@@ -1,0 +1,8 @@
+{
+  "dataset_type": "csv",
+  "dataset_path": "datasets/data.csv",
+  "target_column": "diagnosis",
+  "model_type": "feedforward",
+  "epochs": 10,
+  "batch_size": 32
+}
