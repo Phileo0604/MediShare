@@ -1,0 +1,8 @@
+{
+    "DATASET_PATH": "datasets/data.csv",
+    "TARGET_COLUMN": "diagnosis",
+    "EPOCHS": 10,
+    "BATCH_SIZE": 32,
+    "NUM_CLIENTS": 5,
+    "NUM_ROUNDS": 3
+}

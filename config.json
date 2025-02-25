@@ -1,0 +1,19 @@
+{
+  "dataset_choice": "parkinsons",
+  "datasets": {
+    "parkinsons": {
+      "dataset_path": "C:\\Users\\Cherr\\OneDrive\\Desktop\\MediShare\\MediShare\\datasets\\gait-in-parkinsons-disease\\gait_parkinsons1.xlsx",
+      "target_column": "Group"
+    },
+    "lung": {
+      "dataset_path": "datasets/lung.csv",
+      "target_column": "disease"
+    },
+    "retinopathy": {
+      "dataset_path": "datasets/retinopathy.csv",
+      "target_column": "severity"
+    }
+  },
+  "epochs": 10,
+  "batch_size": 32
+}

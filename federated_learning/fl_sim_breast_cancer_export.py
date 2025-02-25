@@ -17,14 +17,13 @@ from flwr.server import ServerApp, ServerConfig, ServerAppComponents
 from flwr.server.strategy import FedAvg
 from flwr.simulation import run_simulation
 
-# Load configuration from config.json
-with open("config.json", "r") as f:
-    config = json.load(f)
-
-dataset_path = config["dataset_path"]
-target_column = config["target_column"]
-epochs = config["epochs"]
-batch_size = config["batch_size"]
+# 🚀 Hardcoded Configuration (Replace values as needed)
+DATASET_PATH = "datasets\data.csv"  # Change path to your dataset
+TARGET_COLUMN = "diagnosis"  # Change this to match your dataset's label column
+EPOCHS = 10
+BATCH_SIZE = 32
+NUM_CLIENTS = 5  # Number of federated clients
+NUM_ROUNDS = 3   # Number of FL rounds
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {DEVICE}")
@@ -58,15 +57,15 @@ class CSVDataset(Dataset):
 
 # Load dataset
 def load_datasets():
-    data = pd.read_csv(dataset_path)
+    data = pd.read_csv(DATASET_PATH)
     train_data, test_data = train_test_split(data, test_size=0.2, random_state=42)
-    train_dataset = CSVDataset(train_data, target_column)
-    test_dataset = CSVDataset(test_data, target_column)
+    train_dataset = CSVDataset(train_data, TARGET_COLUMN)
+    test_dataset = CSVDataset(test_data, TARGET_COLUMN)
     return train_dataset, test_dataset
 
 train_dataset, test_dataset = load_datasets()
-train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=batch_size)
+train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE)
 
 # Neural network definition
 class FeedforwardNN(nn.Module):
@@ -155,7 +154,7 @@ class FlowerCSVClient(NumPyClient):
 
     def fit(self, parameters, config):
         set_parameters(self.model, parameters)
-        train(self.model, self.train_loader, epochs=epochs)
+        train(self.model, self.train_loader, epochs=EPOCHS)
         return get_parameters(self.model), len(self.train_loader.dataset), {}
 
     def evaluate(self, parameters, config):
@@ -177,7 +176,7 @@ def client_fn(context: Context):
 # Server configuration
 def server_fn(context):
     strategy = FedAvg()
-    config = ServerConfig(num_rounds=3)
+    config = ServerConfig(num_rounds=NUM_ROUNDS)
     return ServerAppComponents(strategy=strategy, config=config)
 
 server = ServerApp(server_fn=server_fn)
@@ -187,12 +186,12 @@ client = ClientApp(client_fn=client_fn)
 input_dim = train_dataset.features.shape[1]
 output_dim = len(set(train_dataset.labels))
 model = FeedforwardNN(input_dim, output_dim).to(DEVICE)
-train(model, train_loader, epochs=epochs)
+train(model, train_loader, epochs=EPOCHS)
 export_model_parameters(model, "model_parameters.json")
 
 # Run the simulation
 run_simulation(
     server_app=server,
     client_app=client,
-    num_supernodes=5  # Number of participating clients
+    num_supernodes=NUM_CLIENTS  # Number of participating clients
 )
