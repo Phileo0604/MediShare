@@ -4,5 +4,5 @@
     "EPOCHS": 10,
     "BATCH_SIZE": 32,
     "NUM_CLIENTS": 5,
-    "NUM_ROUNDS": 3
+    "NUM_ROUNDS": 5
 }
