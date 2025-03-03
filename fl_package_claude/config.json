@@ -8,12 +8,21 @@
         "batch_size": 32,
         "learning_rate": 0.001
     },
-    "federated": {
-        "num_clients": 5,
-        "num_rounds": 3
-    },
     "model": {
         "hidden_layers": [64, 32],
-        "parameters_file": "model_parameters.json"
+        "parameters_file": "global_model.json"
+    },
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8080,
+        "client_host": "127.0.0.1",
+        "update_threshold": 1,
+        "contribution_weight": 0.1,
+        "backup_dir": "model_backups"
+    },
+    "client": {
+        "cycles": 0,
+        "wait_time": 60,
+        "retry_interval": 10
     }
 }
