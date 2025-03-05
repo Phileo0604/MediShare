@@ -18,9 +18,9 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-logger = logging.getLogger("ContinuousServer")
+logger = logging.getLogger("Server")
 
-class ContinuousModelServer:
+class ModelServer:
     """
     A federated learning server that runs continuously, accepting client contributions
     and updating the global model as contributions are received.
@@ -74,6 +74,7 @@ class ContinuousModelServer:
             self.global_parameters = None
     
     def save_global_model(self) -> None:
+        print("DEBUG: Entered save_global_model method")
         """Save the global model to disk."""
         if self.global_parameters is not None:
             try:
@@ -127,6 +128,7 @@ class ContinuousModelServer:
             logger.info(f"Updated global model (update #{self.update_count})")
             
             # Save the updated model
+            print(f"DEBUG: About to save global model, update count: {self.update_count}")
             self.save_global_model()
     
     def process_client_contribution(self, client_parameters: List[np.ndarray]) -> None:
@@ -139,6 +141,7 @@ class ContinuousModelServer:
             
             # Check if we should update the global model
             if len(self.pending_contributions) >= self.update_threshold:
+                logger.info(f"Update threshold reached ({self.update_threshold}), updating global model")
                 # Simple approach: use the latest contribution
                 self.update_global_model(self.pending_contributions[-1])
                 
@@ -148,6 +151,7 @@ class ContinuousModelServer:
                 
                 # Clear pending contributions after update
                 self.pending_contributions = []
+                logger.info("Cleared pending contributions after update")
     
     def _average_parameters(self, parameter_list: List[List[np.ndarray]]) -> List[np.ndarray]:
         """Average multiple sets of parameters."""
@@ -203,22 +207,29 @@ class ContinuousModelServer:
             while len(received_data) < data_size:
                 chunk = client_socket.recv(min(4096, data_size - len(received_data)))
                 if not chunk:
+                    logger.warning(f"Client {client_address} disconnected during data transfer")
                     break
                 received_data += chunk
             
-            # Parse received parameters
+            # Now check if we received complete data
             if len(received_data) == data_size:
-                parameters_json = received_data.decode('utf-8')
-                client_parameters = [np.array(param) for param in json.loads(parameters_json)]
+                logger.info(f"Successfully received complete data ({len(received_data)} bytes) from client {client_address}")
                 
-                # Process the contribution
-                self.process_client_contribution(client_parameters)
-                
-                # Send acknowledgment
-                client_socket.sendall(b'ACK')
-                logger.info(f"Processed contribution from client {client_address}")
+                try:
+                    parameters_json = received_data.decode('utf-8')
+                    client_parameters = [np.array(param) for param in json.loads(parameters_json)]
+                    logger.info(f"Successfully parsed parameters from client {client_address}")
+                    
+                    # Process the contribution
+                    self.process_client_contribution(client_parameters)
+                    
+                    # Send acknowledgment
+                    client_socket.sendall(b'ACK')
+                    logger.info(f"Processed contribution from client {client_address}")
+                except Exception as e:
+                    logger.error(f"Error processing parameters from client {client_address}: {e}")
             else:
-                logger.warning(f"Incomplete data from client {client_address}")
+                logger.warning(f"Incomplete data from client {client_address}: expected {data_size} bytes, received {len(received_data)} bytes")
         
         except Exception as e:
             logger.error(f"Error handling client {client_address}: {e}")
@@ -276,7 +287,7 @@ class ContinuousModelServer:
 
 
 def run_server(config):
-    """Run the continuous federated learning server."""
+    """Run the federated learning server."""
     # Extract server configuration
     host = config["server"].get("host", "0.0.0.0")
     port = int(config["server"].get("port", 8080))
@@ -292,7 +303,7 @@ def run_server(config):
     }
     
     # Create and start server
-    server = ContinuousModelServer(
+    server = ModelServer(
         model_path=model_path,
         model_config=model_config,
         host=host,
@@ -319,7 +330,7 @@ if __name__ == "__main__":
     import argparse
     import json
     
-    parser = argparse.ArgumentParser(description="Run a continuous federated learning server")
+    parser = argparse.ArgumentParser(description="Run a federated learning server")
     parser.add_argument("--config", type=str, default="config.json", help="Path to configuration file")
     args = parser.parse_args()
     

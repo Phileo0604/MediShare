@@ -1,0 +1,1178 @@
+2025-03-02 20:54:06,468 - ContinuousServer - INFO - Loaded global model from global_model.json
+2025-03-02 20:54:06,468 - ContinuousServer - INFO - Server started. Press Ctrl+C to stop...
+2025-03-02 20:54:06,468 - ContinuousServer - INFO - Server listening on 0.0.0.0:8080
+2025-03-02 20:56:17,330 - ContinuousServer - INFO - Loaded global model from global_model.json
+2025-03-02 20:56:17,331 - ContinuousServer - INFO - Server started. Press Ctrl+C to stop...
+2025-03-02 20:56:17,331 - ContinuousServer - INFO - Server listening on 0.0.0.0:8080
+2025-03-02 21:06:25,205 - ContinuousServer - INFO - Loaded global model from global_model.json
+2025-03-02 21:06:25,206 - ContinuousServer - INFO - Server started. Press Ctrl+C to stop...
+2025-03-02 21:06:25,206 - ContinuousServer - INFO - Server listening on 0.0.0.0:8080
+2025-03-02 21:06:30,264 - ContinuousServer - INFO - Client connected from ('127.0.0.1', 50716)
+2025-03-02 21:06:30,266 - ContinuousServer - INFO - Sent global model to client ('127.0.0.1', 50716)
+2025-03-02 21:06:31,981 - ContinuousServer - INFO - Expecting 88299 bytes from client ('127.0.0.1', 50716)
+2025-03-02 21:06:31,982 - ContinuousServer - INFO - Received client contribution (client #1, pending: 1)
+2025-03-02 21:06:48,661 - ContinuousServer - INFO - Client connected from ('127.0.0.1', 50718)
+2025-03-02 21:06:48,664 - ContinuousServer - INFO - Sent global model to client ('127.0.0.1', 50718)
+2025-03-02 21:06:50,038 - ContinuousServer - INFO - Expecting 88200 bytes from client ('127.0.0.1', 50718)
+2025-03-02 21:07:20,646 - ContinuousServer - INFO - Client connected from ('127.0.0.1', 50721)
+2025-03-02 21:07:20,649 - ContinuousServer - INFO - Sent global model to client ('127.0.0.1', 50721)
+2025-03-02 21:07:22,000 - ContinuousServer - INFO - Expecting 88235 bytes from client ('127.0.0.1', 50721)
+2025-03-04 14:03:57,858 - ContinuousServer - INFO - Loaded global model from global_model.json
+2025-03-04 14:03:57,859 - ContinuousServer - INFO - Server started. Press Ctrl+C to stop...
+2025-03-04 14:03:57,859 - ContinuousServer - INFO - Server listening on 0.0.0.0:8080
+2025-03-04 15:40:57,938 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 15:40:57,939 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-04 15:40:57,939 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-04 15:41:04,300 - Server - INFO - Client connected from ('127.0.0.1', 51552)
+2025-03-04 15:41:04,302 - Server - INFO - Sent global model to client ('127.0.0.1', 51552)
+2025-03-04 15:41:06,080 - Server - INFO - Expecting 88254 bytes from client ('127.0.0.1', 51552)
+2025-03-04 15:41:06,082 - Server - INFO - Received client contribution (client #1, pending: 1)
+2025-03-04 15:41:42,820 - Server - INFO - Client connected from ('127.0.0.1', 51555)
+2025-03-04 15:41:42,823 - Server - INFO - Sent global model to client ('127.0.0.1', 51555)
+2025-03-04 15:41:44,175 - Server - INFO - Expecting 88269 bytes from client ('127.0.0.1', 51555)
+2025-03-04 20:53:09,162 - Server - INFO - Client connected from ('127.0.0.1', 62596)
+2025-03-04 20:53:09,165 - Server - INFO - Sent global model to client ('127.0.0.1', 62596)
+2025-03-04 20:53:10,631 - Server - INFO - Expecting 88244 bytes from client ('127.0.0.1', 62596)
+2025-03-04 21:20:25,109 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 21:20:25,109 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-04 21:20:25,110 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-04 21:20:39,675 - Server - INFO - Client connected from ('127.0.0.1', 63541)
+2025-03-04 21:20:39,678 - Server - INFO - Sent global model to client ('127.0.0.1', 63541)
+2025-03-04 21:20:41,101 - Server - INFO - Expecting 89131 bytes from client ('127.0.0.1', 63541)
+2025-03-04 21:20:41,103 - Server - INFO - Received client contribution (client #1, pending: 1)
+2025-03-04 21:21:20,365 - Server - INFO - Client connected from ('127.0.0.1', 63568)
+2025-03-04 21:21:20,368 - Server - INFO - Sent global model to client ('127.0.0.1', 63568)
+2025-03-04 21:21:21,841 - Server - INFO - Expecting 89043 bytes from client ('127.0.0.1', 63568)
+2025-03-04 21:21:51,929 - Server - INFO - Client connected from ('127.0.0.1', 63582)
+2025-03-04 21:21:51,932 - Server - INFO - Sent global model to client ('127.0.0.1', 63582)
+2025-03-04 21:21:53,297 - Server - INFO - Expecting 89109 bytes from client ('127.0.0.1', 63582)
+2025-03-04 21:24:55,412 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 21:24:55,413 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-04 21:24:55,413 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-04 21:25:02,549 - Server - INFO - Client connected from ('127.0.0.1', 63682)
+2025-03-04 21:25:02,552 - Server - INFO - Sent global model to client ('127.0.0.1', 63682)
+2025-03-04 21:25:03,941 - Server - INFO - Expecting 89070 bytes from client ('127.0.0.1', 63682)
+2025-03-04 21:25:03,941 - Server - ERROR - Error handling client ('127.0.0.1', 63682): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:25:13,944 - Server - INFO - Client connected from ('127.0.0.1', 63688)
+2025-03-04 21:25:13,946 - Server - INFO - Sent global model to client ('127.0.0.1', 63688)
+2025-03-04 21:25:14,144 - Server - INFO - Expecting 89104 bytes from client ('127.0.0.1', 63688)
+2025-03-04 21:25:14,145 - Server - ERROR - Error handling client ('127.0.0.1', 63688): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:25:24,147 - Server - INFO - Client connected from ('127.0.0.1', 63693)
+2025-03-04 21:25:24,149 - Server - INFO - Sent global model to client ('127.0.0.1', 63693)
+2025-03-04 21:25:24,340 - Server - INFO - Expecting 89075 bytes from client ('127.0.0.1', 63693)
+2025-03-04 21:25:24,341 - Server - ERROR - Error handling client ('127.0.0.1', 63693): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:25:34,343 - Server - INFO - Client connected from ('127.0.0.1', 63698)
+2025-03-04 21:25:34,346 - Server - INFO - Sent global model to client ('127.0.0.1', 63698)
+2025-03-04 21:25:34,547 - Server - INFO - Expecting 89080 bytes from client ('127.0.0.1', 63698)
+2025-03-04 21:25:34,547 - Server - ERROR - Error handling client ('127.0.0.1', 63698): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:25:44,550 - Server - INFO - Client connected from ('127.0.0.1', 63712)
+2025-03-04 21:25:44,552 - Server - INFO - Sent global model to client ('127.0.0.1', 63712)
+2025-03-04 21:25:44,748 - Server - INFO - Expecting 89124 bytes from client ('127.0.0.1', 63712)
+2025-03-04 21:25:44,748 - Server - ERROR - Error handling client ('127.0.0.1', 63712): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:25:54,751 - Server - INFO - Client connected from ('127.0.0.1', 63718)
+2025-03-04 21:25:54,753 - Server - INFO - Sent global model to client ('127.0.0.1', 63718)
+2025-03-04 21:25:54,949 - Server - INFO - Expecting 89091 bytes from client ('127.0.0.1', 63718)
+2025-03-04 21:25:54,949 - Server - ERROR - Error handling client ('127.0.0.1', 63718): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:26:04,951 - Server - INFO - Client connected from ('127.0.0.1', 63724)
+2025-03-04 21:26:04,953 - Server - INFO - Sent global model to client ('127.0.0.1', 63724)
+2025-03-04 21:26:05,147 - Server - INFO - Expecting 89115 bytes from client ('127.0.0.1', 63724)
+2025-03-04 21:26:05,148 - Server - ERROR - Error handling client ('127.0.0.1', 63724): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:26:15,150 - Server - INFO - Client connected from ('127.0.0.1', 63735)
+2025-03-04 21:26:15,153 - Server - INFO - Sent global model to client ('127.0.0.1', 63735)
+2025-03-04 21:26:15,416 - Server - INFO - Expecting 89077 bytes from client ('127.0.0.1', 63735)
+2025-03-04 21:26:15,416 - Server - ERROR - Error handling client ('127.0.0.1', 63735): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:26:25,419 - Server - INFO - Client connected from ('127.0.0.1', 63741)
+2025-03-04 21:26:25,421 - Server - INFO - Sent global model to client ('127.0.0.1', 63741)
+2025-03-04 21:26:25,642 - Server - INFO - Expecting 89071 bytes from client ('127.0.0.1', 63741)
+2025-03-04 21:26:25,642 - Server - ERROR - Error handling client ('127.0.0.1', 63741): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:26:35,644 - Server - INFO - Client connected from ('127.0.0.1', 63746)
+2025-03-04 21:26:35,646 - Server - INFO - Sent global model to client ('127.0.0.1', 63746)
+2025-03-04 21:26:35,887 - Server - INFO - Expecting 89067 bytes from client ('127.0.0.1', 63746)
+2025-03-04 21:26:35,888 - Server - ERROR - Error handling client ('127.0.0.1', 63746): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:26:45,890 - Server - INFO - Client connected from ('127.0.0.1', 63757)
+2025-03-04 21:26:45,892 - Server - INFO - Sent global model to client ('127.0.0.1', 63757)
+2025-03-04 21:26:46,097 - Server - INFO - Expecting 89105 bytes from client ('127.0.0.1', 63757)
+2025-03-04 21:26:46,097 - Server - ERROR - Error handling client ('127.0.0.1', 63757): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:26:56,100 - Server - INFO - Client connected from ('127.0.0.1', 63767)
+2025-03-04 21:26:56,102 - Server - INFO - Sent global model to client ('127.0.0.1', 63767)
+2025-03-04 21:26:56,310 - Server - INFO - Expecting 89090 bytes from client ('127.0.0.1', 63767)
+2025-03-04 21:26:56,311 - Server - ERROR - Error handling client ('127.0.0.1', 63767): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:27:06,314 - Server - INFO - Client connected from ('127.0.0.1', 63771)
+2025-03-04 21:27:06,318 - Server - INFO - Sent global model to client ('127.0.0.1', 63771)
+2025-03-04 21:27:06,605 - Server - INFO - Expecting 89120 bytes from client ('127.0.0.1', 63771)
+2025-03-04 21:27:06,606 - Server - ERROR - Error handling client ('127.0.0.1', 63771): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:27:16,609 - Server - INFO - Client connected from ('127.0.0.1', 63782)
+2025-03-04 21:27:16,611 - Server - INFO - Sent global model to client ('127.0.0.1', 63782)
+2025-03-04 21:27:16,814 - Server - INFO - Expecting 89083 bytes from client ('127.0.0.1', 63782)
+2025-03-04 21:27:16,814 - Server - ERROR - Error handling client ('127.0.0.1', 63782): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:27:26,817 - Server - INFO - Client connected from ('127.0.0.1', 63790)
+2025-03-04 21:27:26,819 - Server - INFO - Sent global model to client ('127.0.0.1', 63790)
+2025-03-04 21:27:27,034 - Server - INFO - Expecting 89035 bytes from client ('127.0.0.1', 63790)
+2025-03-04 21:27:27,035 - Server - ERROR - Error handling client ('127.0.0.1', 63790): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:27:37,037 - Server - INFO - Client connected from ('127.0.0.1', 63794)
+2025-03-04 21:27:37,039 - Server - INFO - Sent global model to client ('127.0.0.1', 63794)
+2025-03-04 21:27:37,228 - Server - INFO - Expecting 89123 bytes from client ('127.0.0.1', 63794)
+2025-03-04 21:27:37,229 - Server - ERROR - Error handling client ('127.0.0.1', 63794): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:27:47,231 - Server - INFO - Client connected from ('127.0.0.1', 63800)
+2025-03-04 21:27:47,233 - Server - INFO - Sent global model to client ('127.0.0.1', 63800)
+2025-03-04 21:27:47,438 - Server - INFO - Expecting 89087 bytes from client ('127.0.0.1', 63800)
+2025-03-04 21:27:47,438 - Server - ERROR - Error handling client ('127.0.0.1', 63800): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:27:57,442 - Server - INFO - Client connected from ('127.0.0.1', 63806)
+2025-03-04 21:27:57,444 - Server - INFO - Sent global model to client ('127.0.0.1', 63806)
+2025-03-04 21:27:57,634 - Server - INFO - Expecting 89122 bytes from client ('127.0.0.1', 63806)
+2025-03-04 21:27:57,634 - Server - ERROR - Error handling client ('127.0.0.1', 63806): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:28:07,637 - Server - INFO - Client connected from ('127.0.0.1', 63810)
+2025-03-04 21:28:07,639 - Server - INFO - Sent global model to client ('127.0.0.1', 63810)
+2025-03-04 21:28:07,843 - Server - INFO - Expecting 89061 bytes from client ('127.0.0.1', 63810)
+2025-03-04 21:28:07,843 - Server - ERROR - Error handling client ('127.0.0.1', 63810): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:28:17,846 - Server - INFO - Client connected from ('127.0.0.1', 63816)
+2025-03-04 21:28:17,848 - Server - INFO - Sent global model to client ('127.0.0.1', 63816)
+2025-03-04 21:28:18,048 - Server - INFO - Expecting 89076 bytes from client ('127.0.0.1', 63816)
+2025-03-04 21:28:18,048 - Server - ERROR - Error handling client ('127.0.0.1', 63816): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:28:28,050 - Server - INFO - Client connected from ('127.0.0.1', 63821)
+2025-03-04 21:28:28,052 - Server - INFO - Sent global model to client ('127.0.0.1', 63821)
+2025-03-04 21:28:28,238 - Server - INFO - Expecting 89135 bytes from client ('127.0.0.1', 63821)
+2025-03-04 21:28:28,238 - Server - ERROR - Error handling client ('127.0.0.1', 63821): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:28:38,241 - Server - INFO - Client connected from ('127.0.0.1', 63826)
+2025-03-04 21:28:38,243 - Server - INFO - Sent global model to client ('127.0.0.1', 63826)
+2025-03-04 21:28:38,455 - Server - INFO - Expecting 89117 bytes from client ('127.0.0.1', 63826)
+2025-03-04 21:28:38,455 - Server - ERROR - Error handling client ('127.0.0.1', 63826): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:28:48,458 - Server - INFO - Client connected from ('127.0.0.1', 63830)
+2025-03-04 21:28:48,460 - Server - INFO - Sent global model to client ('127.0.0.1', 63830)
+2025-03-04 21:28:48,679 - Server - INFO - Expecting 89093 bytes from client ('127.0.0.1', 63830)
+2025-03-04 21:28:48,679 - Server - ERROR - Error handling client ('127.0.0.1', 63830): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:28:58,682 - Server - INFO - Client connected from ('127.0.0.1', 63855)
+2025-03-04 21:28:58,684 - Server - INFO - Sent global model to client ('127.0.0.1', 63855)
+2025-03-04 21:28:58,893 - Server - INFO - Expecting 89079 bytes from client ('127.0.0.1', 63855)
+2025-03-04 21:28:58,893 - Server - ERROR - Error handling client ('127.0.0.1', 63855): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:29:08,896 - Server - INFO - Client connected from ('127.0.0.1', 63860)
+2025-03-04 21:29:08,898 - Server - INFO - Sent global model to client ('127.0.0.1', 63860)
+2025-03-04 21:29:09,114 - Server - INFO - Expecting 89065 bytes from client ('127.0.0.1', 63860)
+2025-03-04 21:29:09,114 - Server - ERROR - Error handling client ('127.0.0.1', 63860): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:29:19,117 - Server - INFO - Client connected from ('127.0.0.1', 63868)
+2025-03-04 21:29:19,119 - Server - INFO - Sent global model to client ('127.0.0.1', 63868)
+2025-03-04 21:29:19,325 - Server - INFO - Expecting 89099 bytes from client ('127.0.0.1', 63868)
+2025-03-04 21:29:19,325 - Server - ERROR - Error handling client ('127.0.0.1', 63868): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:29:29,328 - Server - INFO - Client connected from ('127.0.0.1', 63875)
+2025-03-04 21:29:29,330 - Server - INFO - Sent global model to client ('127.0.0.1', 63875)
+2025-03-04 21:29:29,546 - Server - INFO - Expecting 89061 bytes from client ('127.0.0.1', 63875)
+2025-03-04 21:29:29,547 - Server - ERROR - Error handling client ('127.0.0.1', 63875): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:29:39,550 - Server - INFO - Client connected from ('127.0.0.1', 63880)
+2025-03-04 21:29:39,554 - Server - INFO - Sent global model to client ('127.0.0.1', 63880)
+2025-03-04 21:29:39,771 - Server - INFO - Expecting 89119 bytes from client ('127.0.0.1', 63880)
+2025-03-04 21:29:39,772 - Server - ERROR - Error handling client ('127.0.0.1', 63880): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:29:49,775 - Server - INFO - Client connected from ('127.0.0.1', 63885)
+2025-03-04 21:29:49,777 - Server - INFO - Sent global model to client ('127.0.0.1', 63885)
+2025-03-04 21:29:49,988 - Server - INFO - Expecting 89066 bytes from client ('127.0.0.1', 63885)
+2025-03-04 21:29:49,988 - Server - ERROR - Error handling client ('127.0.0.1', 63885): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:29:59,991 - Server - INFO - Client connected from ('127.0.0.1', 63892)
+2025-03-04 21:29:59,993 - Server - INFO - Sent global model to client ('127.0.0.1', 63892)
+2025-03-04 21:30:00,189 - Server - INFO - Expecting 89144 bytes from client ('127.0.0.1', 63892)
+2025-03-04 21:30:00,190 - Server - ERROR - Error handling client ('127.0.0.1', 63892): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:30:10,192 - Server - INFO - Client connected from ('127.0.0.1', 63897)
+2025-03-04 21:30:10,194 - Server - INFO - Sent global model to client ('127.0.0.1', 63897)
+2025-03-04 21:30:10,399 - Server - INFO - Expecting 89055 bytes from client ('127.0.0.1', 63897)
+2025-03-04 21:30:10,400 - Server - ERROR - Error handling client ('127.0.0.1', 63897): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:30:20,402 - Server - INFO - Client connected from ('127.0.0.1', 63902)
+2025-03-04 21:30:20,404 - Server - INFO - Sent global model to client ('127.0.0.1', 63902)
+2025-03-04 21:30:20,619 - Server - INFO - Expecting 89108 bytes from client ('127.0.0.1', 63902)
+2025-03-04 21:30:20,620 - Server - ERROR - Error handling client ('127.0.0.1', 63902): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:30:30,622 - Server - INFO - Client connected from ('127.0.0.1', 63907)
+2025-03-04 21:30:30,624 - Server - INFO - Sent global model to client ('127.0.0.1', 63907)
+2025-03-04 21:30:30,825 - Server - INFO - Expecting 89083 bytes from client ('127.0.0.1', 63907)
+2025-03-04 21:30:30,826 - Server - ERROR - Error handling client ('127.0.0.1', 63907): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:30:40,828 - Server - INFO - Client connected from ('127.0.0.1', 63918)
+2025-03-04 21:30:40,830 - Server - INFO - Sent global model to client ('127.0.0.1', 63918)
+2025-03-04 21:30:41,044 - Server - INFO - Expecting 89148 bytes from client ('127.0.0.1', 63918)
+2025-03-04 21:30:41,044 - Server - ERROR - Error handling client ('127.0.0.1', 63918): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:30:51,047 - Server - INFO - Client connected from ('127.0.0.1', 63923)
+2025-03-04 21:30:51,050 - Server - INFO - Sent global model to client ('127.0.0.1', 63923)
+2025-03-04 21:30:51,353 - Server - INFO - Expecting 89074 bytes from client ('127.0.0.1', 63923)
+2025-03-04 21:30:51,354 - Server - ERROR - Error handling client ('127.0.0.1', 63923): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:31:01,356 - Server - INFO - Client connected from ('127.0.0.1', 63931)
+2025-03-04 21:31:01,358 - Server - INFO - Sent global model to client ('127.0.0.1', 63931)
+2025-03-04 21:31:01,565 - Server - INFO - Expecting 89095 bytes from client ('127.0.0.1', 63931)
+2025-03-04 21:31:01,565 - Server - ERROR - Error handling client ('127.0.0.1', 63931): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:31:11,568 - Server - INFO - Client connected from ('127.0.0.1', 63937)
+2025-03-04 21:31:11,573 - Server - INFO - Sent global model to client ('127.0.0.1', 63937)
+2025-03-04 21:31:11,804 - Server - INFO - Expecting 89055 bytes from client ('127.0.0.1', 63937)
+2025-03-04 21:31:11,804 - Server - ERROR - Error handling client ('127.0.0.1', 63937): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:31:21,806 - Server - INFO - Client connected from ('127.0.0.1', 63943)
+2025-03-04 21:31:21,808 - Server - INFO - Sent global model to client ('127.0.0.1', 63943)
+2025-03-04 21:31:22,005 - Server - INFO - Expecting 89147 bytes from client ('127.0.0.1', 63943)
+2025-03-04 21:31:22,005 - Server - ERROR - Error handling client ('127.0.0.1', 63943): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:31:32,008 - Server - INFO - Client connected from ('127.0.0.1', 63950)
+2025-03-04 21:31:32,010 - Server - INFO - Sent global model to client ('127.0.0.1', 63950)
+2025-03-04 21:31:32,231 - Server - INFO - Expecting 89083 bytes from client ('127.0.0.1', 63950)
+2025-03-04 21:31:32,232 - Server - ERROR - Error handling client ('127.0.0.1', 63950): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:31:42,234 - Server - INFO - Client connected from ('127.0.0.1', 63956)
+2025-03-04 21:31:42,237 - Server - INFO - Sent global model to client ('127.0.0.1', 63956)
+2025-03-04 21:31:42,454 - Server - INFO - Expecting 89158 bytes from client ('127.0.0.1', 63956)
+2025-03-04 21:31:42,454 - Server - ERROR - Error handling client ('127.0.0.1', 63956): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:31:52,457 - Server - INFO - Client connected from ('127.0.0.1', 63966)
+2025-03-04 21:31:52,459 - Server - INFO - Sent global model to client ('127.0.0.1', 63966)
+2025-03-04 21:31:52,674 - Server - INFO - Expecting 89074 bytes from client ('127.0.0.1', 63966)
+2025-03-04 21:31:52,674 - Server - ERROR - Error handling client ('127.0.0.1', 63966): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:32:02,677 - Server - INFO - Client connected from ('127.0.0.1', 63984)
+2025-03-04 21:32:02,679 - Server - INFO - Sent global model to client ('127.0.0.1', 63984)
+2025-03-04 21:32:02,997 - Server - INFO - Expecting 89049 bytes from client ('127.0.0.1', 63984)
+2025-03-04 21:32:02,997 - Server - ERROR - Error handling client ('127.0.0.1', 63984): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:32:13,001 - Server - INFO - Client connected from ('127.0.0.1', 63989)
+2025-03-04 21:32:13,003 - Server - INFO - Sent global model to client ('127.0.0.1', 63989)
+2025-03-04 21:32:13,203 - Server - INFO - Expecting 89091 bytes from client ('127.0.0.1', 63989)
+2025-03-04 21:32:13,203 - Server - ERROR - Error handling client ('127.0.0.1', 63989): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:32:23,205 - Server - INFO - Client connected from ('127.0.0.1', 64006)
+2025-03-04 21:32:23,208 - Server - INFO - Sent global model to client ('127.0.0.1', 64006)
+2025-03-04 21:32:23,418 - Server - INFO - Expecting 89040 bytes from client ('127.0.0.1', 64006)
+2025-03-04 21:32:23,418 - Server - ERROR - Error handling client ('127.0.0.1', 64006): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:32:33,420 - Server - INFO - Client connected from ('127.0.0.1', 64012)
+2025-03-04 21:32:33,422 - Server - INFO - Sent global model to client ('127.0.0.1', 64012)
+2025-03-04 21:32:33,619 - Server - INFO - Expecting 89064 bytes from client ('127.0.0.1', 64012)
+2025-03-04 21:32:33,620 - Server - ERROR - Error handling client ('127.0.0.1', 64012): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:32:43,623 - Server - INFO - Client connected from ('127.0.0.1', 64017)
+2025-03-04 21:32:43,625 - Server - INFO - Sent global model to client ('127.0.0.1', 64017)
+2025-03-04 21:32:43,841 - Server - INFO - Expecting 89125 bytes from client ('127.0.0.1', 64017)
+2025-03-04 21:32:43,842 - Server - ERROR - Error handling client ('127.0.0.1', 64017): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:32:53,844 - Server - INFO - Client connected from ('127.0.0.1', 64027)
+2025-03-04 21:32:53,847 - Server - INFO - Sent global model to client ('127.0.0.1', 64027)
+2025-03-04 21:32:54,037 - Server - INFO - Expecting 89072 bytes from client ('127.0.0.1', 64027)
+2025-03-04 21:32:54,037 - Server - ERROR - Error handling client ('127.0.0.1', 64027): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:33:04,040 - Server - INFO - Client connected from ('127.0.0.1', 64031)
+2025-03-04 21:33:04,042 - Server - INFO - Sent global model to client ('127.0.0.1', 64031)
+2025-03-04 21:33:04,241 - Server - INFO - Expecting 89042 bytes from client ('127.0.0.1', 64031)
+2025-03-04 21:33:04,241 - Server - ERROR - Error handling client ('127.0.0.1', 64031): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:33:14,243 - Server - INFO - Client connected from ('127.0.0.1', 64036)
+2025-03-04 21:33:14,245 - Server - INFO - Sent global model to client ('127.0.0.1', 64036)
+2025-03-04 21:33:14,446 - Server - INFO - Expecting 89186 bytes from client ('127.0.0.1', 64036)
+2025-03-04 21:33:14,447 - Server - ERROR - Error handling client ('127.0.0.1', 64036): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:33:24,449 - Server - INFO - Client connected from ('127.0.0.1', 64041)
+2025-03-04 21:33:24,451 - Server - INFO - Sent global model to client ('127.0.0.1', 64041)
+2025-03-04 21:33:24,650 - Server - INFO - Expecting 89122 bytes from client ('127.0.0.1', 64041)
+2025-03-04 21:33:24,650 - Server - ERROR - Error handling client ('127.0.0.1', 64041): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:33:34,653 - Server - INFO - Client connected from ('127.0.0.1', 64046)
+2025-03-04 21:33:34,655 - Server - INFO - Sent global model to client ('127.0.0.1', 64046)
+2025-03-04 21:33:34,848 - Server - INFO - Expecting 89102 bytes from client ('127.0.0.1', 64046)
+2025-03-04 21:33:34,848 - Server - ERROR - Error handling client ('127.0.0.1', 64046): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:33:44,851 - Server - INFO - Client connected from ('127.0.0.1', 64055)
+2025-03-04 21:33:44,853 - Server - INFO - Sent global model to client ('127.0.0.1', 64055)
+2025-03-04 21:33:45,048 - Server - INFO - Expecting 89092 bytes from client ('127.0.0.1', 64055)
+2025-03-04 21:33:45,049 - Server - ERROR - Error handling client ('127.0.0.1', 64055): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:33:55,051 - Server - INFO - Client connected from ('127.0.0.1', 64063)
+2025-03-04 21:33:55,053 - Server - INFO - Sent global model to client ('127.0.0.1', 64063)
+2025-03-04 21:33:55,268 - Server - INFO - Expecting 89111 bytes from client ('127.0.0.1', 64063)
+2025-03-04 21:33:55,268 - Server - ERROR - Error handling client ('127.0.0.1', 64063): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:34:05,270 - Server - INFO - Client connected from ('127.0.0.1', 64067)
+2025-03-04 21:34:05,272 - Server - INFO - Sent global model to client ('127.0.0.1', 64067)
+2025-03-04 21:34:05,469 - Server - INFO - Expecting 89099 bytes from client ('127.0.0.1', 64067)
+2025-03-04 21:34:05,469 - Server - ERROR - Error handling client ('127.0.0.1', 64067): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:34:15,472 - Server - INFO - Client connected from ('127.0.0.1', 64074)
+2025-03-04 21:34:15,474 - Server - INFO - Sent global model to client ('127.0.0.1', 64074)
+2025-03-04 21:34:15,676 - Server - INFO - Expecting 89067 bytes from client ('127.0.0.1', 64074)
+2025-03-04 21:34:15,676 - Server - ERROR - Error handling client ('127.0.0.1', 64074): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:34:25,679 - Server - INFO - Client connected from ('127.0.0.1', 64079)
+2025-03-04 21:34:25,681 - Server - INFO - Sent global model to client ('127.0.0.1', 64079)
+2025-03-04 21:34:25,874 - Server - INFO - Expecting 89132 bytes from client ('127.0.0.1', 64079)
+2025-03-04 21:34:25,874 - Server - ERROR - Error handling client ('127.0.0.1', 64079): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:34:35,877 - Server - INFO - Client connected from ('127.0.0.1', 64086)
+2025-03-04 21:34:35,879 - Server - INFO - Sent global model to client ('127.0.0.1', 64086)
+2025-03-04 21:34:36,083 - Server - INFO - Expecting 89074 bytes from client ('127.0.0.1', 64086)
+2025-03-04 21:34:36,083 - Server - ERROR - Error handling client ('127.0.0.1', 64086): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:34:46,086 - Server - INFO - Client connected from ('127.0.0.1', 64090)
+2025-03-04 21:34:46,088 - Server - INFO - Sent global model to client ('127.0.0.1', 64090)
+2025-03-04 21:34:46,281 - Server - INFO - Expecting 89107 bytes from client ('127.0.0.1', 64090)
+2025-03-04 21:34:46,282 - Server - ERROR - Error handling client ('127.0.0.1', 64090): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:34:56,285 - Server - INFO - Client connected from ('127.0.0.1', 64096)
+2025-03-04 21:34:56,287 - Server - INFO - Sent global model to client ('127.0.0.1', 64096)
+2025-03-04 21:34:56,520 - Server - INFO - Expecting 89061 bytes from client ('127.0.0.1', 64096)
+2025-03-04 21:34:56,520 - Server - ERROR - Error handling client ('127.0.0.1', 64096): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:35:06,523 - Server - INFO - Client connected from ('127.0.0.1', 64105)
+2025-03-04 21:35:06,525 - Server - INFO - Sent global model to client ('127.0.0.1', 64105)
+2025-03-04 21:35:06,730 - Server - INFO - Expecting 89066 bytes from client ('127.0.0.1', 64105)
+2025-03-04 21:35:06,731 - Server - ERROR - Error handling client ('127.0.0.1', 64105): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:35:16,734 - Server - INFO - Client connected from ('127.0.0.1', 64111)
+2025-03-04 21:35:16,736 - Server - INFO - Sent global model to client ('127.0.0.1', 64111)
+2025-03-04 21:35:16,934 - Server - INFO - Expecting 89107 bytes from client ('127.0.0.1', 64111)
+2025-03-04 21:35:16,934 - Server - ERROR - Error handling client ('127.0.0.1', 64111): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:35:26,938 - Server - INFO - Client connected from ('127.0.0.1', 64117)
+2025-03-04 21:35:26,940 - Server - INFO - Sent global model to client ('127.0.0.1', 64117)
+2025-03-04 21:35:27,139 - Server - INFO - Expecting 89108 bytes from client ('127.0.0.1', 64117)
+2025-03-04 21:35:27,139 - Server - ERROR - Error handling client ('127.0.0.1', 64117): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:35:37,142 - Server - INFO - Client connected from ('127.0.0.1', 64124)
+2025-03-04 21:35:37,146 - Server - INFO - Sent global model to client ('127.0.0.1', 64124)
+2025-03-04 21:35:37,397 - Server - INFO - Expecting 89149 bytes from client ('127.0.0.1', 64124)
+2025-03-04 21:35:37,397 - Server - ERROR - Error handling client ('127.0.0.1', 64124): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:35:47,401 - Server - INFO - Client connected from ('127.0.0.1', 64140)
+2025-03-04 21:35:47,404 - Server - INFO - Sent global model to client ('127.0.0.1', 64140)
+2025-03-04 21:35:47,627 - Server - INFO - Expecting 89071 bytes from client ('127.0.0.1', 64140)
+2025-03-04 21:35:47,627 - Server - ERROR - Error handling client ('127.0.0.1', 64140): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:35:57,630 - Server - INFO - Client connected from ('127.0.0.1', 64147)
+2025-03-04 21:35:57,632 - Server - INFO - Sent global model to client ('127.0.0.1', 64147)
+2025-03-04 21:35:57,848 - Server - INFO - Expecting 89059 bytes from client ('127.0.0.1', 64147)
+2025-03-04 21:35:57,848 - Server - ERROR - Error handling client ('127.0.0.1', 64147): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:36:07,851 - Server - INFO - Client connected from ('127.0.0.1', 64151)
+2025-03-04 21:36:07,853 - Server - INFO - Sent global model to client ('127.0.0.1', 64151)
+2025-03-04 21:36:08,172 - Server - INFO - Expecting 89080 bytes from client ('127.0.0.1', 64151)
+2025-03-04 21:36:08,172 - Server - ERROR - Error handling client ('127.0.0.1', 64151): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:36:18,175 - Server - INFO - Client connected from ('127.0.0.1', 64157)
+2025-03-04 21:36:18,178 - Server - INFO - Sent global model to client ('127.0.0.1', 64157)
+2025-03-04 21:36:18,373 - Server - INFO - Expecting 89107 bytes from client ('127.0.0.1', 64157)
+2025-03-04 21:36:18,374 - Server - ERROR - Error handling client ('127.0.0.1', 64157): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:36:28,376 - Server - INFO - Client connected from ('127.0.0.1', 64162)
+2025-03-04 21:36:28,378 - Server - INFO - Sent global model to client ('127.0.0.1', 64162)
+2025-03-04 21:36:28,586 - Server - INFO - Expecting 89044 bytes from client ('127.0.0.1', 64162)
+2025-03-04 21:36:28,586 - Server - ERROR - Error handling client ('127.0.0.1', 64162): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:36:38,589 - Server - INFO - Client connected from ('127.0.0.1', 64166)
+2025-03-04 21:36:38,591 - Server - INFO - Sent global model to client ('127.0.0.1', 64166)
+2025-03-04 21:36:38,809 - Server - INFO - Expecting 89136 bytes from client ('127.0.0.1', 64166)
+2025-03-04 21:36:38,810 - Server - ERROR - Error handling client ('127.0.0.1', 64166): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:36:48,813 - Server - INFO - Client connected from ('127.0.0.1', 64176)
+2025-03-04 21:36:48,815 - Server - INFO - Sent global model to client ('127.0.0.1', 64176)
+2025-03-04 21:36:49,043 - Server - INFO - Expecting 89093 bytes from client ('127.0.0.1', 64176)
+2025-03-04 21:36:49,044 - Server - ERROR - Error handling client ('127.0.0.1', 64176): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:36:59,047 - Server - INFO - Client connected from ('127.0.0.1', 64183)
+2025-03-04 21:36:59,049 - Server - INFO - Sent global model to client ('127.0.0.1', 64183)
+2025-03-04 21:36:59,264 - Server - INFO - Expecting 89088 bytes from client ('127.0.0.1', 64183)
+2025-03-04 21:36:59,265 - Server - ERROR - Error handling client ('127.0.0.1', 64183): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:37:09,268 - Server - INFO - Client connected from ('127.0.0.1', 64189)
+2025-03-04 21:37:09,270 - Server - INFO - Sent global model to client ('127.0.0.1', 64189)
+2025-03-04 21:37:09,485 - Server - INFO - Expecting 89002 bytes from client ('127.0.0.1', 64189)
+2025-03-04 21:37:09,485 - Server - ERROR - Error handling client ('127.0.0.1', 64189): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:37:19,488 - Server - INFO - Client connected from ('127.0.0.1', 64198)
+2025-03-04 21:37:19,491 - Server - INFO - Sent global model to client ('127.0.0.1', 64198)
+2025-03-04 21:37:19,715 - Server - INFO - Expecting 89175 bytes from client ('127.0.0.1', 64198)
+2025-03-04 21:37:19,715 - Server - ERROR - Error handling client ('127.0.0.1', 64198): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:37:29,719 - Server - INFO - Client connected from ('127.0.0.1', 64207)
+2025-03-04 21:37:29,721 - Server - INFO - Sent global model to client ('127.0.0.1', 64207)
+2025-03-04 21:37:29,960 - Server - INFO - Expecting 89029 bytes from client ('127.0.0.1', 64207)
+2025-03-04 21:37:29,960 - Server - ERROR - Error handling client ('127.0.0.1', 64207): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:37:39,963 - Server - INFO - Client connected from ('127.0.0.1', 64221)
+2025-03-04 21:37:39,966 - Server - INFO - Sent global model to client ('127.0.0.1', 64221)
+2025-03-04 21:37:40,328 - Server - INFO - Expecting 89060 bytes from client ('127.0.0.1', 64221)
+2025-03-04 21:37:40,328 - Server - ERROR - Error handling client ('127.0.0.1', 64221): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:37:50,331 - Server - INFO - Client connected from ('127.0.0.1', 64228)
+2025-03-04 21:37:50,335 - Server - INFO - Sent global model to client ('127.0.0.1', 64228)
+2025-03-04 21:37:50,603 - Server - INFO - Expecting 89081 bytes from client ('127.0.0.1', 64228)
+2025-03-04 21:37:50,604 - Server - ERROR - Error handling client ('127.0.0.1', 64228): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:38:00,606 - Server - INFO - Client connected from ('127.0.0.1', 64235)
+2025-03-04 21:38:00,608 - Server - INFO - Sent global model to client ('127.0.0.1', 64235)
+2025-03-04 21:38:00,830 - Server - INFO - Expecting 89065 bytes from client ('127.0.0.1', 64235)
+2025-03-04 21:38:00,830 - Server - ERROR - Error handling client ('127.0.0.1', 64235): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:38:10,833 - Server - INFO - Client connected from ('127.0.0.1', 64240)
+2025-03-04 21:38:10,835 - Server - INFO - Sent global model to client ('127.0.0.1', 64240)
+2025-03-04 21:38:11,066 - Server - INFO - Expecting 89111 bytes from client ('127.0.0.1', 64240)
+2025-03-04 21:38:11,066 - Server - ERROR - Error handling client ('127.0.0.1', 64240): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:38:21,069 - Server - INFO - Client connected from ('127.0.0.1', 64245)
+2025-03-04 21:38:21,072 - Server - INFO - Sent global model to client ('127.0.0.1', 64245)
+2025-03-04 21:38:21,337 - Server - INFO - Expecting 89090 bytes from client ('127.0.0.1', 64245)
+2025-03-04 21:38:21,337 - Server - ERROR - Error handling client ('127.0.0.1', 64245): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:38:31,341 - Server - INFO - Client connected from ('127.0.0.1', 64250)
+2025-03-04 21:38:31,343 - Server - INFO - Sent global model to client ('127.0.0.1', 64250)
+2025-03-04 21:38:31,557 - Server - INFO - Expecting 89047 bytes from client ('127.0.0.1', 64250)
+2025-03-04 21:38:31,557 - Server - ERROR - Error handling client ('127.0.0.1', 64250): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:38:41,560 - Server - INFO - Client connected from ('127.0.0.1', 64254)
+2025-03-04 21:38:41,563 - Server - INFO - Sent global model to client ('127.0.0.1', 64254)
+2025-03-04 21:38:41,799 - Server - INFO - Expecting 89063 bytes from client ('127.0.0.1', 64254)
+2025-03-04 21:38:41,799 - Server - ERROR - Error handling client ('127.0.0.1', 64254): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:38:51,802 - Server - INFO - Client connected from ('127.0.0.1', 64259)
+2025-03-04 21:38:51,805 - Server - INFO - Sent global model to client ('127.0.0.1', 64259)
+2025-03-04 21:38:52,040 - Server - INFO - Expecting 89137 bytes from client ('127.0.0.1', 64259)
+2025-03-04 21:38:52,040 - Server - ERROR - Error handling client ('127.0.0.1', 64259): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:39:02,043 - Server - INFO - Client connected from ('127.0.0.1', 64265)
+2025-03-04 21:39:02,045 - Server - INFO - Sent global model to client ('127.0.0.1', 64265)
+2025-03-04 21:39:02,262 - Server - INFO - Expecting 89074 bytes from client ('127.0.0.1', 64265)
+2025-03-04 21:39:02,263 - Server - ERROR - Error handling client ('127.0.0.1', 64265): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:39:12,265 - Server - INFO - Client connected from ('127.0.0.1', 64271)
+2025-03-04 21:39:12,268 - Server - INFO - Sent global model to client ('127.0.0.1', 64271)
+2025-03-04 21:39:12,482 - Server - INFO - Expecting 89034 bytes from client ('127.0.0.1', 64271)
+2025-03-04 21:39:12,483 - Server - ERROR - Error handling client ('127.0.0.1', 64271): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:39:22,486 - Server - INFO - Client connected from ('127.0.0.1', 64275)
+2025-03-04 21:39:22,489 - Server - INFO - Sent global model to client ('127.0.0.1', 64275)
+2025-03-04 21:39:22,710 - Server - INFO - Expecting 89113 bytes from client ('127.0.0.1', 64275)
+2025-03-04 21:39:22,711 - Server - ERROR - Error handling client ('127.0.0.1', 64275): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:39:32,713 - Server - INFO - Client connected from ('127.0.0.1', 64281)
+2025-03-04 21:39:32,716 - Server - INFO - Sent global model to client ('127.0.0.1', 64281)
+2025-03-04 21:39:32,945 - Server - INFO - Expecting 89124 bytes from client ('127.0.0.1', 64281)
+2025-03-04 21:39:32,945 - Server - ERROR - Error handling client ('127.0.0.1', 64281): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:39:42,948 - Server - INFO - Client connected from ('127.0.0.1', 64286)
+2025-03-04 21:39:42,950 - Server - INFO - Sent global model to client ('127.0.0.1', 64286)
+2025-03-04 21:39:43,165 - Server - INFO - Expecting 89107 bytes from client ('127.0.0.1', 64286)
+2025-03-04 21:39:43,166 - Server - ERROR - Error handling client ('127.0.0.1', 64286): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:39:53,168 - Server - INFO - Client connected from ('127.0.0.1', 64291)
+2025-03-04 21:39:53,170 - Server - INFO - Sent global model to client ('127.0.0.1', 64291)
+2025-03-04 21:39:53,389 - Server - INFO - Expecting 89063 bytes from client ('127.0.0.1', 64291)
+2025-03-04 21:39:53,390 - Server - ERROR - Error handling client ('127.0.0.1', 64291): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:40:03,392 - Server - INFO - Client connected from ('127.0.0.1', 64298)
+2025-03-04 21:40:03,394 - Server - INFO - Sent global model to client ('127.0.0.1', 64298)
+2025-03-04 21:40:03,642 - Server - INFO - Expecting 89059 bytes from client ('127.0.0.1', 64298)
+2025-03-04 21:40:03,642 - Server - ERROR - Error handling client ('127.0.0.1', 64298): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:40:13,645 - Server - INFO - Client connected from ('127.0.0.1', 64303)
+2025-03-04 21:40:13,648 - Server - INFO - Sent global model to client ('127.0.0.1', 64303)
+2025-03-04 21:40:13,919 - Server - INFO - Expecting 89049 bytes from client ('127.0.0.1', 64303)
+2025-03-04 21:40:13,919 - Server - ERROR - Error handling client ('127.0.0.1', 64303): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:40:23,923 - Server - INFO - Client connected from ('127.0.0.1', 64308)
+2025-03-04 21:40:23,926 - Server - INFO - Sent global model to client ('127.0.0.1', 64308)
+2025-03-04 21:40:24,206 - Server - INFO - Expecting 89160 bytes from client ('127.0.0.1', 64308)
+2025-03-04 21:40:24,207 - Server - ERROR - Error handling client ('127.0.0.1', 64308): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:40:34,211 - Server - INFO - Client connected from ('127.0.0.1', 64313)
+2025-03-04 21:40:34,213 - Server - INFO - Sent global model to client ('127.0.0.1', 64313)
+2025-03-04 21:40:34,459 - Server - INFO - Expecting 89132 bytes from client ('127.0.0.1', 64313)
+2025-03-04 21:40:34,459 - Server - ERROR - Error handling client ('127.0.0.1', 64313): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:40:44,462 - Server - INFO - Client connected from ('127.0.0.1', 64324)
+2025-03-04 21:40:44,464 - Server - INFO - Sent global model to client ('127.0.0.1', 64324)
+2025-03-04 21:40:44,686 - Server - INFO - Expecting 89115 bytes from client ('127.0.0.1', 64324)
+2025-03-04 21:40:44,686 - Server - ERROR - Error handling client ('127.0.0.1', 64324): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:40:54,689 - Server - INFO - Client connected from ('127.0.0.1', 64331)
+2025-03-04 21:40:54,691 - Server - INFO - Sent global model to client ('127.0.0.1', 64331)
+2025-03-04 21:40:54,928 - Server - INFO - Expecting 89075 bytes from client ('127.0.0.1', 64331)
+2025-03-04 21:40:54,928 - Server - ERROR - Error handling client ('127.0.0.1', 64331): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:41:04,931 - Server - INFO - Client connected from ('127.0.0.1', 64335)
+2025-03-04 21:41:04,933 - Server - INFO - Sent global model to client ('127.0.0.1', 64335)
+2025-03-04 21:41:05,178 - Server - INFO - Expecting 89130 bytes from client ('127.0.0.1', 64335)
+2025-03-04 21:41:05,179 - Server - ERROR - Error handling client ('127.0.0.1', 64335): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:41:15,181 - Server - INFO - Client connected from ('127.0.0.1', 64344)
+2025-03-04 21:41:15,184 - Server - INFO - Sent global model to client ('127.0.0.1', 64344)
+2025-03-04 21:41:15,436 - Server - INFO - Expecting 89030 bytes from client ('127.0.0.1', 64344)
+2025-03-04 21:41:15,437 - Server - ERROR - Error handling client ('127.0.0.1', 64344): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:41:25,439 - Server - INFO - Client connected from ('127.0.0.1', 64349)
+2025-03-04 21:41:25,442 - Server - INFO - Sent global model to client ('127.0.0.1', 64349)
+2025-03-04 21:41:25,658 - Server - INFO - Expecting 89090 bytes from client ('127.0.0.1', 64349)
+2025-03-04 21:41:25,658 - Server - ERROR - Error handling client ('127.0.0.1', 64349): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:41:35,661 - Server - INFO - Client connected from ('127.0.0.1', 64353)
+2025-03-04 21:41:35,664 - Server - INFO - Sent global model to client ('127.0.0.1', 64353)
+2025-03-04 21:41:36,027 - Server - INFO - Expecting 89084 bytes from client ('127.0.0.1', 64353)
+2025-03-04 21:41:36,028 - Server - ERROR - Error handling client ('127.0.0.1', 64353): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:41:46,030 - Server - INFO - Client connected from ('127.0.0.1', 64358)
+2025-03-04 21:41:46,033 - Server - INFO - Sent global model to client ('127.0.0.1', 64358)
+2025-03-04 21:41:46,254 - Server - INFO - Expecting 89109 bytes from client ('127.0.0.1', 64358)
+2025-03-04 21:41:46,254 - Server - ERROR - Error handling client ('127.0.0.1', 64358): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:41:56,256 - Server - INFO - Client connected from ('127.0.0.1', 64364)
+2025-03-04 21:41:56,259 - Server - INFO - Sent global model to client ('127.0.0.1', 64364)
+2025-03-04 21:41:56,482 - Server - INFO - Expecting 89033 bytes from client ('127.0.0.1', 64364)
+2025-03-04 21:41:56,482 - Server - ERROR - Error handling client ('127.0.0.1', 64364): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:42:06,484 - Server - INFO - Client connected from ('127.0.0.1', 64369)
+2025-03-04 21:42:06,487 - Server - INFO - Sent global model to client ('127.0.0.1', 64369)
+2025-03-04 21:42:06,711 - Server - INFO - Expecting 89120 bytes from client ('127.0.0.1', 64369)
+2025-03-04 21:42:06,711 - Server - ERROR - Error handling client ('127.0.0.1', 64369): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:42:16,713 - Server - INFO - Client connected from ('127.0.0.1', 64375)
+2025-03-04 21:42:16,717 - Server - INFO - Sent global model to client ('127.0.0.1', 64375)
+2025-03-04 21:42:16,974 - Server - INFO - Expecting 89053 bytes from client ('127.0.0.1', 64375)
+2025-03-04 21:42:16,975 - Server - ERROR - Error handling client ('127.0.0.1', 64375): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:42:26,977 - Server - INFO - Client connected from ('127.0.0.1', 64381)
+2025-03-04 21:42:26,980 - Server - INFO - Sent global model to client ('127.0.0.1', 64381)
+2025-03-04 21:42:27,228 - Server - INFO - Expecting 89116 bytes from client ('127.0.0.1', 64381)
+2025-03-04 21:42:27,229 - Server - ERROR - Error handling client ('127.0.0.1', 64381): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:42:37,231 - Server - INFO - Client connected from ('127.0.0.1', 64385)
+2025-03-04 21:42:37,234 - Server - INFO - Sent global model to client ('127.0.0.1', 64385)
+2025-03-04 21:42:37,495 - Server - INFO - Expecting 89097 bytes from client ('127.0.0.1', 64385)
+2025-03-04 21:42:37,496 - Server - ERROR - Error handling client ('127.0.0.1', 64385): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:42:47,499 - Server - INFO - Client connected from ('127.0.0.1', 64389)
+2025-03-04 21:42:47,501 - Server - INFO - Sent global model to client ('127.0.0.1', 64389)
+2025-03-04 21:42:47,729 - Server - INFO - Expecting 89046 bytes from client ('127.0.0.1', 64389)
+2025-03-04 21:42:47,729 - Server - ERROR - Error handling client ('127.0.0.1', 64389): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:42:57,731 - Server - INFO - Client connected from ('127.0.0.1', 64397)
+2025-03-04 21:42:57,734 - Server - INFO - Sent global model to client ('127.0.0.1', 64397)
+2025-03-04 21:42:57,991 - Server - INFO - Expecting 89073 bytes from client ('127.0.0.1', 64397)
+2025-03-04 21:42:57,991 - Server - ERROR - Error handling client ('127.0.0.1', 64397): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:43:07,994 - Server - INFO - Client connected from ('127.0.0.1', 64401)
+2025-03-04 21:43:07,997 - Server - INFO - Sent global model to client ('127.0.0.1', 64401)
+2025-03-04 21:43:08,382 - Server - INFO - Expecting 89094 bytes from client ('127.0.0.1', 64401)
+2025-03-04 21:43:08,382 - Server - ERROR - Error handling client ('127.0.0.1', 64401): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:43:18,386 - Server - INFO - Client connected from ('127.0.0.1', 64408)
+2025-03-04 21:43:18,392 - Server - INFO - Sent global model to client ('127.0.0.1', 64408)
+2025-03-04 21:43:18,673 - Server - INFO - Expecting 89081 bytes from client ('127.0.0.1', 64408)
+2025-03-04 21:43:18,674 - Server - ERROR - Error handling client ('127.0.0.1', 64408): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:43:28,677 - Server - INFO - Client connected from ('127.0.0.1', 64413)
+2025-03-04 21:43:28,680 - Server - INFO - Sent global model to client ('127.0.0.1', 64413)
+2025-03-04 21:43:28,933 - Server - INFO - Expecting 89064 bytes from client ('127.0.0.1', 64413)
+2025-03-04 21:43:28,933 - Server - ERROR - Error handling client ('127.0.0.1', 64413): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:43:38,937 - Server - INFO - Client connected from ('127.0.0.1', 64417)
+2025-03-04 21:43:38,941 - Server - INFO - Sent global model to client ('127.0.0.1', 64417)
+2025-03-04 21:43:39,208 - Server - INFO - Expecting 89056 bytes from client ('127.0.0.1', 64417)
+2025-03-04 21:43:39,208 - Server - ERROR - Error handling client ('127.0.0.1', 64417): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:43:49,210 - Server - INFO - Client connected from ('127.0.0.1', 64422)
+2025-03-04 21:43:49,213 - Server - INFO - Sent global model to client ('127.0.0.1', 64422)
+2025-03-04 21:43:49,456 - Server - INFO - Expecting 89100 bytes from client ('127.0.0.1', 64422)
+2025-03-04 21:43:49,457 - Server - ERROR - Error handling client ('127.0.0.1', 64422): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:43:59,460 - Server - INFO - Client connected from ('127.0.0.1', 64428)
+2025-03-04 21:43:59,463 - Server - INFO - Sent global model to client ('127.0.0.1', 64428)
+2025-03-04 21:43:59,697 - Server - INFO - Expecting 89087 bytes from client ('127.0.0.1', 64428)
+2025-03-04 21:43:59,697 - Server - ERROR - Error handling client ('127.0.0.1', 64428): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:44:09,699 - Server - INFO - Client connected from ('127.0.0.1', 64433)
+2025-03-04 21:44:09,702 - Server - INFO - Sent global model to client ('127.0.0.1', 64433)
+2025-03-04 21:44:09,946 - Server - INFO - Expecting 89152 bytes from client ('127.0.0.1', 64433)
+2025-03-04 21:44:09,946 - Server - ERROR - Error handling client ('127.0.0.1', 64433): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:44:19,948 - Server - INFO - Client connected from ('127.0.0.1', 64438)
+2025-03-04 21:44:19,950 - Server - INFO - Sent global model to client ('127.0.0.1', 64438)
+2025-03-04 21:44:20,170 - Server - INFO - Expecting 89128 bytes from client ('127.0.0.1', 64438)
+2025-03-04 21:44:20,170 - Server - ERROR - Error handling client ('127.0.0.1', 64438): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:44:30,173 - Server - INFO - Client connected from ('127.0.0.1', 64445)
+2025-03-04 21:44:30,176 - Server - INFO - Sent global model to client ('127.0.0.1', 64445)
+2025-03-04 21:44:30,397 - Server - INFO - Expecting 89097 bytes from client ('127.0.0.1', 64445)
+2025-03-04 21:44:30,397 - Server - ERROR - Error handling client ('127.0.0.1', 64445): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:44:40,401 - Server - INFO - Client connected from ('127.0.0.1', 64449)
+2025-03-04 21:44:40,404 - Server - INFO - Sent global model to client ('127.0.0.1', 64449)
+2025-03-04 21:44:40,764 - Server - INFO - Expecting 89095 bytes from client ('127.0.0.1', 64449)
+2025-03-04 21:44:40,764 - Server - ERROR - Error handling client ('127.0.0.1', 64449): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:44:50,767 - Server - INFO - Client connected from ('127.0.0.1', 64453)
+2025-03-04 21:44:50,770 - Server - INFO - Sent global model to client ('127.0.0.1', 64453)
+2025-03-04 21:44:51,013 - Server - INFO - Expecting 89084 bytes from client ('127.0.0.1', 64453)
+2025-03-04 21:44:51,013 - Server - ERROR - Error handling client ('127.0.0.1', 64453): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:45:01,017 - Server - INFO - Client connected from ('127.0.0.1', 64460)
+2025-03-04 21:45:01,020 - Server - INFO - Sent global model to client ('127.0.0.1', 64460)
+2025-03-04 21:45:01,276 - Server - INFO - Expecting 89047 bytes from client ('127.0.0.1', 64460)
+2025-03-04 21:45:01,276 - Server - ERROR - Error handling client ('127.0.0.1', 64460): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:45:11,278 - Server - INFO - Client connected from ('127.0.0.1', 64465)
+2025-03-04 21:45:11,280 - Server - INFO - Sent global model to client ('127.0.0.1', 64465)
+2025-03-04 21:45:11,500 - Server - INFO - Expecting 89138 bytes from client ('127.0.0.1', 64465)
+2025-03-04 21:45:11,501 - Server - ERROR - Error handling client ('127.0.0.1', 64465): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:45:21,504 - Server - INFO - Client connected from ('127.0.0.1', 64470)
+2025-03-04 21:45:21,507 - Server - INFO - Sent global model to client ('127.0.0.1', 64470)
+2025-03-04 21:45:21,757 - Server - INFO - Expecting 89107 bytes from client ('127.0.0.1', 64470)
+2025-03-04 21:45:21,758 - Server - ERROR - Error handling client ('127.0.0.1', 64470): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:45:31,760 - Server - INFO - Client connected from ('127.0.0.1', 64475)
+2025-03-04 21:45:31,762 - Server - INFO - Sent global model to client ('127.0.0.1', 64475)
+2025-03-04 21:45:31,982 - Server - INFO - Expecting 89118 bytes from client ('127.0.0.1', 64475)
+2025-03-04 21:45:31,983 - Server - ERROR - Error handling client ('127.0.0.1', 64475): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:45:41,986 - Server - INFO - Client connected from ('127.0.0.1', 64488)
+2025-03-04 21:45:41,989 - Server - INFO - Sent global model to client ('127.0.0.1', 64488)
+2025-03-04 21:45:42,222 - Server - INFO - Expecting 89121 bytes from client ('127.0.0.1', 64488)
+2025-03-04 21:45:42,222 - Server - ERROR - Error handling client ('127.0.0.1', 64488): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:45:52,225 - Server - INFO - Client connected from ('127.0.0.1', 64494)
+2025-03-04 21:45:52,228 - Server - INFO - Sent global model to client ('127.0.0.1', 64494)
+2025-03-04 21:45:52,467 - Server - INFO - Expecting 89137 bytes from client ('127.0.0.1', 64494)
+2025-03-04 21:45:52,467 - Server - ERROR - Error handling client ('127.0.0.1', 64494): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:46:02,471 - Server - INFO - Client connected from ('127.0.0.1', 64500)
+2025-03-04 21:46:02,474 - Server - INFO - Sent global model to client ('127.0.0.1', 64500)
+2025-03-04 21:46:02,720 - Server - INFO - Expecting 89082 bytes from client ('127.0.0.1', 64500)
+2025-03-04 21:46:02,720 - Server - ERROR - Error handling client ('127.0.0.1', 64500): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:46:12,723 - Server - INFO - Client connected from ('127.0.0.1', 64506)
+2025-03-04 21:46:12,726 - Server - INFO - Sent global model to client ('127.0.0.1', 64506)
+2025-03-04 21:46:12,981 - Server - INFO - Expecting 89048 bytes from client ('127.0.0.1', 64506)
+2025-03-04 21:46:12,981 - Server - ERROR - Error handling client ('127.0.0.1', 64506): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:46:22,983 - Server - INFO - Client connected from ('127.0.0.1', 64510)
+2025-03-04 21:46:22,986 - Server - INFO - Sent global model to client ('127.0.0.1', 64510)
+2025-03-04 21:46:23,200 - Server - INFO - Expecting 89119 bytes from client ('127.0.0.1', 64510)
+2025-03-04 21:46:23,200 - Server - ERROR - Error handling client ('127.0.0.1', 64510): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:46:33,203 - Server - INFO - Client connected from ('127.0.0.1', 64516)
+2025-03-04 21:46:33,205 - Server - INFO - Sent global model to client ('127.0.0.1', 64516)
+2025-03-04 21:46:33,430 - Server - INFO - Expecting 89139 bytes from client ('127.0.0.1', 64516)
+2025-03-04 21:46:33,431 - Server - ERROR - Error handling client ('127.0.0.1', 64516): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:46:43,434 - Server - INFO - Client connected from ('127.0.0.1', 64527)
+2025-03-04 21:46:43,437 - Server - INFO - Sent global model to client ('127.0.0.1', 64527)
+2025-03-04 21:46:43,688 - Server - INFO - Expecting 89104 bytes from client ('127.0.0.1', 64527)
+2025-03-04 21:46:43,689 - Server - ERROR - Error handling client ('127.0.0.1', 64527): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:46:53,691 - Server - INFO - Client connected from ('127.0.0.1', 64533)
+2025-03-04 21:46:53,696 - Server - INFO - Sent global model to client ('127.0.0.1', 64533)
+2025-03-04 21:46:54,073 - Server - INFO - Expecting 89135 bytes from client ('127.0.0.1', 64533)
+2025-03-04 21:46:54,073 - Server - ERROR - Error handling client ('127.0.0.1', 64533): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:47:04,076 - Server - INFO - Client connected from ('127.0.0.1', 64544)
+2025-03-04 21:47:04,079 - Server - INFO - Sent global model to client ('127.0.0.1', 64544)
+2025-03-04 21:47:04,347 - Server - INFO - Expecting 89088 bytes from client ('127.0.0.1', 64544)
+2025-03-04 21:47:04,347 - Server - ERROR - Error handling client ('127.0.0.1', 64544): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:47:14,350 - Server - INFO - Client connected from ('127.0.0.1', 64566)
+2025-03-04 21:47:14,352 - Server - INFO - Sent global model to client ('127.0.0.1', 64566)
+2025-03-04 21:47:14,572 - Server - INFO - Expecting 89104 bytes from client ('127.0.0.1', 64566)
+2025-03-04 21:47:14,573 - Server - ERROR - Error handling client ('127.0.0.1', 64566): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:47:24,575 - Server - INFO - Client connected from ('127.0.0.1', 64573)
+2025-03-04 21:47:24,578 - Server - INFO - Sent global model to client ('127.0.0.1', 64573)
+2025-03-04 21:47:24,844 - Server - INFO - Expecting 89096 bytes from client ('127.0.0.1', 64573)
+2025-03-04 21:47:24,844 - Server - ERROR - Error handling client ('127.0.0.1', 64573): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:47:34,847 - Server - INFO - Client connected from ('127.0.0.1', 64578)
+2025-03-04 21:47:34,850 - Server - INFO - Sent global model to client ('127.0.0.1', 64578)
+2025-03-04 21:47:35,082 - Server - INFO - Expecting 89040 bytes from client ('127.0.0.1', 64578)
+2025-03-04 21:47:35,082 - Server - ERROR - Error handling client ('127.0.0.1', 64578): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:47:45,085 - Server - INFO - Client connected from ('127.0.0.1', 64582)
+2025-03-04 21:47:45,088 - Server - INFO - Sent global model to client ('127.0.0.1', 64582)
+2025-03-04 21:47:45,311 - Server - INFO - Expecting 89107 bytes from client ('127.0.0.1', 64582)
+2025-03-04 21:47:45,311 - Server - ERROR - Error handling client ('127.0.0.1', 64582): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:47:55,314 - Server - INFO - Client connected from ('127.0.0.1', 64591)
+2025-03-04 21:47:55,317 - Server - INFO - Sent global model to client ('127.0.0.1', 64591)
+2025-03-04 21:47:55,580 - Server - INFO - Expecting 89113 bytes from client ('127.0.0.1', 64591)
+2025-03-04 21:47:55,580 - Server - ERROR - Error handling client ('127.0.0.1', 64591): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:48:05,583 - Server - INFO - Client connected from ('127.0.0.1', 64595)
+2025-03-04 21:48:05,586 - Server - INFO - Sent global model to client ('127.0.0.1', 64595)
+2025-03-04 21:48:05,803 - Server - INFO - Expecting 89098 bytes from client ('127.0.0.1', 64595)
+2025-03-04 21:48:05,804 - Server - ERROR - Error handling client ('127.0.0.1', 64595): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:48:15,806 - Server - INFO - Client connected from ('127.0.0.1', 64601)
+2025-03-04 21:48:15,809 - Server - INFO - Sent global model to client ('127.0.0.1', 64601)
+2025-03-04 21:48:16,035 - Server - INFO - Expecting 89096 bytes from client ('127.0.0.1', 64601)
+2025-03-04 21:48:16,035 - Server - ERROR - Error handling client ('127.0.0.1', 64601): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:48:26,039 - Server - INFO - Client connected from ('127.0.0.1', 64606)
+2025-03-04 21:48:26,041 - Server - INFO - Sent global model to client ('127.0.0.1', 64606)
+2025-03-04 21:48:26,402 - Server - INFO - Expecting 89045 bytes from client ('127.0.0.1', 64606)
+2025-03-04 21:48:26,402 - Server - ERROR - Error handling client ('127.0.0.1', 64606): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:48:36,404 - Server - INFO - Client connected from ('127.0.0.1', 64613)
+2025-03-04 21:48:36,406 - Server - INFO - Sent global model to client ('127.0.0.1', 64613)
+2025-03-04 21:48:36,646 - Server - INFO - Expecting 89024 bytes from client ('127.0.0.1', 64613)
+2025-03-04 21:48:36,646 - Server - ERROR - Error handling client ('127.0.0.1', 64613): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:48:46,650 - Server - INFO - Client connected from ('127.0.0.1', 64618)
+2025-03-04 21:48:46,652 - Server - INFO - Sent global model to client ('127.0.0.1', 64618)
+2025-03-04 21:48:46,877 - Server - INFO - Expecting 89056 bytes from client ('127.0.0.1', 64618)
+2025-03-04 21:48:46,878 - Server - ERROR - Error handling client ('127.0.0.1', 64618): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:48:56,880 - Server - INFO - Client connected from ('127.0.0.1', 64626)
+2025-03-04 21:48:56,882 - Server - INFO - Sent global model to client ('127.0.0.1', 64626)
+2025-03-04 21:48:57,122 - Server - INFO - Expecting 89116 bytes from client ('127.0.0.1', 64626)
+2025-03-04 21:48:57,122 - Server - ERROR - Error handling client ('127.0.0.1', 64626): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:49:07,124 - Server - INFO - Client connected from ('127.0.0.1', 64631)
+2025-03-04 21:49:07,129 - Server - INFO - Sent global model to client ('127.0.0.1', 64631)
+2025-03-04 21:49:07,369 - Server - INFO - Expecting 89079 bytes from client ('127.0.0.1', 64631)
+2025-03-04 21:49:07,369 - Server - ERROR - Error handling client ('127.0.0.1', 64631): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:49:17,371 - Server - INFO - Client connected from ('127.0.0.1', 64636)
+2025-03-04 21:49:17,373 - Server - INFO - Sent global model to client ('127.0.0.1', 64636)
+2025-03-04 21:49:17,589 - Server - INFO - Expecting 89125 bytes from client ('127.0.0.1', 64636)
+2025-03-04 21:49:17,589 - Server - ERROR - Error handling client ('127.0.0.1', 64636): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:49:27,592 - Server - INFO - Client connected from ('127.0.0.1', 64643)
+2025-03-04 21:49:27,597 - Server - INFO - Sent global model to client ('127.0.0.1', 64643)
+2025-03-04 21:49:27,825 - Server - INFO - Expecting 89100 bytes from client ('127.0.0.1', 64643)
+2025-03-04 21:49:27,826 - Server - ERROR - Error handling client ('127.0.0.1', 64643): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:49:37,829 - Server - INFO - Client connected from ('127.0.0.1', 64647)
+2025-03-04 21:49:37,832 - Server - INFO - Sent global model to client ('127.0.0.1', 64647)
+2025-03-04 21:49:38,071 - Server - INFO - Expecting 89093 bytes from client ('127.0.0.1', 64647)
+2025-03-04 21:49:38,071 - Server - ERROR - Error handling client ('127.0.0.1', 64647): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:49:48,073 - Server - INFO - Client connected from ('127.0.0.1', 64651)
+2025-03-04 21:49:48,075 - Server - INFO - Sent global model to client ('127.0.0.1', 64651)
+2025-03-04 21:49:48,297 - Server - INFO - Expecting 89133 bytes from client ('127.0.0.1', 64651)
+2025-03-04 21:49:48,297 - Server - ERROR - Error handling client ('127.0.0.1', 64651): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:49:58,300 - Server - INFO - Client connected from ('127.0.0.1', 64658)
+2025-03-04 21:49:58,302 - Server - INFO - Sent global model to client ('127.0.0.1', 64658)
+2025-03-04 21:49:58,557 - Server - INFO - Expecting 89119 bytes from client ('127.0.0.1', 64658)
+2025-03-04 21:49:58,557 - Server - ERROR - Error handling client ('127.0.0.1', 64658): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:50:08,561 - Server - INFO - Client connected from ('127.0.0.1', 64662)
+2025-03-04 21:50:08,564 - Server - INFO - Sent global model to client ('127.0.0.1', 64662)
+2025-03-04 21:50:08,795 - Server - INFO - Expecting 89119 bytes from client ('127.0.0.1', 64662)
+2025-03-04 21:50:08,795 - Server - ERROR - Error handling client ('127.0.0.1', 64662): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:50:18,798 - Server - INFO - Client connected from ('127.0.0.1', 64668)
+2025-03-04 21:50:18,802 - Server - INFO - Sent global model to client ('127.0.0.1', 64668)
+2025-03-04 21:50:19,180 - Server - INFO - Expecting 89077 bytes from client ('127.0.0.1', 64668)
+2025-03-04 21:50:19,180 - Server - ERROR - Error handling client ('127.0.0.1', 64668): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:50:29,183 - Server - INFO - Client connected from ('127.0.0.1', 64673)
+2025-03-04 21:50:29,185 - Server - INFO - Sent global model to client ('127.0.0.1', 64673)
+2025-03-04 21:50:29,433 - Server - INFO - Expecting 89132 bytes from client ('127.0.0.1', 64673)
+2025-03-04 21:50:29,433 - Server - ERROR - Error handling client ('127.0.0.1', 64673): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:50:39,436 - Server - INFO - Client connected from ('127.0.0.1', 64680)
+2025-03-04 21:50:39,439 - Server - INFO - Sent global model to client ('127.0.0.1', 64680)
+2025-03-04 21:50:39,693 - Server - INFO - Expecting 89086 bytes from client ('127.0.0.1', 64680)
+2025-03-04 21:50:39,693 - Server - ERROR - Error handling client ('127.0.0.1', 64680): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:50:49,696 - Server - INFO - Client connected from ('127.0.0.1', 64689)
+2025-03-04 21:50:49,699 - Server - INFO - Sent global model to client ('127.0.0.1', 64689)
+2025-03-04 21:50:49,913 - Server - INFO - Expecting 89086 bytes from client ('127.0.0.1', 64689)
+2025-03-04 21:50:49,914 - Server - ERROR - Error handling client ('127.0.0.1', 64689): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:50:59,917 - Server - INFO - Client connected from ('127.0.0.1', 64695)
+2025-03-04 21:50:59,919 - Server - INFO - Sent global model to client ('127.0.0.1', 64695)
+2025-03-04 21:51:00,144 - Server - INFO - Expecting 89124 bytes from client ('127.0.0.1', 64695)
+2025-03-04 21:51:00,144 - Server - ERROR - Error handling client ('127.0.0.1', 64695): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:51:10,147 - Server - INFO - Client connected from ('127.0.0.1', 64700)
+2025-03-04 21:51:10,149 - Server - INFO - Sent global model to client ('127.0.0.1', 64700)
+2025-03-04 21:51:10,369 - Server - INFO - Expecting 89038 bytes from client ('127.0.0.1', 64700)
+2025-03-04 21:51:10,370 - Server - ERROR - Error handling client ('127.0.0.1', 64700): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:51:20,372 - Server - INFO - Client connected from ('127.0.0.1', 64710)
+2025-03-04 21:51:20,375 - Server - INFO - Sent global model to client ('127.0.0.1', 64710)
+2025-03-04 21:51:20,598 - Server - INFO - Expecting 89092 bytes from client ('127.0.0.1', 64710)
+2025-03-04 21:51:20,598 - Server - ERROR - Error handling client ('127.0.0.1', 64710): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:51:30,601 - Server - INFO - Client connected from ('127.0.0.1', 64715)
+2025-03-04 21:51:30,603 - Server - INFO - Sent global model to client ('127.0.0.1', 64715)
+2025-03-04 21:51:30,818 - Server - INFO - Expecting 89070 bytes from client ('127.0.0.1', 64715)
+2025-03-04 21:51:30,818 - Server - ERROR - Error handling client ('127.0.0.1', 64715): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:51:40,821 - Server - INFO - Client connected from ('127.0.0.1', 64720)
+2025-03-04 21:51:40,824 - Server - INFO - Sent global model to client ('127.0.0.1', 64720)
+2025-03-04 21:51:41,051 - Server - INFO - Expecting 89099 bytes from client ('127.0.0.1', 64720)
+2025-03-04 21:51:41,051 - Server - ERROR - Error handling client ('127.0.0.1', 64720): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:51:51,054 - Server - INFO - Client connected from ('127.0.0.1', 64724)
+2025-03-04 21:51:51,056 - Server - INFO - Sent global model to client ('127.0.0.1', 64724)
+2025-03-04 21:51:51,260 - Server - INFO - Expecting 89136 bytes from client ('127.0.0.1', 64724)
+2025-03-04 21:51:51,261 - Server - ERROR - Error handling client ('127.0.0.1', 64724): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:52:01,263 - Server - INFO - Client connected from ('127.0.0.1', 64732)
+2025-03-04 21:52:01,265 - Server - INFO - Sent global model to client ('127.0.0.1', 64732)
+2025-03-04 21:52:01,466 - Server - INFO - Expecting 89086 bytes from client ('127.0.0.1', 64732)
+2025-03-04 21:52:01,466 - Server - ERROR - Error handling client ('127.0.0.1', 64732): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:52:11,469 - Server - INFO - Client connected from ('127.0.0.1', 64737)
+2025-03-04 21:52:11,471 - Server - INFO - Sent global model to client ('127.0.0.1', 64737)
+2025-03-04 21:52:11,677 - Server - INFO - Expecting 89119 bytes from client ('127.0.0.1', 64737)
+2025-03-04 21:52:11,677 - Server - ERROR - Error handling client ('127.0.0.1', 64737): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:52:21,686 - Server - INFO - Client connected from ('127.0.0.1', 64742)
+2025-03-04 21:52:21,693 - Server - INFO - Sent global model to client ('127.0.0.1', 64742)
+2025-03-04 21:52:21,920 - Server - INFO - Expecting 89059 bytes from client ('127.0.0.1', 64742)
+2025-03-04 21:52:21,921 - Server - ERROR - Error handling client ('127.0.0.1', 64742): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:52:31,924 - Server - INFO - Client connected from ('127.0.0.1', 64748)
+2025-03-04 21:52:31,927 - Server - INFO - Sent global model to client ('127.0.0.1', 64748)
+2025-03-04 21:52:32,134 - Server - INFO - Expecting 89098 bytes from client ('127.0.0.1', 64748)
+2025-03-04 21:52:32,134 - Server - ERROR - Error handling client ('127.0.0.1', 64748): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:52:42,137 - Server - INFO - Client connected from ('127.0.0.1', 64752)
+2025-03-04 21:52:42,140 - Server - INFO - Sent global model to client ('127.0.0.1', 64752)
+2025-03-04 21:52:42,355 - Server - INFO - Expecting 89082 bytes from client ('127.0.0.1', 64752)
+2025-03-04 21:52:42,355 - Server - ERROR - Error handling client ('127.0.0.1', 64752): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:52:52,358 - Server - INFO - Client connected from ('127.0.0.1', 64758)
+2025-03-04 21:52:52,361 - Server - INFO - Sent global model to client ('127.0.0.1', 64758)
+2025-03-04 21:52:52,571 - Server - INFO - Expecting 89150 bytes from client ('127.0.0.1', 64758)
+2025-03-04 21:52:52,571 - Server - ERROR - Error handling client ('127.0.0.1', 64758): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:53:02,573 - Server - INFO - Client connected from ('127.0.0.1', 64766)
+2025-03-04 21:53:02,576 - Server - INFO - Sent global model to client ('127.0.0.1', 64766)
+2025-03-04 21:53:02,801 - Server - INFO - Expecting 89041 bytes from client ('127.0.0.1', 64766)
+2025-03-04 21:53:02,802 - Server - ERROR - Error handling client ('127.0.0.1', 64766): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:53:12,804 - Server - INFO - Client connected from ('127.0.0.1', 64771)
+2025-03-04 21:53:12,806 - Server - INFO - Sent global model to client ('127.0.0.1', 64771)
+2025-03-04 21:53:13,009 - Server - INFO - Expecting 89146 bytes from client ('127.0.0.1', 64771)
+2025-03-04 21:53:13,009 - Server - ERROR - Error handling client ('127.0.0.1', 64771): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:53:23,012 - Server - INFO - Client connected from ('127.0.0.1', 64776)
+2025-03-04 21:53:23,014 - Server - INFO - Sent global model to client ('127.0.0.1', 64776)
+2025-03-04 21:53:23,214 - Server - INFO - Expecting 89074 bytes from client ('127.0.0.1', 64776)
+2025-03-04 21:53:23,214 - Server - ERROR - Error handling client ('127.0.0.1', 64776): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:53:33,217 - Server - INFO - Client connected from ('127.0.0.1', 64781)
+2025-03-04 21:53:33,219 - Server - INFO - Sent global model to client ('127.0.0.1', 64781)
+2025-03-04 21:53:33,428 - Server - INFO - Expecting 89073 bytes from client ('127.0.0.1', 64781)
+2025-03-04 21:53:33,429 - Server - ERROR - Error handling client ('127.0.0.1', 64781): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:53:43,432 - Server - INFO - Client connected from ('127.0.0.1', 64786)
+2025-03-04 21:53:43,435 - Server - INFO - Sent global model to client ('127.0.0.1', 64786)
+2025-03-04 21:53:43,679 - Server - INFO - Expecting 89140 bytes from client ('127.0.0.1', 64786)
+2025-03-04 21:53:43,680 - Server - ERROR - Error handling client ('127.0.0.1', 64786): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:53:53,682 - Server - INFO - Client connected from ('127.0.0.1', 64796)
+2025-03-04 21:53:53,684 - Server - INFO - Sent global model to client ('127.0.0.1', 64796)
+2025-03-04 21:53:53,933 - Server - INFO - Expecting 89084 bytes from client ('127.0.0.1', 64796)
+2025-03-04 21:53:53,934 - Server - ERROR - Error handling client ('127.0.0.1', 64796): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:54:03,936 - Server - INFO - Client connected from ('127.0.0.1', 64802)
+2025-03-04 21:54:03,938 - Server - INFO - Sent global model to client ('127.0.0.1', 64802)
+2025-03-04 21:54:04,139 - Server - INFO - Expecting 89109 bytes from client ('127.0.0.1', 64802)
+2025-03-04 21:54:04,139 - Server - ERROR - Error handling client ('127.0.0.1', 64802): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:54:14,143 - Server - INFO - Client connected from ('127.0.0.1', 64808)
+2025-03-04 21:54:14,145 - Server - INFO - Sent global model to client ('127.0.0.1', 64808)
+2025-03-04 21:54:14,354 - Server - INFO - Expecting 89023 bytes from client ('127.0.0.1', 64808)
+2025-03-04 21:54:14,354 - Server - ERROR - Error handling client ('127.0.0.1', 64808): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:54:24,356 - Server - INFO - Client connected from ('127.0.0.1', 64812)
+2025-03-04 21:54:24,358 - Server - INFO - Sent global model to client ('127.0.0.1', 64812)
+2025-03-04 21:54:24,567 - Server - INFO - Expecting 89119 bytes from client ('127.0.0.1', 64812)
+2025-03-04 21:54:24,567 - Server - ERROR - Error handling client ('127.0.0.1', 64812): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:54:34,570 - Server - INFO - Client connected from ('127.0.0.1', 64819)
+2025-03-04 21:54:34,572 - Server - INFO - Sent global model to client ('127.0.0.1', 64819)
+2025-03-04 21:54:34,796 - Server - INFO - Expecting 89060 bytes from client ('127.0.0.1', 64819)
+2025-03-04 21:54:34,797 - Server - ERROR - Error handling client ('127.0.0.1', 64819): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:54:44,800 - Server - INFO - Client connected from ('127.0.0.1', 64823)
+2025-03-04 21:54:44,802 - Server - INFO - Sent global model to client ('127.0.0.1', 64823)
+2025-03-04 21:54:45,006 - Server - INFO - Expecting 89119 bytes from client ('127.0.0.1', 64823)
+2025-03-04 21:54:45,007 - Server - ERROR - Error handling client ('127.0.0.1', 64823): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:54:55,009 - Server - INFO - Client connected from ('127.0.0.1', 64829)
+2025-03-04 21:54:55,011 - Server - INFO - Sent global model to client ('127.0.0.1', 64829)
+2025-03-04 21:54:55,216 - Server - INFO - Expecting 89087 bytes from client ('127.0.0.1', 64829)
+2025-03-04 21:54:55,216 - Server - ERROR - Error handling client ('127.0.0.1', 64829): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:55:05,219 - Server - INFO - Client connected from ('127.0.0.1', 64834)
+2025-03-04 21:55:05,221 - Server - INFO - Sent global model to client ('127.0.0.1', 64834)
+2025-03-04 21:55:05,430 - Server - INFO - Expecting 89088 bytes from client ('127.0.0.1', 64834)
+2025-03-04 21:55:05,430 - Server - ERROR - Error handling client ('127.0.0.1', 64834): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:55:15,433 - Server - INFO - Client connected from ('127.0.0.1', 64839)
+2025-03-04 21:55:15,436 - Server - INFO - Sent global model to client ('127.0.0.1', 64839)
+2025-03-04 21:55:15,650 - Server - INFO - Expecting 89085 bytes from client ('127.0.0.1', 64839)
+2025-03-04 21:55:15,650 - Server - ERROR - Error handling client ('127.0.0.1', 64839): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:55:25,653 - Server - INFO - Client connected from ('127.0.0.1', 64845)
+2025-03-04 21:55:25,655 - Server - INFO - Sent global model to client ('127.0.0.1', 64845)
+2025-03-04 21:55:25,863 - Server - INFO - Expecting 89095 bytes from client ('127.0.0.1', 64845)
+2025-03-04 21:55:25,863 - Server - ERROR - Error handling client ('127.0.0.1', 64845): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:55:35,866 - Server - INFO - Client connected from ('127.0.0.1', 64849)
+2025-03-04 21:55:35,869 - Server - INFO - Sent global model to client ('127.0.0.1', 64849)
+2025-03-04 21:55:36,083 - Server - INFO - Expecting 89135 bytes from client ('127.0.0.1', 64849)
+2025-03-04 21:55:36,083 - Server - ERROR - Error handling client ('127.0.0.1', 64849): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:55:46,086 - Server - INFO - Client connected from ('127.0.0.1', 64863)
+2025-03-04 21:55:46,088 - Server - INFO - Sent global model to client ('127.0.0.1', 64863)
+2025-03-04 21:55:46,297 - Server - INFO - Expecting 89112 bytes from client ('127.0.0.1', 64863)
+2025-03-04 21:55:46,297 - Server - ERROR - Error handling client ('127.0.0.1', 64863): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:55:56,299 - Server - INFO - Client connected from ('127.0.0.1', 64870)
+2025-03-04 21:55:56,301 - Server - INFO - Sent global model to client ('127.0.0.1', 64870)
+2025-03-04 21:55:56,507 - Server - INFO - Expecting 89095 bytes from client ('127.0.0.1', 64870)
+2025-03-04 21:55:56,507 - Server - ERROR - Error handling client ('127.0.0.1', 64870): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:56:06,510 - Server - INFO - Client connected from ('127.0.0.1', 64874)
+2025-03-04 21:56:06,513 - Server - INFO - Sent global model to client ('127.0.0.1', 64874)
+2025-03-04 21:56:06,722 - Server - INFO - Expecting 89086 bytes from client ('127.0.0.1', 64874)
+2025-03-04 21:56:06,722 - Server - ERROR - Error handling client ('127.0.0.1', 64874): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:56:16,725 - Server - INFO - Client connected from ('127.0.0.1', 64879)
+2025-03-04 21:56:16,728 - Server - INFO - Sent global model to client ('127.0.0.1', 64879)
+2025-03-04 21:56:16,946 - Server - INFO - Expecting 89157 bytes from client ('127.0.0.1', 64879)
+2025-03-04 21:56:16,946 - Server - ERROR - Error handling client ('127.0.0.1', 64879): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:56:26,948 - Server - INFO - Client connected from ('127.0.0.1', 64885)
+2025-03-04 21:56:26,950 - Server - INFO - Sent global model to client ('127.0.0.1', 64885)
+2025-03-04 21:56:27,156 - Server - INFO - Expecting 89134 bytes from client ('127.0.0.1', 64885)
+2025-03-04 21:56:27,156 - Server - ERROR - Error handling client ('127.0.0.1', 64885): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:56:37,159 - Server - INFO - Client connected from ('127.0.0.1', 64889)
+2025-03-04 21:56:37,162 - Server - INFO - Sent global model to client ('127.0.0.1', 64889)
+2025-03-04 21:56:37,363 - Server - INFO - Expecting 89046 bytes from client ('127.0.0.1', 64889)
+2025-03-04 21:56:37,363 - Server - ERROR - Error handling client ('127.0.0.1', 64889): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:56:47,366 - Server - INFO - Client connected from ('127.0.0.1', 64902)
+2025-03-04 21:56:47,368 - Server - INFO - Sent global model to client ('127.0.0.1', 64902)
+2025-03-04 21:56:47,593 - Server - INFO - Expecting 89129 bytes from client ('127.0.0.1', 64902)
+2025-03-04 21:56:47,594 - Server - ERROR - Error handling client ('127.0.0.1', 64902): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:56:57,597 - Server - INFO - Client connected from ('127.0.0.1', 64913)
+2025-03-04 21:56:57,599 - Server - INFO - Sent global model to client ('127.0.0.1', 64913)
+2025-03-04 21:56:57,805 - Server - INFO - Expecting 89077 bytes from client ('127.0.0.1', 64913)
+2025-03-04 21:56:57,806 - Server - ERROR - Error handling client ('127.0.0.1', 64913): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:57:07,809 - Server - INFO - Client connected from ('127.0.0.1', 64920)
+2025-03-04 21:57:07,811 - Server - INFO - Sent global model to client ('127.0.0.1', 64920)
+2025-03-04 21:57:08,019 - Server - INFO - Expecting 89078 bytes from client ('127.0.0.1', 64920)
+2025-03-04 21:57:08,019 - Server - ERROR - Error handling client ('127.0.0.1', 64920): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:57:18,021 - Server - INFO - Client connected from ('127.0.0.1', 64934)
+2025-03-04 21:57:18,023 - Server - INFO - Sent global model to client ('127.0.0.1', 64934)
+2025-03-04 21:57:18,238 - Server - INFO - Expecting 89061 bytes from client ('127.0.0.1', 64934)
+2025-03-04 21:57:18,238 - Server - ERROR - Error handling client ('127.0.0.1', 64934): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:57:28,241 - Server - INFO - Client connected from ('127.0.0.1', 64939)
+2025-03-04 21:57:28,244 - Server - INFO - Sent global model to client ('127.0.0.1', 64939)
+2025-03-04 21:57:28,458 - Server - INFO - Expecting 88994 bytes from client ('127.0.0.1', 64939)
+2025-03-04 21:57:28,458 - Server - ERROR - Error handling client ('127.0.0.1', 64939): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:57:38,461 - Server - INFO - Client connected from ('127.0.0.1', 64944)
+2025-03-04 21:57:38,464 - Server - INFO - Sent global model to client ('127.0.0.1', 64944)
+2025-03-04 21:57:38,669 - Server - INFO - Expecting 89085 bytes from client ('127.0.0.1', 64944)
+2025-03-04 21:57:38,669 - Server - ERROR - Error handling client ('127.0.0.1', 64944): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:57:48,672 - Server - INFO - Client connected from ('127.0.0.1', 64948)
+2025-03-04 21:57:48,674 - Server - INFO - Sent global model to client ('127.0.0.1', 64948)
+2025-03-04 21:57:48,928 - Server - INFO - Expecting 89115 bytes from client ('127.0.0.1', 64948)
+2025-03-04 21:57:48,929 - Server - ERROR - Error handling client ('127.0.0.1', 64948): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:57:58,931 - Server - INFO - Client connected from ('127.0.0.1', 64959)
+2025-03-04 21:57:58,933 - Server - INFO - Sent global model to client ('127.0.0.1', 64959)
+2025-03-04 21:57:59,142 - Server - INFO - Expecting 89105 bytes from client ('127.0.0.1', 64959)
+2025-03-04 21:57:59,143 - Server - ERROR - Error handling client ('127.0.0.1', 64959): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:58:09,146 - Server - INFO - Client connected from ('127.0.0.1', 64965)
+2025-03-04 21:58:09,148 - Server - INFO - Sent global model to client ('127.0.0.1', 64965)
+2025-03-04 21:58:09,357 - Server - INFO - Expecting 89096 bytes from client ('127.0.0.1', 64965)
+2025-03-04 21:58:09,357 - Server - ERROR - Error handling client ('127.0.0.1', 64965): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:58:19,359 - Server - INFO - Client connected from ('127.0.0.1', 64970)
+2025-03-04 21:58:19,361 - Server - INFO - Sent global model to client ('127.0.0.1', 64970)
+2025-03-04 21:58:19,573 - Server - INFO - Expecting 89115 bytes from client ('127.0.0.1', 64970)
+2025-03-04 21:58:19,573 - Server - ERROR - Error handling client ('127.0.0.1', 64970): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:58:29,576 - Server - INFO - Client connected from ('127.0.0.1', 64979)
+2025-03-04 21:58:29,579 - Server - INFO - Sent global model to client ('127.0.0.1', 64979)
+2025-03-04 21:58:29,798 - Server - INFO - Expecting 89162 bytes from client ('127.0.0.1', 64979)
+2025-03-04 21:58:29,798 - Server - ERROR - Error handling client ('127.0.0.1', 64979): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:58:39,801 - Server - INFO - Client connected from ('127.0.0.1', 64983)
+2025-03-04 21:58:39,803 - Server - INFO - Sent global model to client ('127.0.0.1', 64983)
+2025-03-04 21:58:40,079 - Server - INFO - Expecting 89076 bytes from client ('127.0.0.1', 64983)
+2025-03-04 21:58:40,080 - Server - ERROR - Error handling client ('127.0.0.1', 64983): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:58:50,083 - Server - INFO - Client connected from ('127.0.0.1', 64987)
+2025-03-04 21:58:50,085 - Server - INFO - Sent global model to client ('127.0.0.1', 64987)
+2025-03-04 21:58:50,294 - Server - INFO - Expecting 89122 bytes from client ('127.0.0.1', 64987)
+2025-03-04 21:58:50,294 - Server - ERROR - Error handling client ('127.0.0.1', 64987): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:59:00,297 - Server - INFO - Client connected from ('127.0.0.1', 64996)
+2025-03-04 21:59:00,299 - Server - INFO - Sent global model to client ('127.0.0.1', 64996)
+2025-03-04 21:59:00,536 - Server - INFO - Expecting 89107 bytes from client ('127.0.0.1', 64996)
+2025-03-04 21:59:00,536 - Server - ERROR - Error handling client ('127.0.0.1', 64996): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:59:10,538 - Server - INFO - Client connected from ('127.0.0.1', 65002)
+2025-03-04 21:59:10,540 - Server - INFO - Sent global model to client ('127.0.0.1', 65002)
+2025-03-04 21:59:10,747 - Server - INFO - Expecting 89086 bytes from client ('127.0.0.1', 65002)
+2025-03-04 21:59:10,748 - Server - ERROR - Error handling client ('127.0.0.1', 65002): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:59:20,750 - Server - INFO - Client connected from ('127.0.0.1', 65010)
+2025-03-04 21:59:20,753 - Server - INFO - Sent global model to client ('127.0.0.1', 65010)
+2025-03-04 21:59:20,956 - Server - INFO - Expecting 89131 bytes from client ('127.0.0.1', 65010)
+2025-03-04 21:59:20,957 - Server - ERROR - Error handling client ('127.0.0.1', 65010): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:59:30,960 - Server - INFO - Client connected from ('127.0.0.1', 65018)
+2025-03-04 21:59:30,962 - Server - INFO - Sent global model to client ('127.0.0.1', 65018)
+2025-03-04 21:59:31,173 - Server - INFO - Expecting 89095 bytes from client ('127.0.0.1', 65018)
+2025-03-04 21:59:31,174 - Server - ERROR - Error handling client ('127.0.0.1', 65018): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:59:41,177 - Server - INFO - Client connected from ('127.0.0.1', 65022)
+2025-03-04 21:59:41,180 - Server - INFO - Sent global model to client ('127.0.0.1', 65022)
+2025-03-04 21:59:41,397 - Server - INFO - Expecting 89147 bytes from client ('127.0.0.1', 65022)
+2025-03-04 21:59:41,397 - Server - ERROR - Error handling client ('127.0.0.1', 65022): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 21:59:51,400 - Server - INFO - Client connected from ('127.0.0.1', 65027)
+2025-03-04 21:59:51,402 - Server - INFO - Sent global model to client ('127.0.0.1', 65027)
+2025-03-04 21:59:51,611 - Server - INFO - Expecting 89103 bytes from client ('127.0.0.1', 65027)
+2025-03-04 21:59:51,612 - Server - ERROR - Error handling client ('127.0.0.1', 65027): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:00:01,614 - Server - INFO - Client connected from ('127.0.0.1', 65033)
+2025-03-04 22:00:01,616 - Server - INFO - Sent global model to client ('127.0.0.1', 65033)
+2025-03-04 22:00:01,820 - Server - INFO - Expecting 89082 bytes from client ('127.0.0.1', 65033)
+2025-03-04 22:00:01,820 - Server - ERROR - Error handling client ('127.0.0.1', 65033): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:00:11,823 - Server - INFO - Client connected from ('127.0.0.1', 65039)
+2025-03-04 22:00:11,825 - Server - INFO - Sent global model to client ('127.0.0.1', 65039)
+2025-03-04 22:00:12,041 - Server - INFO - Expecting 89127 bytes from client ('127.0.0.1', 65039)
+2025-03-04 22:00:12,042 - Server - ERROR - Error handling client ('127.0.0.1', 65039): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:00:22,044 - Server - INFO - Client connected from ('127.0.0.1', 65043)
+2025-03-04 22:00:22,047 - Server - INFO - Sent global model to client ('127.0.0.1', 65043)
+2025-03-04 22:00:22,253 - Server - INFO - Expecting 89110 bytes from client ('127.0.0.1', 65043)
+2025-03-04 22:00:22,253 - Server - ERROR - Error handling client ('127.0.0.1', 65043): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:00:32,256 - Server - INFO - Client connected from ('127.0.0.1', 65049)
+2025-03-04 22:00:32,258 - Server - INFO - Sent global model to client ('127.0.0.1', 65049)
+2025-03-04 22:00:32,475 - Server - INFO - Expecting 89019 bytes from client ('127.0.0.1', 65049)
+2025-03-04 22:00:32,475 - Server - ERROR - Error handling client ('127.0.0.1', 65049): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:00:42,478 - Server - INFO - Client connected from ('127.0.0.1', 65061)
+2025-03-04 22:00:42,481 - Server - INFO - Sent global model to client ('127.0.0.1', 65061)
+2025-03-04 22:00:42,692 - Server - INFO - Expecting 89123 bytes from client ('127.0.0.1', 65061)
+2025-03-04 22:00:42,692 - Server - ERROR - Error handling client ('127.0.0.1', 65061): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:00:52,695 - Server - INFO - Client connected from ('127.0.0.1', 65065)
+2025-03-04 22:00:52,697 - Server - INFO - Sent global model to client ('127.0.0.1', 65065)
+2025-03-04 22:00:52,912 - Server - INFO - Expecting 89083 bytes from client ('127.0.0.1', 65065)
+2025-03-04 22:00:52,912 - Server - ERROR - Error handling client ('127.0.0.1', 65065): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:01:02,915 - Server - INFO - Client connected from ('127.0.0.1', 65072)
+2025-03-04 22:01:02,917 - Server - INFO - Sent global model to client ('127.0.0.1', 65072)
+2025-03-04 22:01:03,147 - Server - INFO - Expecting 89092 bytes from client ('127.0.0.1', 65072)
+2025-03-04 22:01:03,147 - Server - ERROR - Error handling client ('127.0.0.1', 65072): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:01:13,150 - Server - INFO - Client connected from ('127.0.0.1', 65078)
+2025-03-04 22:01:13,152 - Server - INFO - Sent global model to client ('127.0.0.1', 65078)
+2025-03-04 22:01:13,394 - Server - INFO - Expecting 89070 bytes from client ('127.0.0.1', 65078)
+2025-03-04 22:01:13,395 - Server - ERROR - Error handling client ('127.0.0.1', 65078): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:01:23,397 - Server - INFO - Client connected from ('127.0.0.1', 65084)
+2025-03-04 22:01:23,399 - Server - INFO - Sent global model to client ('127.0.0.1', 65084)
+2025-03-04 22:01:23,608 - Server - INFO - Expecting 89109 bytes from client ('127.0.0.1', 65084)
+2025-03-04 22:01:23,609 - Server - ERROR - Error handling client ('127.0.0.1', 65084): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:01:33,612 - Server - INFO - Client connected from ('127.0.0.1', 65090)
+2025-03-04 22:01:33,616 - Server - INFO - Sent global model to client ('127.0.0.1', 65090)
+2025-03-04 22:01:33,826 - Server - INFO - Expecting 89051 bytes from client ('127.0.0.1', 65090)
+2025-03-04 22:01:33,827 - Server - ERROR - Error handling client ('127.0.0.1', 65090): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:01:43,829 - Server - INFO - Client connected from ('127.0.0.1', 65094)
+2025-03-04 22:01:43,832 - Server - INFO - Sent global model to client ('127.0.0.1', 65094)
+2025-03-04 22:01:44,051 - Server - INFO - Expecting 89095 bytes from client ('127.0.0.1', 65094)
+2025-03-04 22:01:44,051 - Server - ERROR - Error handling client ('127.0.0.1', 65094): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:01:54,054 - Server - INFO - Client connected from ('127.0.0.1', 65099)
+2025-03-04 22:01:54,056 - Server - INFO - Sent global model to client ('127.0.0.1', 65099)
+2025-03-04 22:01:54,275 - Server - INFO - Expecting 89046 bytes from client ('127.0.0.1', 65099)
+2025-03-04 22:01:54,275 - Server - ERROR - Error handling client ('127.0.0.1', 65099): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:02:04,277 - Server - INFO - Client connected from ('127.0.0.1', 65106)
+2025-03-04 22:02:04,280 - Server - INFO - Sent global model to client ('127.0.0.1', 65106)
+2025-03-04 22:02:04,484 - Server - INFO - Expecting 89087 bytes from client ('127.0.0.1', 65106)
+2025-03-04 22:02:04,484 - Server - ERROR - Error handling client ('127.0.0.1', 65106): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:02:14,486 - Server - INFO - Client connected from ('127.0.0.1', 65115)
+2025-03-04 22:02:14,488 - Server - INFO - Sent global model to client ('127.0.0.1', 65115)
+2025-03-04 22:02:14,706 - Server - INFO - Expecting 89118 bytes from client ('127.0.0.1', 65115)
+2025-03-04 22:02:14,706 - Server - ERROR - Error handling client ('127.0.0.1', 65115): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:02:24,708 - Server - INFO - Client connected from ('127.0.0.1', 65121)
+2025-03-04 22:02:24,710 - Server - INFO - Sent global model to client ('127.0.0.1', 65121)
+2025-03-04 22:02:25,048 - Server - INFO - Expecting 89061 bytes from client ('127.0.0.1', 65121)
+2025-03-04 22:02:25,049 - Server - ERROR - Error handling client ('127.0.0.1', 65121): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:02:35,052 - Server - INFO - Client connected from ('127.0.0.1', 65126)
+2025-03-04 22:02:35,054 - Server - INFO - Sent global model to client ('127.0.0.1', 65126)
+2025-03-04 22:02:35,262 - Server - INFO - Expecting 89041 bytes from client ('127.0.0.1', 65126)
+2025-03-04 22:02:35,262 - Server - ERROR - Error handling client ('127.0.0.1', 65126): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:02:45,265 - Server - INFO - Client connected from ('127.0.0.1', 65131)
+2025-03-04 22:02:45,268 - Server - INFO - Sent global model to client ('127.0.0.1', 65131)
+2025-03-04 22:02:45,604 - Server - INFO - Expecting 89096 bytes from client ('127.0.0.1', 65131)
+2025-03-04 22:02:45,605 - Server - ERROR - Error handling client ('127.0.0.1', 65131): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:02:55,607 - Server - INFO - Client connected from ('127.0.0.1', 65138)
+2025-03-04 22:02:55,609 - Server - INFO - Sent global model to client ('127.0.0.1', 65138)
+2025-03-04 22:02:55,821 - Server - INFO - Expecting 89117 bytes from client ('127.0.0.1', 65138)
+2025-03-04 22:02:55,821 - Server - ERROR - Error handling client ('127.0.0.1', 65138): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:03:05,824 - Server - INFO - Client connected from ('127.0.0.1', 65143)
+2025-03-04 22:03:05,827 - Server - INFO - Sent global model to client ('127.0.0.1', 65143)
+2025-03-04 22:03:06,036 - Server - INFO - Expecting 89136 bytes from client ('127.0.0.1', 65143)
+2025-03-04 22:03:06,036 - Server - ERROR - Error handling client ('127.0.0.1', 65143): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:03:16,039 - Server - INFO - Client connected from ('127.0.0.1', 65148)
+2025-03-04 22:03:16,041 - Server - INFO - Sent global model to client ('127.0.0.1', 65148)
+2025-03-04 22:03:16,245 - Server - INFO - Expecting 89093 bytes from client ('127.0.0.1', 65148)
+2025-03-04 22:03:16,245 - Server - ERROR - Error handling client ('127.0.0.1', 65148): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:03:26,248 - Server - INFO - Client connected from ('127.0.0.1', 65153)
+2025-03-04 22:03:26,250 - Server - INFO - Sent global model to client ('127.0.0.1', 65153)
+2025-03-04 22:03:26,464 - Server - INFO - Expecting 89131 bytes from client ('127.0.0.1', 65153)
+2025-03-04 22:03:26,464 - Server - ERROR - Error handling client ('127.0.0.1', 65153): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:03:36,471 - Server - INFO - Client connected from ('127.0.0.1', 65158)
+2025-03-04 22:03:36,489 - Server - INFO - Sent global model to client ('127.0.0.1', 65158)
+2025-03-04 22:03:36,947 - Server - INFO - Expecting 89037 bytes from client ('127.0.0.1', 65158)
+2025-03-04 22:03:36,947 - Server - ERROR - Error handling client ('127.0.0.1', 65158): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:03:46,950 - Server - INFO - Client connected from ('127.0.0.1', 65162)
+2025-03-04 22:03:46,953 - Server - INFO - Sent global model to client ('127.0.0.1', 65162)
+2025-03-04 22:03:47,158 - Server - INFO - Expecting 89097 bytes from client ('127.0.0.1', 65162)
+2025-03-04 22:03:47,158 - Server - ERROR - Error handling client ('127.0.0.1', 65162): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:03:57,161 - Server - INFO - Client connected from ('127.0.0.1', 65169)
+2025-03-04 22:03:57,163 - Server - INFO - Sent global model to client ('127.0.0.1', 65169)
+2025-03-04 22:03:57,378 - Server - INFO - Expecting 89094 bytes from client ('127.0.0.1', 65169)
+2025-03-04 22:03:57,378 - Server - ERROR - Error handling client ('127.0.0.1', 65169): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:04:07,382 - Server - INFO - Client connected from ('127.0.0.1', 65173)
+2025-03-04 22:04:07,384 - Server - INFO - Sent global model to client ('127.0.0.1', 65173)
+2025-03-04 22:04:07,587 - Server - INFO - Expecting 89183 bytes from client ('127.0.0.1', 65173)
+2025-03-04 22:04:07,587 - Server - ERROR - Error handling client ('127.0.0.1', 65173): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:04:17,589 - Server - INFO - Client connected from ('127.0.0.1', 65178)
+2025-03-04 22:04:17,591 - Server - INFO - Sent global model to client ('127.0.0.1', 65178)
+2025-03-04 22:04:17,815 - Server - INFO - Expecting 89078 bytes from client ('127.0.0.1', 65178)
+2025-03-04 22:04:17,815 - Server - ERROR - Error handling client ('127.0.0.1', 65178): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:04:27,818 - Server - INFO - Client connected from ('127.0.0.1', 65185)
+2025-03-04 22:04:27,820 - Server - INFO - Sent global model to client ('127.0.0.1', 65185)
+2025-03-04 22:04:28,026 - Server - INFO - Expecting 89072 bytes from client ('127.0.0.1', 65185)
+2025-03-04 22:04:28,026 - Server - ERROR - Error handling client ('127.0.0.1', 65185): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:04:38,029 - Server - INFO - Client connected from ('127.0.0.1', 65189)
+2025-03-04 22:04:38,031 - Server - INFO - Sent global model to client ('127.0.0.1', 65189)
+2025-03-04 22:04:38,240 - Server - INFO - Expecting 89066 bytes from client ('127.0.0.1', 65189)
+2025-03-04 22:04:38,240 - Server - ERROR - Error handling client ('127.0.0.1', 65189): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:04:48,243 - Server - INFO - Client connected from ('127.0.0.1', 65194)
+2025-03-04 22:04:48,245 - Server - INFO - Sent global model to client ('127.0.0.1', 65194)
+2025-03-04 22:04:48,435 - Server - INFO - Expecting 89099 bytes from client ('127.0.0.1', 65194)
+2025-03-04 22:04:48,435 - Server - ERROR - Error handling client ('127.0.0.1', 65194): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:04:58,437 - Server - INFO - Client connected from ('127.0.0.1', 65205)
+2025-03-04 22:04:58,440 - Server - INFO - Sent global model to client ('127.0.0.1', 65205)
+2025-03-04 22:04:58,766 - Server - INFO - Expecting 89045 bytes from client ('127.0.0.1', 65205)
+2025-03-04 22:04:58,767 - Server - ERROR - Error handling client ('127.0.0.1', 65205): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:05:08,769 - Server - INFO - Client connected from ('127.0.0.1', 65211)
+2025-03-04 22:05:08,771 - Server - INFO - Sent global model to client ('127.0.0.1', 65211)
+2025-03-04 22:05:08,968 - Server - INFO - Expecting 89042 bytes from client ('127.0.0.1', 65211)
+2025-03-04 22:05:08,969 - Server - ERROR - Error handling client ('127.0.0.1', 65211): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:05:18,972 - Server - INFO - Client connected from ('127.0.0.1', 65217)
+2025-03-04 22:05:18,974 - Server - INFO - Sent global model to client ('127.0.0.1', 65217)
+2025-03-04 22:05:19,172 - Server - INFO - Expecting 89117 bytes from client ('127.0.0.1', 65217)
+2025-03-04 22:05:19,172 - Server - ERROR - Error handling client ('127.0.0.1', 65217): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:05:29,174 - Server - INFO - Client connected from ('127.0.0.1', 65222)
+2025-03-04 22:05:29,176 - Server - INFO - Sent global model to client ('127.0.0.1', 65222)
+2025-03-04 22:05:29,373 - Server - INFO - Expecting 89098 bytes from client ('127.0.0.1', 65222)
+2025-03-04 22:05:29,374 - Server - ERROR - Error handling client ('127.0.0.1', 65222): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:05:39,377 - Server - INFO - Client connected from ('127.0.0.1', 65245)
+2025-03-04 22:05:39,379 - Server - INFO - Sent global model to client ('127.0.0.1', 65245)
+2025-03-04 22:05:39,585 - Server - INFO - Expecting 89075 bytes from client ('127.0.0.1', 65245)
+2025-03-04 22:05:39,585 - Server - ERROR - Error handling client ('127.0.0.1', 65245): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:05:49,588 - Server - INFO - Client connected from ('127.0.0.1', 65265)
+2025-03-04 22:05:49,590 - Server - INFO - Sent global model to client ('127.0.0.1', 65265)
+2025-03-04 22:05:49,818 - Server - INFO - Expecting 89106 bytes from client ('127.0.0.1', 65265)
+2025-03-04 22:05:49,818 - Server - ERROR - Error handling client ('127.0.0.1', 65265): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:05:59,822 - Server - INFO - Client connected from ('127.0.0.1', 65272)
+2025-03-04 22:05:59,824 - Server - INFO - Sent global model to client ('127.0.0.1', 65272)
+2025-03-04 22:06:00,028 - Server - INFO - Expecting 89129 bytes from client ('127.0.0.1', 65272)
+2025-03-04 22:06:00,029 - Server - ERROR - Error handling client ('127.0.0.1', 65272): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:06:10,031 - Server - INFO - Client connected from ('127.0.0.1', 65277)
+2025-03-04 22:06:10,033 - Server - INFO - Sent global model to client ('127.0.0.1', 65277)
+2025-03-04 22:06:10,243 - Server - INFO - Expecting 89108 bytes from client ('127.0.0.1', 65277)
+2025-03-04 22:06:10,244 - Server - ERROR - Error handling client ('127.0.0.1', 65277): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:06:20,246 - Server - INFO - Client connected from ('127.0.0.1', 65282)
+2025-03-04 22:06:20,248 - Server - INFO - Sent global model to client ('127.0.0.1', 65282)
+2025-03-04 22:06:20,450 - Server - INFO - Expecting 89066 bytes from client ('127.0.0.1', 65282)
+2025-03-04 22:06:20,450 - Server - ERROR - Error handling client ('127.0.0.1', 65282): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:06:30,453 - Server - INFO - Client connected from ('127.0.0.1', 65288)
+2025-03-04 22:06:30,456 - Server - INFO - Sent global model to client ('127.0.0.1', 65288)
+2025-03-04 22:06:30,678 - Server - INFO - Expecting 89107 bytes from client ('127.0.0.1', 65288)
+2025-03-04 22:06:30,679 - Server - ERROR - Error handling client ('127.0.0.1', 65288): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:06:40,681 - Server - INFO - Client connected from ('127.0.0.1', 65292)
+2025-03-04 22:06:40,683 - Server - INFO - Sent global model to client ('127.0.0.1', 65292)
+2025-03-04 22:06:40,888 - Server - INFO - Expecting 89038 bytes from client ('127.0.0.1', 65292)
+2025-03-04 22:06:40,888 - Server - ERROR - Error handling client ('127.0.0.1', 65292): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:06:50,891 - Server - INFO - Client connected from ('127.0.0.1', 65299)
+2025-03-04 22:06:50,893 - Server - INFO - Sent global model to client ('127.0.0.1', 65299)
+2025-03-04 22:06:51,105 - Server - INFO - Expecting 89072 bytes from client ('127.0.0.1', 65299)
+2025-03-04 22:06:51,105 - Server - ERROR - Error handling client ('127.0.0.1', 65299): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:07:01,108 - Server - INFO - Client connected from ('127.0.0.1', 65309)
+2025-03-04 22:07:01,111 - Server - INFO - Sent global model to client ('127.0.0.1', 65309)
+2025-03-04 22:07:01,339 - Server - INFO - Expecting 89082 bytes from client ('127.0.0.1', 65309)
+2025-03-04 22:07:01,339 - Server - ERROR - Error handling client ('127.0.0.1', 65309): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:07:11,342 - Server - INFO - Client connected from ('127.0.0.1', 65315)
+2025-03-04 22:07:11,344 - Server - INFO - Sent global model to client ('127.0.0.1', 65315)
+2025-03-04 22:07:11,550 - Server - INFO - Expecting 89134 bytes from client ('127.0.0.1', 65315)
+2025-03-04 22:07:11,550 - Server - ERROR - Error handling client ('127.0.0.1', 65315): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:07:21,552 - Server - INFO - Client connected from ('127.0.0.1', 65335)
+2025-03-04 22:07:21,554 - Server - INFO - Sent global model to client ('127.0.0.1', 65335)
+2025-03-04 22:07:21,755 - Server - INFO - Expecting 89045 bytes from client ('127.0.0.1', 65335)
+2025-03-04 22:07:21,755 - Server - ERROR - Error handling client ('127.0.0.1', 65335): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:07:31,758 - Server - INFO - Client connected from ('127.0.0.1', 65345)
+2025-03-04 22:07:31,760 - Server - INFO - Sent global model to client ('127.0.0.1', 65345)
+2025-03-04 22:07:31,991 - Server - INFO - Expecting 89088 bytes from client ('127.0.0.1', 65345)
+2025-03-04 22:07:31,991 - Server - ERROR - Error handling client ('127.0.0.1', 65345): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:07:41,993 - Server - INFO - Client connected from ('127.0.0.1', 65350)
+2025-03-04 22:07:41,995 - Server - INFO - Sent global model to client ('127.0.0.1', 65350)
+2025-03-04 22:07:42,204 - Server - INFO - Expecting 89109 bytes from client ('127.0.0.1', 65350)
+2025-03-04 22:07:42,204 - Server - ERROR - Error handling client ('127.0.0.1', 65350): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:07:52,208 - Server - INFO - Client connected from ('127.0.0.1', 65355)
+2025-03-04 22:07:52,210 - Server - INFO - Sent global model to client ('127.0.0.1', 65355)
+2025-03-04 22:07:52,408 - Server - INFO - Expecting 89090 bytes from client ('127.0.0.1', 65355)
+2025-03-04 22:07:52,408 - Server - ERROR - Error handling client ('127.0.0.1', 65355): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:08:02,411 - Server - INFO - Client connected from ('127.0.0.1', 65367)
+2025-03-04 22:08:02,413 - Server - INFO - Sent global model to client ('127.0.0.1', 65367)
+2025-03-04 22:08:02,612 - Server - INFO - Expecting 89094 bytes from client ('127.0.0.1', 65367)
+2025-03-04 22:08:02,612 - Server - ERROR - Error handling client ('127.0.0.1', 65367): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:08:12,615 - Server - INFO - Client connected from ('127.0.0.1', 65374)
+2025-03-04 22:08:12,617 - Server - INFO - Sent global model to client ('127.0.0.1', 65374)
+2025-03-04 22:08:12,813 - Server - INFO - Expecting 89071 bytes from client ('127.0.0.1', 65374)
+2025-03-04 22:08:12,813 - Server - ERROR - Error handling client ('127.0.0.1', 65374): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:08:22,816 - Server - INFO - Client connected from ('127.0.0.1', 65380)
+2025-03-04 22:08:22,818 - Server - INFO - Sent global model to client ('127.0.0.1', 65380)
+2025-03-04 22:08:23,035 - Server - INFO - Expecting 89080 bytes from client ('127.0.0.1', 65380)
+2025-03-04 22:08:23,035 - Server - ERROR - Error handling client ('127.0.0.1', 65380): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:08:33,038 - Server - INFO - Client connected from ('127.0.0.1', 65391)
+2025-03-04 22:08:33,040 - Server - INFO - Sent global model to client ('127.0.0.1', 65391)
+2025-03-04 22:08:33,253 - Server - INFO - Expecting 89057 bytes from client ('127.0.0.1', 65391)
+2025-03-04 22:08:33,253 - Server - ERROR - Error handling client ('127.0.0.1', 65391): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:08:43,256 - Server - INFO - Client connected from ('127.0.0.1', 65395)
+2025-03-04 22:08:43,258 - Server - INFO - Sent global model to client ('127.0.0.1', 65395)
+2025-03-04 22:08:43,474 - Server - INFO - Expecting 89074 bytes from client ('127.0.0.1', 65395)
+2025-03-04 22:08:43,475 - Server - ERROR - Error handling client ('127.0.0.1', 65395): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:08:53,477 - Server - INFO - Client connected from ('127.0.0.1', 65399)
+2025-03-04 22:08:53,481 - Server - INFO - Sent global model to client ('127.0.0.1', 65399)
+2025-03-04 22:08:53,690 - Server - INFO - Expecting 89083 bytes from client ('127.0.0.1', 65399)
+2025-03-04 22:08:53,691 - Server - ERROR - Error handling client ('127.0.0.1', 65399): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:09:03,694 - Server - INFO - Client connected from ('127.0.0.1', 65406)
+2025-03-04 22:09:03,698 - Server - INFO - Sent global model to client ('127.0.0.1', 65406)
+2025-03-04 22:09:03,910 - Server - INFO - Expecting 89085 bytes from client ('127.0.0.1', 65406)
+2025-03-04 22:09:03,910 - Server - ERROR - Error handling client ('127.0.0.1', 65406): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:09:13,912 - Server - INFO - Client connected from ('127.0.0.1', 65411)
+2025-03-04 22:09:13,914 - Server - INFO - Sent global model to client ('127.0.0.1', 65411)
+2025-03-04 22:09:14,118 - Server - INFO - Expecting 89081 bytes from client ('127.0.0.1', 65411)
+2025-03-04 22:09:14,118 - Server - ERROR - Error handling client ('127.0.0.1', 65411): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:09:24,121 - Server - INFO - Client connected from ('127.0.0.1', 65416)
+2025-03-04 22:09:24,123 - Server - INFO - Sent global model to client ('127.0.0.1', 65416)
+2025-03-04 22:09:24,344 - Server - INFO - Expecting 89081 bytes from client ('127.0.0.1', 65416)
+2025-03-04 22:09:24,344 - Server - ERROR - Error handling client ('127.0.0.1', 65416): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:09:34,348 - Server - INFO - Client connected from ('127.0.0.1', 65422)
+2025-03-04 22:09:34,352 - Server - INFO - Sent global model to client ('127.0.0.1', 65422)
+2025-03-04 22:09:34,559 - Server - INFO - Expecting 89093 bytes from client ('127.0.0.1', 65422)
+2025-03-04 22:09:34,560 - Server - ERROR - Error handling client ('127.0.0.1', 65422): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:09:44,562 - Server - INFO - Client connected from ('127.0.0.1', 65426)
+2025-03-04 22:09:44,565 - Server - INFO - Sent global model to client ('127.0.0.1', 65426)
+2025-03-04 22:09:44,767 - Server - INFO - Expecting 89116 bytes from client ('127.0.0.1', 65426)
+2025-03-04 22:09:44,767 - Server - ERROR - Error handling client ('127.0.0.1', 65426): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:09:54,770 - Server - INFO - Client connected from ('127.0.0.1', 65431)
+2025-03-04 22:09:54,772 - Server - INFO - Sent global model to client ('127.0.0.1', 65431)
+2025-03-04 22:09:54,981 - Server - INFO - Expecting 89090 bytes from client ('127.0.0.1', 65431)
+2025-03-04 22:09:54,982 - Server - ERROR - Error handling client ('127.0.0.1', 65431): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:10:04,985 - Server - INFO - Client connected from ('127.0.0.1', 65437)
+2025-03-04 22:10:04,987 - Server - INFO - Sent global model to client ('127.0.0.1', 65437)
+2025-03-04 22:10:05,202 - Server - INFO - Expecting 89070 bytes from client ('127.0.0.1', 65437)
+2025-03-04 22:10:05,202 - Server - ERROR - Error handling client ('127.0.0.1', 65437): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:10:15,206 - Server - INFO - Client connected from ('127.0.0.1', 65443)
+2025-03-04 22:10:15,208 - Server - INFO - Sent global model to client ('127.0.0.1', 65443)
+2025-03-04 22:10:15,464 - Server - INFO - Expecting 89065 bytes from client ('127.0.0.1', 65443)
+2025-03-04 22:10:15,464 - Server - ERROR - Error handling client ('127.0.0.1', 65443): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:10:25,467 - Server - INFO - Client connected from ('127.0.0.1', 65447)
+2025-03-04 22:10:25,469 - Server - INFO - Sent global model to client ('127.0.0.1', 65447)
+2025-03-04 22:10:25,675 - Server - INFO - Expecting 89135 bytes from client ('127.0.0.1', 65447)
+2025-03-04 22:10:25,676 - Server - ERROR - Error handling client ('127.0.0.1', 65447): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:10:35,678 - Server - INFO - Client connected from ('127.0.0.1', 65456)
+2025-03-04 22:10:35,680 - Server - INFO - Sent global model to client ('127.0.0.1', 65456)
+2025-03-04 22:10:35,891 - Server - INFO - Expecting 89063 bytes from client ('127.0.0.1', 65456)
+2025-03-04 22:10:35,892 - Server - ERROR - Error handling client ('127.0.0.1', 65456): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:10:45,894 - Server - INFO - Client connected from ('127.0.0.1', 65468)
+2025-03-04 22:10:45,896 - Server - INFO - Sent global model to client ('127.0.0.1', 65468)
+2025-03-04 22:10:46,106 - Server - INFO - Expecting 89136 bytes from client ('127.0.0.1', 65468)
+2025-03-04 22:10:46,107 - Server - ERROR - Error handling client ('127.0.0.1', 65468): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:10:56,110 - Server - INFO - Client connected from ('127.0.0.1', 65474)
+2025-03-04 22:10:56,112 - Server - INFO - Sent global model to client ('127.0.0.1', 65474)
+2025-03-04 22:10:56,319 - Server - INFO - Expecting 89079 bytes from client ('127.0.0.1', 65474)
+2025-03-04 22:10:56,320 - Server - ERROR - Error handling client ('127.0.0.1', 65474): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:11:06,322 - Server - INFO - Client connected from ('127.0.0.1', 65479)
+2025-03-04 22:11:06,324 - Server - INFO - Sent global model to client ('127.0.0.1', 65479)
+2025-03-04 22:11:06,536 - Server - INFO - Expecting 89115 bytes from client ('127.0.0.1', 65479)
+2025-03-04 22:11:06,536 - Server - ERROR - Error handling client ('127.0.0.1', 65479): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:11:16,538 - Server - INFO - Client connected from ('127.0.0.1', 65490)
+2025-03-04 22:11:16,542 - Server - INFO - Sent global model to client ('127.0.0.1', 65490)
+2025-03-04 22:11:17,040 - Server - INFO - Expecting 89059 bytes from client ('127.0.0.1', 65490)
+2025-03-04 22:11:17,040 - Server - ERROR - Error handling client ('127.0.0.1', 65490): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:11:27,043 - Server - INFO - Client connected from ('127.0.0.1', 65495)
+2025-03-04 22:11:27,045 - Server - INFO - Sent global model to client ('127.0.0.1', 65495)
+2025-03-04 22:11:27,310 - Server - INFO - Expecting 89065 bytes from client ('127.0.0.1', 65495)
+2025-03-04 22:11:27,311 - Server - ERROR - Error handling client ('127.0.0.1', 65495): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:11:37,314 - Server - INFO - Client connected from ('127.0.0.1', 65500)
+2025-03-04 22:11:37,316 - Server - INFO - Sent global model to client ('127.0.0.1', 65500)
+2025-03-04 22:11:37,518 - Server - INFO - Expecting 89100 bytes from client ('127.0.0.1', 65500)
+2025-03-04 22:11:37,518 - Server - ERROR - Error handling client ('127.0.0.1', 65500): cannot access local variable 'received_data' where it is not associated with a value
+2025-03-04 22:32:59,730 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 22:34:07,491 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 22:34:07,491 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-04 22:34:07,491 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-04 22:34:31,463 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 22:34:44,888 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 22:39:55,690 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 22:39:55,690 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-04 22:39:55,690 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-04 22:52:45,809 - Server - INFO - Client connected from ('127.0.0.1', 50454)
+2025-03-04 22:52:45,812 - Server - INFO - Sent global model to client ('127.0.0.1', 50454)
+2025-03-04 22:52:47,284 - Server - INFO - Expecting 89141 bytes from client ('127.0.0.1', 50454)
+2025-03-04 22:52:47,285 - Server - INFO - Successfully received complete data (89141 bytes) from client ('127.0.0.1', 50454)
+2025-03-04 22:52:47,287 - Server - INFO - Successfully parsed parameters from client ('127.0.0.1', 50454)
+2025-03-04 22:52:47,287 - Server - INFO - Received client contribution (client #1, pending: 1)
+2025-03-04 22:52:47,288 - Server - INFO - Update threshold reached (1), updating global model
+2025-03-04 22:57:13,507 - Server - INFO - Client connected from ('127.0.0.1', 50605)
+2025-03-04 22:57:13,510 - Server - INFO - Sent global model to client ('127.0.0.1', 50605)
+2025-03-04 22:57:14,946 - Server - INFO - Expecting 89211 bytes from client ('127.0.0.1', 50605)
+2025-03-04 22:57:14,947 - Server - INFO - Successfully received complete data (89211 bytes) from client ('127.0.0.1', 50605)
+2025-03-04 22:57:14,949 - Server - INFO - Successfully parsed parameters from client ('127.0.0.1', 50605)
+2025-03-04 23:14:11,106 - Server - INFO - Loaded global model from global_model.json
+2025-03-04 23:14:11,107 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-04 23:14:11,107 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-04 23:14:18,582 - Server - INFO - Client connected from ('127.0.0.1', 51213)
+2025-03-04 23:14:18,585 - Server - INFO - Sent global model to client ('127.0.0.1', 51213)
+2025-03-04 23:14:20,009 - Server - INFO - Expecting 89090 bytes from client ('127.0.0.1', 51213)
+2025-03-04 23:14:20,009 - Server - INFO - Successfully received complete data (89090 bytes) from client ('127.0.0.1', 51213)
+2025-03-04 23:14:20,011 - Server - INFO - Successfully parsed parameters from client ('127.0.0.1', 51213)
+2025-03-04 23:14:20,012 - Server - INFO - Received client contribution (client #1, pending: 1)
+2025-03-04 23:14:20,012 - Server - INFO - Update threshold reached (1), updating global model

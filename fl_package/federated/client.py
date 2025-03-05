@@ -18,12 +18,12 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-logger = logging.getLogger("ContinuousClient")
+logger = logging.getLogger("Client")
 
 
-class ContinuousClient:
+class Client:
     """
-    A federated learning client that connects to a continuous server,
+    A federated learning client that connects to a server,
     receives the current global model, trains locally, and sends updates.
     """
     
@@ -212,7 +212,7 @@ def run_client(
 ):
     """Run a continuous federated learning client."""
     # Create client
-    client = ContinuousClient(
+    client = Client(
         model=model,
         train_loader=train_loader,
         test_loader=test_loader,
@@ -233,7 +233,7 @@ if __name__ == "__main__":
     from utils.data_utils import load_datasets
     from models.nn_models import create_model
     
-    parser = argparse.ArgumentParser(description="Run a continuous federated learning client")
+    parser = argparse.ArgumentParser(description="Run a federated learning client")
     parser.add_argument("--config", type=str, default="config.json", help="Path to configuration file")
     parser.add_argument("--client-id", type=str, default=None, help="Client identifier")
     parser.add_argument("--server-host", type=str, default="127.0.0.1", help="Server hostname or IP")

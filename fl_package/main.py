@@ -87,9 +87,20 @@ def main():
         run_standalone_training(config, model, train_loader)
         
     elif args.mode == "server":
-        # For continuous server mode, import here to avoid unnecessary imports
+        # For server mode, import from the federated subdirectory
         sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-        from federated.continuous_server import run_server
+        try:
+            from federated.server import run_server
+        except ModuleNotFoundError as e:
+            print(f"Error importing server module: {e}")
+            # Try to find where server.py is located
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            for root, dirs, files in os.walk(base_dir):
+                if "server.py" in files:
+                    rel_path = os.path.relpath(root, base_dir)
+                    print(f"Found server.py in: {rel_path}")
+                    print(f"Try to import using: from {rel_path.replace(os.sep, '.')}.server import run_server")
+            raise
         
         # Try to initialize data and model to get dimensions
         try:
@@ -104,13 +115,24 @@ def main():
             print(f"Warning: Could not initialize model: {e}")
             print("The server will still start, but may use default dimensions for the model.")
         
-        # Run the continuous server
+        # Run the server
         run_server(config)
         
     elif args.mode == "client":
-        # For continuous client mode, import here to avoid unnecessary imports
+        # For client mode, import from the federated subdirectory
         sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-        from federated.continuous_client import run_client
+        try:
+            from federated.client import run_client
+        except ModuleNotFoundError as e:
+            print(f"Error importing client module: {e}")
+            # Try to find where client.py is located
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            for root, dirs, files in os.walk(base_dir):
+                if "client.py" in files:
+                    rel_path = os.path.relpath(root, base_dir)
+                    print(f"Found client.py in: {rel_path}")
+                    print(f"Try to import using: from {rel_path.replace(os.sep, '.')}.client import run_client")
+            raise
         
         # Initialize data and model
         train_dataset, test_dataset, train_loader, test_loader, model, device = initialize_data_and_model(config)
