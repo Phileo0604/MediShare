@@ -1186,3 +1186,39 @@
 2025-03-06 20:06:19,169 - Server - INFO - Successfully parsed parameters from client ('127.0.0.1', 56859)
 2025-03-06 20:06:19,169 - Server - INFO - Received client contribution (client #1, pending: 1)
 2025-03-06 20:06:19,169 - Server - INFO - Update threshold reached (1), updating global model
+2025-03-06 20:08:05,488 - Server - INFO - Loaded global model from global_model.json
+2025-03-06 20:08:05,488 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-06 20:08:05,489 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-06 20:08:15,227 - Server - INFO - Client connected from ('127.0.0.1', 56939)
+2025-03-06 20:08:15,230 - Server - INFO - Sent global model to client ('127.0.0.1', 56939)
+2025-03-06 20:08:16,625 - Server - INFO - Expecting 89133 bytes from client ('127.0.0.1', 56939)
+2025-03-06 20:08:16,626 - Server - INFO - Successfully received complete data (89133 bytes) from client ('127.0.0.1', 56939)
+2025-03-06 20:08:16,628 - Server - INFO - Successfully parsed parameters from client ('127.0.0.1', 56939)
+2025-03-06 20:08:16,628 - Server - INFO - Received client contribution (client #1, pending: 1)
+2025-03-06 20:08:16,628 - Server - INFO - Update threshold reached (1), updating global model
+2025-03-06 20:08:16,628 - Server - INFO - Updated global model (update #1)
+2025-03-06 20:08:16,645 - Server - INFO - Saved global model to global_model.json with backup at model_backups\global_model_20250306_200816.json
+2025-03-06 20:08:16,646 - Server - INFO - Cleared pending contributions after update
+2025-03-06 20:08:16,646 - Server - INFO - Processed contribution from client ('127.0.0.1', 56939)
+2025-03-06 20:08:40,937 - Server - INFO - Client connected from ('127.0.0.1', 56957)
+2025-03-06 20:08:40,940 - Server - INFO - Sent global model to client ('127.0.0.1', 56957)
+2025-03-06 20:08:42,429 - Server - INFO - Expecting 89077 bytes from client ('127.0.0.1', 56957)
+2025-03-06 20:08:42,429 - Server - INFO - Successfully received complete data (89077 bytes) from client ('127.0.0.1', 56957)
+2025-03-06 20:08:42,432 - Server - INFO - Successfully parsed parameters from client ('127.0.0.1', 56957)
+2025-03-06 20:08:42,432 - Server - INFO - Received client contribution (client #2, pending: 1)
+2025-03-06 20:08:42,432 - Server - INFO - Update threshold reached (1), updating global model
+2025-03-06 20:08:42,432 - Server - INFO - Updated global model (update #2)
+2025-03-06 20:08:42,453 - Server - INFO - Saved global model to global_model.json with backup at model_backups\global_model_20250306_200842.json
+2025-03-06 20:08:42,453 - Server - INFO - Cleared pending contributions after update
+2025-03-06 20:08:42,453 - Server - INFO - Processed contribution from client ('127.0.0.1', 56957)
+2025-03-06 20:08:47,457 - Server - INFO - Client connected from ('127.0.0.1', 56960)
+2025-03-06 20:08:47,459 - Server - INFO - Sent global model to client ('127.0.0.1', 56960)
+2025-03-06 20:08:47,666 - Server - INFO - Expecting 89062 bytes from client ('127.0.0.1', 56960)
+2025-03-06 20:08:47,666 - Server - INFO - Successfully received complete data (89062 bytes) from client ('127.0.0.1', 56960)
+2025-03-06 20:08:47,669 - Server - INFO - Successfully parsed parameters from client ('127.0.0.1', 56960)
+2025-03-06 20:08:47,669 - Server - INFO - Received client contribution (client #3, pending: 1)
+2025-03-06 20:08:47,669 - Server - INFO - Update threshold reached (1), updating global model
+2025-03-06 20:08:47,669 - Server - INFO - Updated global model (update #3)
+2025-03-06 20:08:47,685 - Server - INFO - Saved global model to global_model.json with backup at model_backups\global_model_20250306_200847.json
+2025-03-06 20:08:47,685 - Server - INFO - Cleared pending contributions after update
+2025-03-06 20:08:47,686 - Server - INFO - Processed contribution from client ('127.0.0.1', 56960)
