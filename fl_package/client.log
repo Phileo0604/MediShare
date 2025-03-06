@@ -2626,3 +2626,37 @@
 2025-03-04 23:14:18,587 - Client - INFO - Starting local training for 10 epochs
 2025-03-04 23:14:20,005 - Client - INFO - Local evaluation - Loss: 0.0652, Accuracy: 0.9737
 2025-03-04 23:14:20,009 - Client - INFO - Sent updated model parameters (89090 bytes)
+2025-03-06 20:06:17,716 - Client - INFO - Starting federated cycle 1
+2025-03-06 20:06:17,720 - Client - INFO - Expecting 89272 bytes from server
+2025-03-06 20:06:17,722 - Client - INFO - Received and set global model parameters
+2025-03-06 20:06:17,723 - Client - INFO - Starting local training for 10 epochs
+2025-03-06 20:06:19,163 - Client - INFO - Local evaluation - Loss: 0.0643, Accuracy: 0.9825
+2025-03-06 20:06:19,166 - Client - INFO - Sent updated model parameters (89117 bytes)
+2025-03-06 20:08:00,387 - Client - ERROR - Error sending model update: [WinError 10054] An existing connection was forcibly closed by the remote host
+2025-03-06 20:08:00,387 - Client - WARNING - Federated cycle 1 failed
+2025-03-06 20:08:15,226 - Client - INFO - Starting federated cycle 1
+2025-03-06 20:08:15,230 - Client - INFO - Expecting 89272 bytes from server
+2025-03-06 20:08:15,232 - Client - INFO - Received and set global model parameters
+2025-03-06 20:08:15,232 - Client - INFO - Starting local training for 10 epochs
+2025-03-06 20:08:16,621 - Client - INFO - Local evaluation - Loss: 0.0640, Accuracy: 0.9737
+2025-03-06 20:08:16,625 - Client - INFO - Sent updated model parameters (89133 bytes)
+2025-03-06 20:08:16,646 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-06 20:08:16,646 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-06 20:08:16,646 - Client - INFO - Waiting 60 seconds before next cycle
+2025-03-06 20:08:40,936 - Client - INFO - Starting federated cycle 1
+2025-03-06 20:08:40,940 - Client - INFO - Expecting 89239 bytes from server
+2025-03-06 20:08:40,942 - Client - INFO - Received and set global model parameters
+2025-03-06 20:08:40,942 - Client - INFO - Starting local training for 10 epochs
+2025-03-06 20:08:42,425 - Client - INFO - Local evaluation - Loss: 0.0632, Accuracy: 0.9737
+2025-03-06 20:08:42,429 - Client - INFO - Sent updated model parameters (89077 bytes)
+2025-03-06 20:08:42,453 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-06 20:08:42,454 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-06 20:08:42,454 - Client - INFO - Waiting 5 seconds before next cycle
+2025-03-06 20:08:47,456 - Client - INFO - Starting federated cycle 2
+2025-03-06 20:08:47,459 - Client - INFO - Expecting 89204 bytes from server
+2025-03-06 20:08:47,461 - Client - INFO - Received and set global model parameters
+2025-03-06 20:08:47,461 - Client - INFO - Starting local training for 10 epochs
+2025-03-06 20:08:47,663 - Client - INFO - Local evaluation - Loss: 0.0679, Accuracy: 0.9737
+2025-03-06 20:08:47,666 - Client - INFO - Sent updated model parameters (89062 bytes)
+2025-03-06 20:08:47,686 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-06 20:08:47,686 - Client - INFO - Federated cycle 2 completed successfully

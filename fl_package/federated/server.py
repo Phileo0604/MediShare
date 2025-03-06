@@ -103,33 +103,34 @@ class ModelServer:
         Update the global model with client parameters.
         Uses weighted averaging between current global model and client contribution.
         """
-        with self.lock:
-            # If global parameters don't exist yet, use client parameters directly
-            if self.global_parameters is None:
-                self.global_parameters = [np.copy(param) for param in client_parameters]
-                logger.info("Initialized global model with first client contribution")
-            else:
-                # Validate that shapes match
-                if len(self.global_parameters) != len(client_parameters):
-                    logger.error(f"Parameter shape mismatch: global {len(self.global_parameters)} vs client {len(client_parameters)}")
+        # No need to acquire lock here since this is called from within a locked context in process_client_contribution
+        
+        # If global parameters don't exist yet, use client parameters directly
+        if self.global_parameters is None:
+            self.global_parameters = [np.copy(param) for param in client_parameters]
+            logger.info("Initialized global model with first client contribution")
+        else:
+            # Validate that shapes match
+            if len(self.global_parameters) != len(client_parameters):
+                logger.error(f"Parameter shape mismatch: global {len(self.global_parameters)} vs client {len(client_parameters)}")
+                return
+            
+            # Update global model with weighted average
+            for i in range(len(self.global_parameters)):
+                if self.global_parameters[i].shape != client_parameters[i].shape:
+                    logger.error(f"Parameter shape mismatch at index {i}")
                     return
                 
-                # Update global model with weighted average
-                for i in range(len(self.global_parameters)):
-                    if self.global_parameters[i].shape != client_parameters[i].shape:
-                        logger.error(f"Parameter shape mismatch at index {i}")
-                        return
-                    
-                    # Weighted average: (1-w)*global + w*client
-                    self.global_parameters[i] = (1 - self.contribution_weight) * self.global_parameters[i] + \
-                                               self.contribution_weight * client_parameters[i]
-            
-            self.update_count += 1
-            logger.info(f"Updated global model (update #{self.update_count})")
-            
-            # Save the updated model
-            print(f"DEBUG: About to save global model, update count: {self.update_count}")
-            self.save_global_model()
+                # Weighted average: (1-w)*global + w*client
+                self.global_parameters[i] = (1 - self.contribution_weight) * self.global_parameters[i] + \
+                                        self.contribution_weight * client_parameters[i]
+        
+        self.update_count += 1
+        logger.info(f"Updated global model (update #{self.update_count})")
+        
+        # Save the updated model
+        print(f"DEBUG: About to save global model, update count: {self.update_count}")
+        self.save_global_model()
     
     def process_client_contribution(self, client_parameters: List[np.ndarray]) -> None:
         """Process a client contribution by updating the pending contributions list."""
