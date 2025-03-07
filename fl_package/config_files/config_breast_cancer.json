@@ -1,0 +1,28 @@
+{
+    "dataset": {
+        "path": "datasets/data.csv",
+        "target_column": "diagnosis"
+    },
+    "training": {
+        "epochs": 10,
+        "batch_size": 32,
+        "learning_rate": 0.001
+    },
+    "model": {
+        "hidden_layers": [64, 32],
+        "parameters_file": "global_models/breast_cancer_model.json"
+    },
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8080,
+        "client_host": "127.0.0.1",
+        "update_threshold": 1,
+        "contribution_weight": 0.1,
+        "backup_dir": "model_backups/breast_cancer"
+    },
+    "client": {
+        "cycles": 1,
+        "wait_time": 10,
+        "retry_interval": 10
+    }
+}

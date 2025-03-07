@@ -1,7 +1,11 @@
 {
     "dataset": {
-        "path": "datasets/data.csv",
-        "target_column": "diagnosis"
+        "path": "datasets/gait_parkinsons_Ga.xlsx",
+        "target_column": "diagnosis",
+        "parkinsons_path": "datasets",
+        "parkinsons_target_column": "UPDRS",
+        "third_dataset_path": "datasets/third_dataset.csv",
+        "third_dataset_target_column": "target"
     },
     "training": {
         "epochs": 10,
@@ -10,7 +14,28 @@
     },
     "model": {
         "hidden_layers": [64, 32],
-        "parameters_file": "global_model.json"
+        "parkinsons_hidden_layers": [128, 64, 32],
+        "third_dataset_hidden_layers": [256, 128, 64],
+        "parameters_file": "global_model.json",
+        "xgboost_params": {
+            "parkinsons": {
+                "objective": "reg:squarederror",
+                "learning_rate": 0.05,
+                "max_depth": 6,
+                "subsample": 0.8,
+                "colsample_bytree": 0.8,
+                "eval_metric": "rmse",
+                "min_child_weight": 3
+            },
+            "third_dataset": {
+                "objective": "binary:logistic",
+                "learning_rate": 0.1,
+                "max_depth": 5,
+                "subsample": 0.8,
+                "colsample_bytree": 0.8,
+                "eval_metric": "logloss"
+            }
+        }
     },
     "server": {
         "host": "0.0.0.0",
@@ -21,8 +46,8 @@
         "backup_dir": "model_backups"
     },
     "client": {
-        "cycles": 0,
-        "wait_time": 60,
+        "cycles": 1,
+        "wait_time": 10,
         "retry_interval": 10
     }
 }

@@ -2660,3 +2660,62 @@
 2025-03-06 20:08:47,666 - Client - INFO - Sent updated model parameters (89062 bytes)
 2025-03-06 20:08:47,686 - Client - INFO - Server acknowledged receipt of parameters
 2025-03-06 20:08:47,686 - Client - INFO - Federated cycle 2 completed successfully
+2025-03-07 13:41:04,355 - Client - INFO - Using model path: global_models\parkinsons_model.pkl
+2025-03-07 13:41:04,356 - Client - INFO - Starting federated cycle 1 for parkinsons
+2025-03-07 13:41:04,357 - Client - INFO - Sent dataset type: parkinsons
+2025-03-07 13:41:04,360 - Client - INFO - Server has no global model for parkinsons yet
+2025-03-07 13:41:04,361 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-07 13:41:04,481 - Client - INFO - Local evaluation - Loss: 184.6784, Accuracy: 184.6784
+2025-03-07 13:41:04,482 - Client - INFO - Sent updated model parameters (16832 bytes) for parkinsons
+2025-03-07 13:41:04,493 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-07 13:41:04,494 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-07 13:53:54,569 - Client - INFO - Using model path: global_models\breast_cancer_model.json
+2025-03-07 13:53:54,570 - Client - INFO - Starting federated cycle 1 for breast_cancer
+2025-03-07 13:53:54,572 - Client - INFO - Sent dataset type: breast_cancer
+2025-03-07 13:53:54,574 - Client - INFO - Server has no global model for breast_cancer yet
+2025-03-07 13:53:54,575 - Client - INFO - Starting local training for 10 epochs on breast_cancer dataset
+2025-03-07 13:53:57,744 - Client - INFO - Local evaluation - Loss: 0.0523, Accuracy: 0.9825
+2025-03-07 13:53:57,747 - Client - INFO - Sent updated model parameters (89229 bytes) for breast_cancer
+2025-03-07 13:53:57,771 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-07 13:53:57,773 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-07 13:54:28,498 - Client - INFO - Using model path: global_models\parkinsons_model.pkl
+2025-03-07 13:54:28,498 - Client - INFO - Starting federated cycle 1 for parkinsons
+2025-03-07 13:54:28,499 - Client - INFO - Sent dataset type: parkinsons
+2025-03-07 13:54:28,502 - Client - INFO - Expecting 16832 bytes from server
+2025-03-07 13:54:28,504 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-07 13:54:28,504 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-07 13:54:28,555 - Client - INFO - Local evaluation - Loss: 189.2105, Accuracy: 189.2105
+2025-03-07 13:54:28,556 - Client - INFO - Sent updated model parameters (16288 bytes) for parkinsons
+2025-03-07 13:54:28,567 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-07 13:54:28,567 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-07 14:14:43,025 - Client - INFO - Using model path: global_models\parkinsons_model.pkl
+2025-03-07 14:14:43,027 - Client - INFO - Starting federated cycle 1 for parkinsons
+2025-03-07 14:14:43,029 - Client - INFO - Sent dataset type: parkinsons
+2025-03-07 14:14:43,034 - Client - INFO - Expecting 16288 bytes from server
+2025-03-07 14:14:43,036 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-07 14:14:43,037 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-07 14:14:43,112 - Client - INFO - Local evaluation - Loss: 190.9652, Accuracy: 190.9652
+2025-03-07 14:14:43,115 - Client - INFO - Sent updated model parameters (16220 bytes) for parkinsons
+2025-03-07 14:14:43,128 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-07 14:14:43,129 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-07 14:15:11,561 - Client - INFO - Using model path: global_models\parkinsons_model.pkl
+2025-03-07 14:15:11,561 - Client - INFO - Starting federated cycle 1 for parkinsons
+2025-03-07 14:15:11,561 - Client - INFO - Sent dataset type: parkinsons
+2025-03-07 14:15:11,566 - Client - INFO - Expecting 16220 bytes from server
+2025-03-07 14:15:11,568 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-07 14:15:11,568 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-07 14:15:11,636 - Client - INFO - Local evaluation - Loss: 183.9150, Accuracy: 183.9150
+2025-03-07 14:15:11,638 - Client - INFO - Sent updated model parameters (16628 bytes) for parkinsons
+2025-03-07 14:15:11,656 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-07 14:15:11,656 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-07 14:15:11,656 - Client - INFO - Waiting 10 seconds before next cycle
+2025-03-07 14:42:45,229 - Client - INFO - Using model path: global_models\breast_cancer_model.json
+2025-03-07 14:42:45,229 - Client - INFO - Starting federated cycle 1 for breast_cancer
+2025-03-07 14:42:45,229 - Client - INFO - Sent dataset type: breast_cancer
+2025-03-07 14:42:45,237 - Client - INFO - Expecting 89229 bytes from server
+2025-03-07 14:42:45,254 - Client - INFO - Received and set global model parameters for breast_cancer
+2025-03-07 14:42:45,254 - Client - INFO - Starting local training for 10 epochs on breast_cancer dataset
+2025-03-07 14:42:48,619 - Client - INFO - Local evaluation - Loss: 0.0602, Accuracy: 0.9825
+2025-03-07 14:42:48,627 - Client - INFO - Sent updated model parameters (89035 bytes) for breast_cancer
+2025-03-07 14:42:48,652 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-07 14:42:48,659 - Client - INFO - Federated cycle 1 completed successfully

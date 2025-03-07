@@ -1222,3 +1222,90 @@
 2025-03-06 20:08:47,685 - Server - INFO - Saved global model to global_model.json with backup at model_backups\global_model_20250306_200847.json
 2025-03-06 20:08:47,685 - Server - INFO - Cleared pending contributions after update
 2025-03-06 20:08:47,686 - Server - INFO - Processed contribution from client ('127.0.0.1', 56960)
+2025-03-07 11:23:20,956 - Server - WARNING - No model file found for breast_cancer at global_models\breast_cancer_model.json
+2025-03-07 11:23:20,956 - Server - WARNING - No model file found for parkinsons at global_models\parkinsons_model.pkl
+2025-03-07 11:23:20,956 - Server - WARNING - No model file found for third_dataset at global_models\third_dataset_model.pkl
+2025-03-07 11:23:20,956 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-07 11:23:20,956 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-07 12:56:29,906 - Server - INFO - Shutting down server...
+2025-03-07 12:56:34,920 - Server - INFO - Server shutdown complete
+2025-03-07 13:20:18,645 - Server - WARNING - No model file found for breast_cancer at global_models\breast_cancer_model.json
+2025-03-07 13:20:18,646 - Server - WARNING - No model file found for parkinsons at global_models\parkinsons_model.pkl
+2025-03-07 13:20:18,647 - Server - WARNING - No model file found for third_dataset at global_models\third_dataset_model.pkl
+2025-03-07 13:20:18,650 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-07 13:20:18,651 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-07 13:41:04,358 - Server - INFO - Client connected from ('127.0.0.1', 54188)
+2025-03-07 13:41:04,359 - Server - INFO - Client ('127.0.0.1', 54188) requested model for dataset: parkinsons
+2025-03-07 13:41:04,360 - Server - INFO - Sent empty model indicator for parkinsons to client ('127.0.0.1', 54188)
+2025-03-07 13:41:04,482 - Server - INFO - Expecting 16832 bytes from client ('127.0.0.1', 54188)
+2025-03-07 13:41:04,483 - Server - INFO - Successfully received complete data (16832 bytes) from client ('127.0.0.1', 54188)
+2025-03-07 13:41:04,484 - Server - INFO - Successfully parsed parameters for parkinsons from client ('127.0.0.1', 54188)
+2025-03-07 13:41:04,484 - Server - INFO - Received client contribution for parkinsons (client #1, pending: 1)
+2025-03-07 13:41:04,486 - Server - INFO - Update threshold reached for parkinsons (1), updating global model
+2025-03-07 13:41:04,486 - Server - INFO - Initialized global model for parkinsons with first client contribution
+2025-03-07 13:41:04,486 - Server - INFO - Updated global model for parkinsons (update #1)
+2025-03-07 13:41:04,492 - Server - INFO - Saved global model for parkinsons to global_models\parkinsons_model.pkl with backup at model_backups\parkinsons\global_model_20250307_134104.pkl
+2025-03-07 13:41:04,493 - Server - INFO - Cleared pending contributions for parkinsons after update
+2025-03-07 13:41:04,493 - Server - INFO - Processed contribution for parkinsons from client ('127.0.0.1', 54188)
+2025-03-07 13:53:54,573 - Server - INFO - Client connected from ('127.0.0.1', 54272)
+2025-03-07 13:53:54,573 - Server - INFO - Client ('127.0.0.1', 54272) requested model for dataset: breast_cancer
+2025-03-07 13:53:54,574 - Server - INFO - Sent empty model indicator for breast_cancer to client ('127.0.0.1', 54272)
+2025-03-07 13:53:57,747 - Server - INFO - Expecting 89229 bytes from client ('127.0.0.1', 54272)
+2025-03-07 13:53:57,748 - Server - INFO - Successfully received complete data (89229 bytes) from client ('127.0.0.1', 54272)
+2025-03-07 13:53:57,752 - Server - INFO - Successfully parsed parameters for breast_cancer from client ('127.0.0.1', 54272)
+2025-03-07 13:53:57,752 - Server - INFO - Received client contribution for breast_cancer (client #1, pending: 1)
+2025-03-07 13:53:57,752 - Server - INFO - Update threshold reached for breast_cancer (1), updating global model
+2025-03-07 13:53:57,752 - Server - INFO - Initialized global model for breast_cancer with first client contribution
+2025-03-07 13:53:57,753 - Server - INFO - Updated global model for breast_cancer (update #1)
+2025-03-07 13:53:57,769 - Server - INFO - Saved global model for breast_cancer to global_models\breast_cancer_model.json with backup at model_backups\breast_cancer\global_model_20250307_135357.json
+2025-03-07 13:53:57,770 - Server - INFO - Cleared pending contributions for breast_cancer after update
+2025-03-07 13:53:57,771 - Server - INFO - Processed contribution for breast_cancer from client ('127.0.0.1', 54272)
+2025-03-07 13:54:28,500 - Server - INFO - Client connected from ('127.0.0.1', 54275)
+2025-03-07 13:54:28,500 - Server - INFO - Client ('127.0.0.1', 54275) requested model for dataset: parkinsons
+2025-03-07 13:54:28,502 - Server - INFO - Sent global model for parkinsons to client ('127.0.0.1', 54275)
+2025-03-07 13:54:28,556 - Server - INFO - Expecting 16288 bytes from client ('127.0.0.1', 54275)
+2025-03-07 13:54:28,557 - Server - INFO - Successfully received complete data (16288 bytes) from client ('127.0.0.1', 54275)
+2025-03-07 13:54:28,558 - Server - INFO - Successfully parsed parameters for parkinsons from client ('127.0.0.1', 54275)
+2025-03-07 13:54:28,558 - Server - INFO - Received client contribution for parkinsons (client #2, pending: 1)
+2025-03-07 13:54:28,559 - Server - INFO - Update threshold reached for parkinsons (1), updating global model
+2025-03-07 13:54:28,561 - Server - INFO - Updating XGBoost model for parkinsons with latest contribution
+2025-03-07 13:54:28,561 - Server - INFO - Updated global model for parkinsons (update #2)
+2025-03-07 13:54:28,566 - Server - INFO - Saved global model for parkinsons to global_models\parkinsons_model.pkl with backup at model_backups\parkinsons\global_model_20250307_135428.pkl
+2025-03-07 13:54:28,566 - Server - INFO - Cleared pending contributions for parkinsons after update
+2025-03-07 13:54:28,567 - Server - INFO - Processed contribution for parkinsons from client ('127.0.0.1', 54275)
+2025-03-07 14:14:43,031 - Server - INFO - Client connected from ('127.0.0.1', 54513)
+2025-03-07 14:14:43,032 - Server - INFO - Client ('127.0.0.1', 54513) requested model for dataset: parkinsons
+2025-03-07 14:14:43,034 - Server - INFO - Sent global model for parkinsons to client ('127.0.0.1', 54513)
+2025-03-07 14:14:43,115 - Server - INFO - Expecting 16220 bytes from client ('127.0.0.1', 54513)
+2025-03-07 14:14:43,117 - Server - INFO - Successfully received complete data (16220 bytes) from client ('127.0.0.1', 54513)
+2025-03-07 14:14:43,118 - Server - INFO - Successfully parsed parameters for parkinsons from client ('127.0.0.1', 54513)
+2025-03-07 14:14:43,119 - Server - INFO - Received client contribution for parkinsons (client #3, pending: 1)
+2025-03-07 14:14:43,119 - Server - INFO - Update threshold reached for parkinsons (1), updating global model
+2025-03-07 14:14:43,119 - Server - INFO - Updating XGBoost model for parkinsons with latest contribution
+2025-03-07 14:14:43,120 - Server - INFO - Updated global model for parkinsons (update #3)
+2025-03-07 14:14:43,127 - Server - INFO - Saved global model for parkinsons to global_models\parkinsons_model.pkl with backup at model_backups\parkinsons\global_model_20250307_141443.pkl
+2025-03-07 14:14:43,128 - Server - INFO - Cleared pending contributions for parkinsons after update
+2025-03-07 14:14:43,128 - Server - INFO - Processed contribution for parkinsons from client ('127.0.0.1', 54513)
+2025-03-07 14:15:11,561 - Server - INFO - Client connected from ('127.0.0.1', 54522)
+2025-03-07 14:15:11,561 - Server - INFO - Client ('127.0.0.1', 54522) requested model for dataset: parkinsons
+2025-03-07 14:15:11,566 - Server - INFO - Sent global model for parkinsons to client ('127.0.0.1', 54522)
+2025-03-07 14:15:11,638 - Server - INFO - Expecting 16628 bytes from client ('127.0.0.1', 54522)
+2025-03-07 14:15:11,638 - Server - INFO - Successfully received complete data (16628 bytes) from client ('127.0.0.1', 54522)
+2025-03-07 14:15:11,641 - Server - INFO - Successfully parsed parameters for parkinsons from client ('127.0.0.1', 54522)
+2025-03-07 14:15:11,642 - Server - INFO - Received client contribution for parkinsons (client #4, pending: 1)
+2025-03-07 14:15:11,643 - Server - INFO - Update threshold reached for parkinsons (1), updating global model
+2025-03-07 14:15:11,644 - Server - INFO - Updating XGBoost model for parkinsons with latest contribution
+2025-03-07 14:15:11,644 - Server - INFO - Updated global model for parkinsons (update #4)
+2025-03-07 14:15:11,654 - Server - INFO - Saved global model for parkinsons to global_models\parkinsons_model.pkl with backup at model_backups\parkinsons\global_model_20250307_141511.pkl
+2025-03-07 14:15:11,655 - Server - INFO - Cleared pending contributions for parkinsons after update
+2025-03-07 14:15:11,656 - Server - INFO - Processed contribution for parkinsons from client ('127.0.0.1', 54522)
+2025-03-07 14:41:41,746 - Server - INFO - Shutting down server...
+2025-03-07 14:41:46,758 - Server - INFO - Server shutdown complete
+2025-03-07 14:42:30,377 - Server - INFO - Loaded global model for breast_cancer from global_models\breast_cancer_model.json
+2025-03-07 14:42:30,407 - Server - INFO - Loaded global model for parkinsons from global_models\parkinsons_model.pkl
+2025-03-07 14:42:30,413 - Server - WARNING - No model file found for third_dataset at global_models\third_dataset_model.pkl
+2025-03-07 14:42:30,417 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-07 14:42:30,417 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-07 14:42:45,236 - Server - INFO - Client connected from ('127.0.0.1', 51478)
+2025-03-07 14:42:45,236 - Server - INFO - Client ('127.0.0.1', 51478) requested model for dataset: breast_cancer
+2025-03-07 14:42:45,237 - Server - INFO - Sent global model for breast_cancer to client ('127.0.0.1', 51478)
