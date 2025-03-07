@@ -1309,3 +1309,14 @@
 2025-03-07 14:42:45,236 - Server - INFO - Client connected from ('127.0.0.1', 51478)
 2025-03-07 14:42:45,236 - Server - INFO - Client ('127.0.0.1', 51478) requested model for dataset: breast_cancer
 2025-03-07 14:42:45,237 - Server - INFO - Sent global model for breast_cancer to client ('127.0.0.1', 51478)
+2025-03-07 14:42:48,627 - Server - INFO - Expecting 89035 bytes from client ('127.0.0.1', 51478)
+2025-03-07 14:42:48,627 - Server - INFO - Successfully received complete data (89035 bytes) from client ('127.0.0.1', 51478)
+2025-03-07 14:42:48,627 - Server - INFO - Successfully parsed parameters for breast_cancer from client ('127.0.0.1', 51478)
+2025-03-07 14:42:48,627 - Server - INFO - Received client contribution for breast_cancer (client #1, pending: 1)
+2025-03-07 14:42:48,627 - Server - INFO - Update threshold reached for breast_cancer (1), updating global model
+2025-03-07 14:42:48,627 - Server - INFO - Updated global model for breast_cancer (update #1)
+2025-03-07 14:42:48,652 - Server - INFO - Saved global model for breast_cancer to global_models\breast_cancer_model.json with backup at model_backups\breast_cancer\global_model_20250307_144248.json
+2025-03-07 14:42:48,652 - Server - INFO - Cleared pending contributions for breast_cancer after update
+2025-03-07 14:42:48,652 - Server - INFO - Processed contribution for breast_cancer from client ('127.0.0.1', 51478)
+2025-03-07 15:08:13,697 - Server - INFO - Shutting down server...
+2025-03-07 15:08:18,702 - Server - INFO - Server shutdown complete
