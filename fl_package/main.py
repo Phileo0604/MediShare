@@ -64,6 +64,8 @@ def initialize_data_and_model(config, dataset_type="breast_cancer"):
     hidden_layers = config["model"].get("hidden_layers", [64, 32])
     if dataset_type == "parkinsons" and "parkinsons_hidden_layers" in config["model"]:
         hidden_layers = config["model"]["parkinsons_hidden_layers"]
+    elif dataset_type == "reinopath" and "reinopath_hidden_layers" in config["model"]:
+        hidden_layers = config["model"]["reinopath_hidden_layers"]
     elif dataset_type == "third_dataset" and "third_dataset_hidden_layers" in config["model"]:
         hidden_layers = config["model"]["third_dataset_hidden_layers"]
     
@@ -108,9 +110,9 @@ def main():
     parser.add_argument("--server-port", type=int, default=None, help="Server port")
     parser.add_argument("--cycles", type=int, default=None, help="Number of client cycles (0 for infinite)")
     parser.add_argument("--wait-time", type=int, default=None, help="Wait time between client cycles in seconds")
-    # Add dataset type argument
+    # Add dataset type argument with reinopath included
     parser.add_argument("--dataset-type", type=str, default="breast_cancer",
-                        choices=["breast_cancer", "parkinsons", "third_dataset"],
+                        choices=["breast_cancer", "parkinsons", "reinopath", "third_dataset"],
                         help="Type of dataset to use (default: breast_cancer)")
     
     args = parser.parse_args()
@@ -188,6 +190,11 @@ def main():
                 dataset_path = config["dataset"]["parkinsons_path"]
             if "parkinsons_target_column" in config["dataset"]:
                 target_column = config["dataset"]["parkinsons_target_column"]
+        elif args.dataset_type == "reinopath":
+            if "reinopath_path" in config["dataset"]:
+                dataset_path = config["dataset"]["reinopath_path"]
+            if "reinopath_target_column" in config["dataset"]:
+                target_column = config["dataset"]["reinopath_target_column"]
         elif args.dataset_type == "third_dataset":
             if "third_dataset_path" in config["dataset"]:
                 dataset_path = config["dataset"]["third_dataset_path"]

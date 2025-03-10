@@ -1,4 +1,5 @@
 {
+    "dataset_type": "breast_cancer",
     "dataset": {
         "path": "datasets/data.csv",
         "target_column": "diagnosis"

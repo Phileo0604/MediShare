@@ -9,11 +9,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 
-# Add this after your existing imports
-import torch
-from torch.utils.data import Dataset
-
-# Add this class definition
 class CustomDataset(Dataset):
     """Custom dataset class that holds features and labels separately."""
     
@@ -26,6 +21,7 @@ class CustomDataset(Dataset):
         
     def __getitem__(self, idx):
         return self.features[idx], self.labels[idx]
+
 
 class CSVDataset(Dataset):
     """Dataset class for loading and preprocessing CSV data."""
@@ -60,6 +56,29 @@ class CSVDataset(Dataset):
         return features, label
 
 
+class ReinopathDataset(Dataset):
+    """Dataset class for Reinopath diabetic retinopathy data."""
+    
+    def __init__(self, features, labels):
+        """
+        Initialize dataset.
+        
+        Args:
+            features: Numpy array of features
+            labels: Numpy array of labels
+        """
+        self.features = features
+        self.labels = labels
+    
+    def __len__(self):
+        return len(self.features)
+    
+    def __getitem__(self, idx):
+        features = torch.tensor(self.features[idx], dtype=torch.float32)
+        label = torch.tensor(self.labels[idx], dtype=torch.long)
+        return features, label
+
+
 def load_default_dataset(dataset_path, target_column, batch_size, test_size=0.2):
     """Load and split dataset into training and testing sets."""
     try:
@@ -88,27 +107,6 @@ def load_default_dataset(dataset_path, target_column, batch_size, test_size=0.2)
         print(f"Error loading dataset: {e}")
         raise
 
-
-def load_datasets(data_path, target_column, batch_size=32, dataset_type="breast_cancer"):
-    """
-    Load datasets based on dataset type.
-    
-    Args:
-        data_path: Path to the dataset CSV file or directory of Excel files
-        target_column: Column name to use as target
-        batch_size: Batch size for DataLoader
-        dataset_type: Type of dataset to load
-    
-    Returns:
-        train_dataset, test_dataset, train_loader, test_loader
-    """
-    if dataset_type.lower() == "parkinsons":
-        # Use specialized loading for Parkinson's Excel files
-        return load_parkinsons_dataset(data_path, target_column, batch_size)
-    else:
-        # Use the original loading function for other datasets
-        # This could be implemented to handle the breast cancer dataset and other datasets
-        return load_default_dataset(data_path, target_column, batch_size)
 
 def load_parkinsons_dataset(data_path, target_column, batch_size=32, test_size=0.2):
     """
@@ -198,3 +196,105 @@ def load_parkinsons_dataset(data_path, target_column, batch_size=32, test_size=0
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
     
     return train_dataset, test_dataset, train_loader, test_loader
+
+
+def load_reinopath_dataset(data_path, target_column="class", batch_size=32, test_size=0.2):
+    """
+    Load and preprocess the Reinopath diabetic retinopathy dataset.
+    
+    Args:
+        data_path: Path to the dataset CSV file
+        target_column: Column to use as target (default: "class")
+        batch_size: Batch size for DataLoader
+        test_size: Proportion of data to use for testing
+    
+    Returns:
+        train_dataset, test_dataset, train_loader, test_loader
+    """
+    # Load the dataset
+    try:
+        if os.path.isdir(data_path):
+            # If a directory is provided, look for CSV files
+            for file in os.listdir(data_path):
+                if file.lower().endswith('.csv') and 'reinopath' in file.lower():
+                    data_path = os.path.join(data_path, file)
+                    break
+        
+        df = pd.read_csv(data_path)
+        print(f"Loaded Reinopath dataset with {df.shape[0]} samples and {df.shape[1]} columns")
+    except Exception as e:
+        print(f"Error loading dataset: {e}")
+        raise
+    
+    # Extract features and target
+    X = df.drop(columns=[target_column], errors='ignore')
+    y = df[target_column]
+    
+    # Define feature names
+    feature_names = X.columns.tolist()
+    
+    # Handle missing values
+    imputer = SimpleImputer(strategy='median')
+    X_imputed = imputer.fit_transform(X)
+    
+    # Scale features
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X_imputed)
+    
+    # Split data
+    X_train, X_test, y_train, y_test = train_test_split(
+        X_scaled, y, test_size=test_size, random_state=42, stratify=y
+    )
+    
+    # Convert to PyTorch tensors
+    X_train_tensor = torch.FloatTensor(X_train)
+    y_train_tensor = torch.LongTensor(y_train.values)
+    X_test_tensor = torch.FloatTensor(X_test)
+    y_test_tensor = torch.LongTensor(y_test.values)
+    
+    # Create datasets
+    train_dataset = ReinopathDataset(X_train, y_train.values)
+    test_dataset = ReinopathDataset(X_test, y_test.values)
+    
+    # Add feature information for later use
+    train_dataset.feature_names = feature_names
+    test_dataset.feature_names = feature_names
+    
+    # Add original data shapes
+    train_dataset.features_shape = X_train.shape
+    test_dataset.features_shape = X_test.shape
+    
+    # Create data loaders
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+    
+    print(f"Split into {len(train_dataset)} training and {len(test_dataset)} testing samples")
+    print(f"Features shape: {X_train.shape[1]}")
+    print(f"Class distribution - Training: {np.bincount(y_train.astype(int))}, Testing: {np.bincount(y_test.astype(int))}")
+    
+    return train_dataset, test_dataset, train_loader, test_loader
+
+
+def load_datasets(data_path, target_column, batch_size=32, dataset_type="breast_cancer"):
+    """
+    Load datasets based on dataset type.
+    
+    Args:
+        data_path: Path to the dataset CSV file or directory
+        target_column: Column name to use as target
+        batch_size: Batch size for DataLoader
+        dataset_type: Type of dataset to load
+    
+    Returns:
+        train_dataset, test_dataset, train_loader, test_loader
+    """
+    if dataset_type.lower() == "parkinsons":
+        # Use specialized loading for Parkinson's Excel files
+        return load_parkinsons_dataset(data_path, target_column, batch_size)
+    elif dataset_type.lower() == "reinopath":
+        # Use specialized loading for Reinopath dataset
+        return load_reinopath_dataset(data_path, target_column, batch_size)
+    else:
+        # Use the original loading function for other datasets
+        # (e.g., breast cancer dataset)
+        return load_default_dataset(data_path, target_column, batch_size)

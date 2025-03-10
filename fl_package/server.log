@@ -1320,3 +1320,59 @@
 2025-03-07 14:42:48,652 - Server - INFO - Processed contribution for breast_cancer from client ('127.0.0.1', 51478)
 2025-03-07 15:08:13,697 - Server - INFO - Shutting down server...
 2025-03-07 15:08:18,702 - Server - INFO - Server shutdown complete
+2025-03-09 20:43:46,341 - Server - INFO - Loaded global model for breast_cancer from global_models\breast_cancer_model.json
+2025-03-09 20:43:46,348 - Server - INFO - Loaded global model for parkinsons from global_models\parkinsons_model.pkl
+2025-03-09 20:43:46,348 - Server - WARNING - No model file found for third_dataset at global_models\third_dataset_model.pkl
+2025-03-09 20:43:46,349 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-09 20:43:46,349 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-09 20:44:41,621 - Server - INFO - Client connected from ('127.0.0.1', 63730)
+2025-03-09 20:44:41,621 - Server - INFO - Client ('127.0.0.1', 63730) requested model for dataset: breast_cancer
+2025-03-09 20:44:41,624 - Server - INFO - Sent global model for breast_cancer to client ('127.0.0.1', 63730)
+2025-03-09 20:44:43,570 - Server - INFO - Expecting 89053 bytes from client ('127.0.0.1', 63730)
+2025-03-09 20:44:43,570 - Server - INFO - Successfully received complete data (89053 bytes) from client ('127.0.0.1', 63730)
+2025-03-09 20:44:43,572 - Server - INFO - Successfully parsed parameters for breast_cancer from client ('127.0.0.1', 63730)
+2025-03-09 20:44:43,572 - Server - INFO - Received client contribution for breast_cancer (client #1, pending: 1)
+2025-03-09 20:44:43,572 - Server - INFO - Update threshold reached for breast_cancer (1), updating global model
+2025-03-09 20:44:43,572 - Server - INFO - Updated global model for breast_cancer (update #1)
+2025-03-09 20:44:43,590 - Server - INFO - Saved global model for breast_cancer to global_models\breast_cancer_model.json with backup at model_backups\breast_cancer\global_model_20250309_204443.json
+2025-03-09 20:44:43,590 - Server - INFO - Cleared pending contributions for breast_cancer after update
+2025-03-09 20:44:43,590 - Server - INFO - Processed contribution for breast_cancer from client ('127.0.0.1', 63730)
+2025-03-09 23:56:38,422 - Server - INFO - Loaded global model for breast_cancer from global_models\breast_cancer_model.json
+2025-03-09 23:56:38,423 - Server - INFO - Loaded global model for parkinsons from global_models\parkinsons_model.pkl
+2025-03-09 23:56:38,423 - Server - WARNING - No model file found for third_dataset at global_models\third_dataset_model.pkl
+2025-03-09 23:56:38,424 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-09 23:56:38,424 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-10 00:38:31,817 - Server - INFO - Loaded global model for breast_cancer from global_models\breast_cancer_model.json
+2025-03-10 00:38:31,817 - Server - INFO - Loaded global model for parkinsons from global_models\parkinsons_model.pkl
+2025-03-10 00:38:31,817 - Server - WARNING - No model file found for third_dataset at global_models\third_dataset_model.pkl
+2025-03-10 00:38:31,818 - Server - INFO - Server started. Press Ctrl+C to stop...
+2025-03-10 00:38:31,818 - Server - INFO - Server listening on 0.0.0.0:8080
+2025-03-10 00:39:33,449 - Server - INFO - Client connected from ('127.0.0.1', 65402)
+2025-03-10 00:39:33,450 - Server - INFO - Client ('127.0.0.1', 65402) requested model for dataset: reinopath
+2025-03-10 00:39:33,450 - Server - INFO - Sent empty model indicator for reinopath to client ('127.0.0.1', 65402)
+2025-03-10 00:39:33,450 - Server - WARNING - Client ('127.0.0.1', 65402) disconnected before sending parameters
+2025-03-10 00:39:43,453 - Server - INFO - Client connected from ('127.0.0.1', 65404)
+2025-03-10 00:39:43,453 - Server - INFO - Client ('127.0.0.1', 65404) requested model for dataset: reinopath
+2025-03-10 00:39:43,453 - Server - INFO - Sent empty model indicator for reinopath to client ('127.0.0.1', 65404)
+2025-03-10 00:39:43,454 - Server - WARNING - Client ('127.0.0.1', 65404) disconnected before sending parameters
+2025-03-10 00:57:47,237 - Server - INFO - Client connected from ('127.0.0.1', 65534)
+2025-03-10 00:57:47,238 - Server - INFO - Client ('127.0.0.1', 65534) requested model for dataset: reinopath
+2025-03-10 00:57:47,238 - Server - INFO - Sent empty model indicator for reinopath to client ('127.0.0.1', 65534)
+2025-03-10 00:57:47,328 - Server - INFO - Expecting 32056 bytes from client ('127.0.0.1', 65534)
+2025-03-10 00:57:47,328 - Server - INFO - Successfully received complete data (32056 bytes) from client ('127.0.0.1', 65534)
+2025-03-10 00:57:47,329 - Server - INFO - Successfully parsed parameters for reinopath from client ('127.0.0.1', 65534)
+2025-03-10 00:57:47,329 - Server - INFO - Received client contribution for reinopath (client #1, pending: 1)
+2025-03-10 00:57:47,329 - Server - INFO - Update threshold reached for reinopath (1), updating global model
+2025-03-10 00:57:47,330 - Server - INFO - Initialized global model for reinopath with first client contribution
+2025-03-10 00:57:47,330 - Server - INFO - Updated global model for reinopath (update #1)
+2025-03-10 00:57:47,332 - Server - INFO - Saved global model for reinopath to global_models\reinopath_model.pkl with backup at model_backups\reinopath\global_model_20250310_005747.pkl
+2025-03-10 00:57:47,332 - Server - INFO - Cleared pending contributions for reinopath after update
+2025-03-10 00:57:47,332 - Server - INFO - Processed contribution for reinopath from client ('127.0.0.1', 65534)
+2025-03-10 00:58:17,335 - Server - INFO - Client connected from ('127.0.0.1', 49154)
+2025-03-10 00:58:17,335 - Server - INFO - Client ('127.0.0.1', 49154) requested model for dataset: reinopath
+2025-03-10 00:58:17,335 - Server - INFO - Sent global model for reinopath to client ('127.0.0.1', 49154)
+2025-03-10 00:58:17,345 - Server - WARNING - Client ('127.0.0.1', 49154) disconnected before sending parameters
+2025-03-10 00:58:27,347 - Server - INFO - Client connected from ('127.0.0.1', 49158)
+2025-03-10 00:58:27,347 - Server - INFO - Client ('127.0.0.1', 49158) requested model for dataset: reinopath
+2025-03-10 00:58:27,347 - Server - INFO - Sent global model for reinopath to client ('127.0.0.1', 49158)
+2025-03-10 00:58:27,357 - Server - WARNING - Client ('127.0.0.1', 49158) disconnected before sending parameters

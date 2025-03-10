@@ -1,0 +1,36 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8080,
+        "client_host": "127.0.0.1",
+        "update_threshold": 1,
+        "contribution_weight": 0.2,
+        "backup_dir": "model_backups"
+    },
+    "model": {
+        "parameters_file": "global_models/default_model.json",
+        "hidden_layers": [64, 32, 16]
+    },
+    "supported_datasets": [
+        "breast_cancer",
+        "parkinsons",
+        "reinopath"
+    ],
+    "dataset_configs": {
+        "breast_cancer": {
+            "parameters_file": "global_models/breast_cancer_model.json",
+            "hidden_layers": [64, 32],
+            "task": "classification"
+        },
+        "parkinsons": {
+            "parameters_file": "global_models/parkinsons_model.pkl",
+            "hidden_layers": [128, 64, 32],
+            "task": "regression"
+        },
+        "reinopath": {
+            "parameters_file": "global_models/reinopath_model.pkl",
+            "hidden_layers": [128, 64, 32],
+            "task": "classification"
+        }
+    }
+}

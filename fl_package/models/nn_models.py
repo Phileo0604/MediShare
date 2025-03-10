@@ -4,8 +4,8 @@ import torch.nn.functional as F
 import json
 import numpy as np
 import os
-from models.xgb_models import XGBoostModel, create_xgboost_model, get_model_path
-
+from models.xgb_models import XGBoostModel, create_xgboost_model
+from models.reinopath_model import create_reinopath_model
 
 class FeedforwardNN(nn.Module):
     """Simple feedforward neural network."""
@@ -118,7 +118,22 @@ def create_model(input_dim, output_dim, hidden_layers=None, device=None, dataset
     Returns:
         Initialized model on the specified device
     """
-    if dataset_type.lower() in ["parkinsons", "third_dataset"]:
+    if dataset_type.lower() == "reinopath":
+        # Use the specialized Reinopath model (XGBoost-based)
+        params = {
+            'objective': 'binary:logistic',
+            'learning_rate': 0.05,
+            'max_depth': 6,
+            'min_child_weight': 1,
+            'subsample': 0.8,
+            'colsample_bytree': 0.8,
+            'eval_metric': 'auc',
+            'scale_pos_weight': 3,  # Helps with class imbalance
+            'gamma': 0.2,           # Minimum loss reduction for split
+            'tree_method': 'hist'
+        }
+        return create_reinopath_model(input_dim, output_dim, params=params)
+    elif dataset_type.lower() in ["parkinsons", "third_dataset"]:
         # Use XGBoost for these datasets
         if dataset_type.lower() == "parkinsons":
             # Customize XGBoost parameters for Parkinson's dataset
@@ -148,3 +163,24 @@ def create_model(input_dim, output_dim, hidden_layers=None, device=None, dataset
         
         model = FeedforwardNN(input_dim, output_dim, hidden_layers).to(device)
         return model
+
+
+def get_model_path(dataset_type):
+    """
+    Get the appropriate model path based on dataset type.
+    This allows dataset-specific global models.
+    """
+    base_dir = "global_models"
+    os.makedirs(base_dir, exist_ok=True)
+    
+    if dataset_type.lower() == "breast_cancer":
+        return os.path.join(base_dir, "breast_cancer_model.json")
+    elif dataset_type.lower() == "parkinsons":
+        return os.path.join(base_dir, "parkinsons_model.pkl")
+    elif dataset_type.lower() == "reinopath":
+        return os.path.join(base_dir, "reinopath_model.pkl")
+    elif dataset_type.lower() == "third_dataset":
+        return os.path.join(base_dir, "third_dataset_model.pkl")
+    else:
+        # Default path
+        return os.path.join(base_dir, "global_model.json")

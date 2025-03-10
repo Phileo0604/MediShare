@@ -123,7 +123,7 @@ class XGBoostModel:
             test_loader: DataLoader with test data
         
         Returns:
-            loss, accuracy (for classification) or mse (for regression)
+            loss, metric (accuracy for classification or RMSE for regression)
         """
         X_test, y_test = self._dataloader_to_numpy(test_loader)
         dtest = xgb.DMatrix(X_test)
@@ -145,9 +145,10 @@ class XGBoostModel:
             loss = -np.mean(np.log(np.clip(y_pred, 1e-10, 1-1e-10)))
             return loss, accuracy
         else:
-            # Regression: return MSE
+            # Regression: return MSE and RMSE
             mse = mean_squared_error(y_test, y_pred)
-            return mse, mse
+            rmse = np.sqrt(mse)
+            return mse, rmse
     
     def predict(self, X):
         """Make predictions on new data."""
@@ -185,11 +186,18 @@ class XGBoostModel:
         if self.model is None:
             return []
         
-        # Serialize the model to buffer
-        model_data = self.model.save_raw()[4:]  # Skip the first 4 bytes (XGBoost header)
-        
-        # Return as a single numpy array
-        return [np.frombuffer(model_data, dtype=np.uint8)]
+        try:
+            # Try the newer API first
+            model_data = self.model.save_raw()[4:]  # Skip the first 4 bytes (XGBoost header)
+            return [np.frombuffer(model_data, dtype=np.uint8)]
+        except AttributeError:
+            # Fall back to an older method for compatibility
+            import tempfile
+            with tempfile.NamedTemporaryFile() as tmp:
+                self.model.save_model(tmp.name)
+                with open(tmp.name, 'rb') as f:
+                    model_data = f.read()
+            return [np.frombuffer(model_data, dtype=np.uint8)]
     
     def set_parameters(self, parameters):
         """
@@ -203,12 +211,19 @@ class XGBoostModel:
         # Convert first parameter back to bytes
         model_data = parameters[0].tobytes()
         
-        # Create a new model
-        self.model = xgb.Booster(params=self.params)
-        
-        # Load the model from raw bytes
         try:
-            self.model.load_model_from_buffer(model_data)
+            # Try newer API first
+            self.model = xgb.Booster(params=self.params)
+            try:
+                self.model.load_model_from_buffer(model_data)
+            except AttributeError:
+                # Fall back for older XGBoost versions
+                import tempfile
+                with tempfile.NamedTemporaryFile(delete=False) as tmp:
+                    tmp.write(model_data)
+                    tmp_name = tmp.name
+                self.model.load_model(tmp_name)
+                os.unlink(tmp_name)
         except Exception as e:
             print(f"Error loading XGBoost model: {e}")
             self.reset_model()
@@ -228,22 +243,3 @@ def create_xgboost_model(input_dim, output_dim, params=None, task="classificatio
         Initialized XGBoost model wrapper
     """
     return XGBoostModel(input_dim, output_dim, params=params, task=task)
-
-
-def get_model_path(dataset_type):
-    """
-    Get the appropriate model path based on dataset type.
-    This allows dataset-specific global models.
-    """
-    base_dir = "global_models"
-    os.makedirs(base_dir, exist_ok=True)
-    
-    if dataset_type.lower() == "breast_cancer":
-        return os.path.join(base_dir, "breast_cancer_model.json")
-    elif dataset_type.lower() == "parkinsons":
-        return os.path.join(base_dir, "parkinsons_model.pkl")
-    elif dataset_type.lower() == "third_dataset":
-        return os.path.join(base_dir, "third_dataset_model.pkl")
-    else:
-        # Default path
-        return os.path.join(base_dir, "global_model.json")
