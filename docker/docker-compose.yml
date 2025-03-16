@@ -1,0 +1,107 @@
+
+services:
+  # Database
+  postgres:
+    image: postgres:17
+    container_name: medishare-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: medishare
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - medishare-network
+
+  # PgAdmin for database management (optional)
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: medishare-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@medishare.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - medishare-network
+
+  # Spring Boot API
+  api:
+    build:
+      context: ../api
+      dockerfile: Dockerfile
+    container_name: medishare-api
+    restart: unless-stopped
+    ports:
+      - "8085:8085"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/medishare
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - FEDERATED_SERVER_HOST=federated-server
+      - FEDERATED_SERVER_PORT=8080
+    volumes:
+      - api_data:/app/data
+      - ../fl_package/federated:/app/federated:rw
+      - ../fl_package/models:/app/models:rw
+      - ../fl_package/config_files:/app/configs:rw
+      - ../fl_package/utils:/app/utils:rw
+      - ../fl_package/training:/app/training:rw
+      - ../fl_package/global_models:/app/global_models:rw
+      - ../fl_package/model_backups:/app/model_backups:rw
+      - ../fl_package/datasets:/app/datasets:rw
+      - ../fl_package/main.py:/app/main.py:ro  # Main script
+      # - ../fl_package:/app:rw
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - medishare-network
+
+  # Federated Learning Server
+  federated-server:
+    build:
+      context: ../fl_package
+      dockerfile: Dockerfile
+    container_name: medishare-federated-server
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../fl_package/config_files:/app/configs:rw  # Config files
+      - ../fl_package/federated:/app/federated:rw  # Federated learning scripts
+      - ../fl_package/datasets:/app/datasets:rw  # Federated learning scripts
+      - ../fl_package/global_models:/app/global_models:rw  # Model storage
+      - ../fl_package/model_backups:/app/model_backups:rw  # Model backups
+      - ../fl_package/models:/app/models:rw  # ML models
+      - ../fl_package/training:/app/training:rw  # Training scripts
+      - ../fl_package/utils:/app/utils:rw  # Utility scripts
+      - ../fl_package/main.py:/app/main.py:ro  # Main script
+    networks:
+      - medishare-network
+
+networks:
+  medishare-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    name: medishare-postgres-data
+  api_data:
+    name: medishare-api-data
+  model_storage:
+    name: medishare-model-storage
+  config_storage:
+    name: medishare-config-storage

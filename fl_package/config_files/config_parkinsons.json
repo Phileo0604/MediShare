@@ -1,6 +1,6 @@
 {
     "dataset": {
-        "path": "datasets",
+        "path": "datasets/gait_parkinsons_Ga.xlsx",
         "target_column": "UPDRS"
     },
     "training": {

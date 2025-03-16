@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
         "./fl_package_claude/federated"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

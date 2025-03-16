@@ -24,7 +24,7 @@ class CustomDataset(torch.utils.data.Dataset):
     def __getitem__(self, idx):
         return self.features[idx], self.labels[idx]
 
-def load_config(config_path="config.json"):
+def load_config(config_path="config_files/server_config.json"):
     """Load configuration from JSON file."""
     with open(config_path, "r") as f:
         return json.load(f)
