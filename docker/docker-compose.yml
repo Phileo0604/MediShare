@@ -1,3 +1,4 @@
+version: '3.8'
 
 services:
   # Database
@@ -63,7 +64,6 @@ services:
       - ../fl_package/model_backups:/app/model_backups:rw
       - ../fl_package/datasets:/app/datasets:rw
       - ../fl_package/main.py:/app/main.py:ro  # Main script
-      # - ../fl_package:/app:rw
     depends_on:
       postgres:
         condition: service_healthy
@@ -89,6 +89,22 @@ services:
       - ../fl_package/training:/app/training:rw  # Training scripts
       - ../fl_package/utils:/app/utils:rw  # Utility scripts
       - ../fl_package/main.py:/app/main.py:ro  # Main script
+    networks:
+      - medishare-network
+
+  # Frontend React Application
+  frontend:
+    build:
+      context: ../medishare-frontend
+      dockerfile: Dockerfile
+    container_name: medishare-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"  # Map container port 80 to host port 3000
+    environment:
+      - REACT_APP_API_URL=http://localhost:8085  # URL to your Spring Boot API
+    depends_on:
+      - api
     networks:
       - medishare-network
 
