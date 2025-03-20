@@ -34,6 +34,16 @@ public class ModelController {
         return ResponseEntity.ok(models);
     }
     
+    @GetMapping("/byId/{id}")
+    public ResponseEntity<?> getModelById(@PathVariable Long id) {
+        Optional<Model> model = modelService.getModelById(id);
+        if (model.isPresent()) {
+            return ResponseEntity.ok(model.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+    
     @GetMapping("/{datasetType}/active")
     public ResponseEntity<?> getActiveModel(@PathVariable String datasetType) {
         Optional<Model> model = modelService.getActiveModel(datasetType);

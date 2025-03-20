@@ -102,6 +102,8 @@ def import_model_parameters(model, file_path="model_parameters.json"):
         print(f"Error loading parameters: {e}")
         raise
 
+    
+
 
 def create_model(input_dim, output_dim, hidden_layers=None, device=None, dataset_type="breast_cancer", task="classification"):
     """
@@ -184,3 +186,24 @@ def get_model_path(dataset_type):
     else:
         # Default path
         return os.path.join(base_dir, "global_model.json")
+    
+    # Add to nn_models.py or equivalent utility file
+
+def load_parameters_from_file(model, file_path):
+    """Load model parameters from a file."""
+    print(f"Loading parameters from {file_path}")
+    
+    if file_path.endswith('.pkl'):
+        # Pickle format for XGBoost models
+        with open(file_path, "rb") as f:
+            parameters = pickle.load(f)
+    else:
+        # JSON format for neural networks
+        with open(file_path, "r") as f:
+            parameters_json = json.load(f)
+            parameters = [np.array(param) for param in parameters_json]
+    
+    # Set parameters to model
+    set_parameters(model, parameters)
+    print("Parameters loaded successfully")
+    return parameters

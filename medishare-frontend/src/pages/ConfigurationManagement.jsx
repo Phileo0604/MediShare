@@ -1,55 +1,103 @@
-// src/pages/ServerManagement.jsx
-import React from 'react';
-import ServerStatus from '../components/server/ServerStatus';
-import ServerControls from '../components/server/ServerControls';
-import { useGlobalContext } from '../context/GlobalContext';
+// src/pages/ConfigurationManagement.jsx
+import React, { useState } from 'react';
+import { useConfigurations } from '../hooks/useConfigurations';
+import ConfigList from '../components/configurations/ConfigList';
+import SimplifiedConfigForm from '../components/configurations/SimplifiedConfigForm';
+import Card from '../components/common/Card';
+import LoadingSpinner from '../components/common/LoadingSpinner';
+import ErrorMessage from '../components/common/ErrorMessage';
 
-const ServerManagement = () => {
-  const { serverStatus, activeClients } = useGlobalContext();
-  
+const ConfigurationManagement = () => {
+  const { 
+    configurations, 
+    loading, 
+    error, 
+    createConfiguration, 
+    updateConfiguration, 
+    deleteConfiguration 
+  } = useConfigurations();
+
+  const [showForm, setShowForm] = useState(false);
+  const [editingConfig, setEditingConfig] = useState(null);
+
+  const handleCreateNew = () => {
+    setEditingConfig(null);
+    setShowForm(true);
+  };
+
+  const handleEdit = (config) => {
+    setEditingConfig(config);
+    setShowForm(true);
+  };
+
+  const handleCancel = () => {
+    setShowForm(false);
+    setEditingConfig(null);
+  };
+
+  const handleDelete = async (datasetType) => {
+    if (window.confirm(`Are you sure you want to delete the configuration for ${datasetType}?`)) {
+      await deleteConfiguration(datasetType);
+    }
+  };
+
+  const handleSubmit = async (formData) => {
+    try {
+      if (editingConfig) {
+        await updateConfiguration(formData.datasetType, formData);
+      } else {
+        await createConfiguration(formData);
+      }
+      setShowForm(false);
+      setEditingConfig(null);
+      return { success: true };
+    } catch (err) {
+      return { 
+        success: false, 
+        error: err.message || 'Failed to save configuration' 
+      };
+    }
+  };
+
+  if (loading && configurations.length === 0) {
+    return <LoadingSpinner />;
+  }
+
   return (
-    <div className="server-management">
-      <h1>Server Management</h1>
-      
-      <div className="status-section">
-        <ServerStatus />
+    <div className="configuration-management">
+      <div className="page-header">
+        <h1>Configuration Management</h1>
+        {!showForm && (
+          <button 
+            className="btn btn-primary"
+            onClick={handleCreateNew}
+          >
+            Create New Configuration
+          </button>
+        )}
       </div>
-      
-      <div className="controls-section">
-        <ServerControls />
-      </div>
-      
-      {serverStatus.isRunning && activeClients.length > 0 && (
-        <div className="active-clients">
-          <h2>Connected Clients</h2>
-          <table className="clients-table">
-            <thead>
-              <tr>
-                <th>Client ID</th>
-                <th>Status</th>
-                <th>Started</th>
-                <th>Dataset Type</th>
-                <th>Cycles</th>
-              </tr>
-            </thead>
-            <tbody>
-              {activeClients.map((client) => (
-                <tr key={client.clientId}>
-                  <td>{client.clientId}</td>
-                  <td>
-                    <span className="status-badge active">Active</span>
-                  </td>
-                  <td>{new Date(client.startTime).toLocaleString()}</td>
-                  <td>{client.datasetType}</td>
-                  <td>{client.cycles}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+
+      {error && <ErrorMessage message={error} />}
+
+      {showForm ? (
+        <Card title={editingConfig ? 'Edit Configuration' : 'Create New Configuration'}>
+          <SimplifiedConfigForm 
+            config={editingConfig}
+            onSubmit={handleSubmit}
+            onCancel={handleCancel}
+          />
+        </Card>
+      ) : (
+        <>
+          <ConfigList 
+            configurations={configurations}
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+          />
+        </>
       )}
     </div>
   );
 };
 
-export default ServerManagement;
+export default ConfigurationManagement;

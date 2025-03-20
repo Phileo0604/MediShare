@@ -93,6 +93,48 @@ body {
   background-color: var(--server-inactive);
 }
 
+.status-indicator {
+  display: flex;
+  align-items: center;
+  max-width: 100%; /* Ensure it doesn't overflow container */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.status-text {
+  margin-left: 5px;
+  word-break: break-word; /* Allow words to break */
+  overflow-wrap: break-word; /* Ensure text wraps */
+  max-width: calc(100% - 20px); /* Account for the status dot */
+}
+
+.status-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  overflow: hidden; /* Prevent content overflow */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.server-status {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Make sure debug info doesn't overflow */
+.debug-data {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre-wrap; /* Allow code to wrap */
+  margin-top: 10px;
+}
+
 .main-nav {
   margin-left: auto;
 }
@@ -158,13 +200,6 @@ body {
   width: 20px;
   height: 20px;
   background-size: contain;
-}
-
-.status-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-left: auto;
 }
 
 .status-indicator.active {
@@ -301,16 +336,10 @@ body {
 }
 
 /* Server Management */
-.server-status, .server-controls {
+.server-controls {
   margin-bottom: 30px;
 }
 
-.status-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
 
 .status-details {
   margin-top: 15px;
@@ -402,4 +431,360 @@ tr:hover {
   .dashboard-cards {
     grid-template-columns: 1fr;
   }
+}
+
+/* Add to index.css */
+
+/* Client history styles */
+.client-tabs {
+  margin-top: 30px;
+}
+
+.tab-headers {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.tab-button.active {
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.tab-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.client-history {
+  margin-top: 20px;
+}
+
+.client-history h2 {
+  margin-bottom: 20px;
+}
+
+/* Add to src/index.css */
+
+/* Server Management Tabs */
+.server-management-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tab-button:hover {
+  color: var(--primary-color);
+}
+
+.tab-button.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+/* Log Viewer Styles */
+.log-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.log-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  border-bottom: 1px solid #444;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+}
+
+.log-filter-input {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #e0e0e0;
+  margin-right: 10px;
+  width: 250px;
+}
+
+.source-filter-select {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #e0e0e0;
+}
+
+.scroll-controls {
+  display: flex;
+  align-items: center;
+}
+
+.scroll-controls label {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.scroll-controls input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.log-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.log-item {
+  padding: 4px 8px;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  display: flex;
+}
+
+.log-timestamp {
+  color: #888;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.log-source {
+  color: #4cb9ff;
+  margin-right: 10px;
+  min-width: 100px;
+  white-space: nowrap;
+}
+
+.log-message {
+  flex: 1;
+}
+
+.log-level-error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff8080;
+}
+
+.log-level-warning {
+  background-color: rgba(255, 255, 0, 0.1);
+  color: #ffff80;
+}
+
+.log-level-info {
+  color: #e0e0e0;
+}
+
+.log-level-default {
+  color: #c0c0c0;
+}
+
+.no-logs-message {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+.description {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Add to src/index.css */
+
+/* Server Management - Logs Section */
+.logs-section {
+  margin-top: 30px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.refresh-control {
+  display: flex;
+  align-items: center;
+}
+
+.refresh-control label {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.refresh-control select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+}
+
+/* Make the log viewer a bit shorter since it's now on the same page */
+.log-viewer {
+  height: 400px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .logs-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .refresh-control {
+    margin-top: 10px;
+  }
+}
+
+/* Tab Styles */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  background-color: #f5f5f5;
+}
+
+.tab-button.active {
+  border-bottom: 3px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Form Layout Improvements */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.form-group.third {
+  flex: 1;
+}
+
+.help-text {
+  display: block;
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* Add these to your index.css to support the form layout */
+.form-section {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-section h3 {
+  margin-bottom: 16px;
+  color: var(--dark-color);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+/* Add to your existing CSS file */
+
+/* Mode selector for client form */
+.mode-selector {
+  margin-bottom: 20px;
+}
+
+.mode-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mode-tab {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.mode-tab.active {
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.helper-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.inline-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #666;
 }

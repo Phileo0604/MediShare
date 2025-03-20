@@ -41,6 +41,12 @@ const Sidebar = () => {
               <span>Models</span>
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/parameters" className={({ isActive }) => isActive ? 'active' : ''}>
+              <i className="icon parameters-icon"></i>
+              <span>Model Parameters</span>
+            </NavLink>
+          </li>
         </ul>
       </nav>
       

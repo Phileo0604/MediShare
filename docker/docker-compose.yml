@@ -38,6 +38,28 @@ services:
     networks:
       - medishare-network
 
+  # Federated Learning Server
+  federated-server:
+    build:
+      context: ../fl_package
+      dockerfile: Dockerfile
+    container_name: medishare-federated-server
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../fl_package/config_files:/app/configs:rw  # Config files
+      - ../fl_package/federated:/app/federated:rw  # Federated learning scripts
+      - ../fl_package/datasets:/app/datasets:rw  # Federated learning scripts
+      - ../fl_package/global_models:/app/global_models:rw  # Model storage
+      - ../fl_package/model_backups:/app/model_backups:rw  # Model backups
+      - ../fl_package/models:/app/models:rw  # ML models
+      - ../fl_package/training:/app/training:rw  # Training scripts
+      - ../fl_package/utils:/app/utils:rw  # Utility scripts
+      - ../fl_package/main.py:/app/main.py:ro  # Main script
+    networks:
+      - medishare-network
+
   # Spring Boot API
   api:
     build:
@@ -70,27 +92,7 @@ services:
     networks:
       - medishare-network
 
-  # Federated Learning Server
-  federated-server:
-    build:
-      context: ../fl_package
-      dockerfile: Dockerfile
-    container_name: medishare-federated-server
-    restart: unless-stopped
-    ports:
-      - "8080:8080"
-    volumes:
-      - ../fl_package/config_files:/app/configs:rw  # Config files
-      - ../fl_package/federated:/app/federated:rw  # Federated learning scripts
-      - ../fl_package/datasets:/app/datasets:rw  # Federated learning scripts
-      - ../fl_package/global_models:/app/global_models:rw  # Model storage
-      - ../fl_package/model_backups:/app/model_backups:rw  # Model backups
-      - ../fl_package/models:/app/models:rw  # ML models
-      - ../fl_package/training:/app/training:rw  # Training scripts
-      - ../fl_package/utils:/app/utils:rw  # Utility scripts
-      - ../fl_package/main.py:/app/main.py:ro  # Main script
-    networks:
-      - medishare-network
+
 
   # Frontend React Application
   frontend:
@@ -100,9 +102,9 @@ services:
     container_name: medishare-frontend
     restart: unless-stopped
     ports:
-      - "3000:80"  # Map container port 80 to host port 3000
+      - "3000:80"
     environment:
-      - REACT_APP_API_URL=http://localhost:8085  # URL to your Spring Boot API
+      - VITE_API_BASE_URL=http://localhost:8085  # This will be used at build time
     depends_on:
       - api
     networks:

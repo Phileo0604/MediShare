@@ -16,7 +16,7 @@ def train(model, train_loader, epochs=10, learning_rate=0.001):
     # Check if this is an XGBoost model
     elif hasattr(model, 'train') and hasattr(model, 'model') and hasattr(model.model, 'predict'):
         try:
-            from training.xgboost_trainer import train_xgboost
+            from training.xgb_trainer import train_xgboost
             return train_xgboost(model, train_loader, epochs=epochs)
         except ImportError:
             print("Warning: XGBoost trainer not found, falling back to default training.")

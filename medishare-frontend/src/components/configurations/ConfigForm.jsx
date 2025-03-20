@@ -1,5 +1,7 @@
 // src/components/configurations/ConfigForm.jsx
 import React, { useState, useEffect } from 'react';
+import SimpleFileSelector from '../common/SimpleFileSelector';
+import '../common/SimpleFileSelector.css';
 
 const ConfigForm = ({ config, onSubmit, onCancel }) => {
   // Initialize with default values or existing config
@@ -144,17 +146,12 @@ const ConfigForm = ({ config, onSubmit, onCancel }) => {
         <div className="form-section">
           <h3>Dataset Configuration</h3>
           
-          <div className="form-group">
-            <label htmlFor="dataset_path">Dataset Path:</label>
-            <input 
-              type="text"
-              id="dataset_path"
-              value={formData.configData.dataset.path}
-              onChange={(e) => handleNestedChange('dataset', 'path', e.target.value)}
-              disabled={loading}
-              required
-            />
-          </div>
+          <SimpleFileSelector
+            label="Dataset Path"
+            value={formData.configData.dataset.path}
+            onChange={(path) => handleNestedChange('dataset', 'path', path)}
+            accept=".csv,.xlsx,.xls"
+          />
           
           <div className="form-group">
             <label htmlFor="target_column">Target Column:</label>

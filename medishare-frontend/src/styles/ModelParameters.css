@@ -1,0 +1,100 @@
+/* src/styles/ModelParameters.css */
+.model-parameters-management {
+    padding: 20px;
+  }
+  
+  .model-parameters-management h1 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+  }
+  
+  .selection-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .selection-bar .form-group {
+    margin-bottom: 0;
+    margin-right: 20px;
+    min-width: 200px;
+  }
+  
+  .model-parameters-sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  @media (min-width: 992px) {
+    .model-parameters-sections {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  .models-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .models-table th,
+  .models-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .models-table th {
+    font-weight: 600;
+    background-color: #f5f5f5;
+  }
+  
+  .models-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .upload-progress {
+    margin: 15px 0;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+  
+  .help-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .success-message {
+    color: var(--secondary-color);
+    background-color: rgba(46, 204, 113, 0.1);
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .button-group .btn {
+    white-space: nowrap;
+  }

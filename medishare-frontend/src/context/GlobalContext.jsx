@@ -28,17 +28,50 @@ export const GlobalProvider = ({ children }) => {
     try {
       setServerStatus(prev => ({ ...prev, loading: true, error: null }));
       const data = await serverApi.getServerStatus();
-      setServerStatus({
-        isRunning: data.isRunning,
-        datasetType: data.datasetType,
-        startTime: data.startTime,
-        activeClients: data.activeClients?.length || 0,
+      
+      // Basic server status
+      const serverStatusUpdate = {
+        isRunning: data.status === 'running',
+        datasetType: data.datasetType || null,
+        startTime: data.startTime || null,
         loading: false,
         error: null
-      });
-      if (data.activeClients) {
-        setActiveClients(data.activeClients);
+      };
+      
+      // If server is running, fetch active clients from logs
+      if (serverStatusUpdate.isRunning) {
+        try {
+          // Get all CLIENT_STARTED logs without matching STOPPED logs
+          const activeClientLogs = await logsApi.getLogsByEventType('CLIENT_STARTED');
+          const stoppedClientLogs = await logsApi.getLogsByEventType('CLIENT_STOPPED');
+          
+          // Filter out clients that have been stopped
+          const stoppedClientIds = stoppedClientLogs.map(log => log.clientId);
+          const activeClients = activeClientLogs
+            .filter(log => !stoppedClientIds.includes(log.clientId))
+            .map(log => {
+              const details = log.details ? JSON.parse(log.details) : {};
+              return {
+                clientId: log.clientId,
+                datasetType: log.datasetType,
+                startTime: log.createdAt,
+                serverHost: details.serverHost || 'unknown',
+                cycles: details.cycles || 1,
+                completedCycles: 0 // We can't know this without additional logging
+              };
+            });
+          
+          serverStatusUpdate.activeClients = activeClients.length;
+          setActiveClients(activeClients);
+        } catch (err) {
+          console.error('Error fetching active clients from logs:', err);
+        }
+      } else {
+        serverStatusUpdate.activeClients = 0;
+        setActiveClients([]);
       }
+      
+      setServerStatus(serverStatusUpdate);
     } catch (error) {
       setServerStatus(prev => ({ 
         ...prev, 
@@ -49,10 +82,10 @@ export const GlobalProvider = ({ children }) => {
   };
 
   // Start the server
-  const startServer = async (datasetType) => {
+  const startServer = async (datasetType, configId = null) => {
     try {
       setServerStatus(prev => ({ ...prev, loading: true, error: null }));
-      await serverApi.startServer(datasetType);
+      await serverApi.startServer(datasetType, configId);
       await fetchServerStatus();
       return true;
     } catch (error) {

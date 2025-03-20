@@ -7,4 +7,5 @@ public class ModelDTO {
     private String datasetType;
     private String name;
     private String description;
+    private String fileFormat;
 }

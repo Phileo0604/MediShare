@@ -41,6 +41,9 @@ const Header = () => {
           <li>
             <Link to="/models">Models</Link>
           </li>
+          <li>
+            <Link to="/parameters">Parameters</Link>
+          </li>
         </ul>
       </nav>
     </header>

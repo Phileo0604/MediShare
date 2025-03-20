@@ -23,6 +23,7 @@ logging.basicConfig(
 logger = logging.getLogger("Client")
 
 
+
 class Client:
     """
     A federated learning client that connects to a server,
@@ -38,8 +39,9 @@ class Client:
         client_id: str = None,
         server_host: str = "127.0.0.1",
         server_port: int = 8080,
-        retry_interval: int = 10,  # Seconds to wait between retries
-        dataset_type: str = "breast_cancer"  # Type of dataset
+        retry_interval: int = 10,
+        dataset_type: str = "breast_cancer",
+        skip_training: bool = False  # Add this parameter
     ):
         self.model = model
         self.train_loader = train_loader
@@ -50,6 +52,7 @@ class Client:
         self.server_port = server_port
         self.retry_interval = retry_interval
         self.dataset_type = dataset_type
+        self.skip_training = skip_training  # Store skip_training flag
         
         # Determine if this is an XGBoost model
         self.is_xgboost = hasattr(self.model, 'model') and hasattr(self.model, 'get_parameters')
@@ -57,6 +60,7 @@ class Client:
         # Get appropriate model path based on dataset type
         self.model_path = get_model_path(dataset_type)
         logger.info(f"Using model path: {self.model_path}")
+        logger.info(f"Training mode: {'evaluation only' if skip_training else 'training enabled'}")
     
     def connect_to_server(self) -> Optional[socket.socket]:
         """Connect to the server."""
@@ -166,6 +170,37 @@ class Client:
         # Evaluate after training
         loss, accuracy = test(self.model, self.test_loader)
         logger.info(f"Local evaluation - Loss: {loss:.4f}, Accuracy: {accuracy:.4f}")
+
+    def run_federated_cycle_no_training(self) -> bool:
+        """Run a federated cycle but skip the training step."""
+        success = False
+        
+        # Connect to server
+        client_socket = self.connect_to_server()
+        if not client_socket:
+            return False
+        
+        try:
+            # Get global model from server
+            if not self.receive_global_model(client_socket):
+                return False
+            
+            # Skip training - just use loaded parameters
+            # Optionally evaluate the model
+            if self.test_loader:
+                loss, accuracy = test(self.model, self.test_loader)
+                logger.info(f"Evaluation - Loss: {loss:.4f}, Accuracy: {accuracy:.4f}")
+            
+            # Send model update to server
+            success = self.send_model_update(client_socket)
+            
+        except Exception as e:
+            logger.error(f"Error during federated cycle: {e}")
+            success = False
+        finally:
+            client_socket.close()
+        
+        return success
     
     def run_federated_cycle(self) -> bool:
         """Run a complete federated learning cycle."""
@@ -181,8 +216,13 @@ class Client:
             if not self.receive_global_model(client_socket):
                 return False
             
-            # Train model locally
-            self.train_local_model()
+            # Train model locally (skip if no dataset)
+            if self.train_loader is not None and not self.skip_training:
+                self.train_local_model()
+            elif self.skip_training:
+                logger.info(f"Skipping local training as requested")
+            else:
+                logger.info(f"No training data available, operating in parameter-sharing mode only")
             
             # Send updated model to server
             success = self.send_model_update(client_socket)
@@ -194,7 +234,38 @@ class Client:
             client_socket.close()
         
         return success
-    
+        
+    def run_federated_cycle_no_training(self) -> bool:
+        """Run a federated cycle but skip the training step."""
+        success = False
+        
+        # Connect to server
+        client_socket = self.connect_to_server()
+        if not client_socket:
+            return False
+        
+        try:
+            # Get global model from server
+            if not self.receive_global_model(client_socket):
+                return False
+            
+            # Skip training - just use loaded parameters
+            # Optionally evaluate the model
+            if self.test_loader:
+                loss, accuracy = test(self.model, self.test_loader)
+                logger.info(f"Evaluation - Loss: {loss:.4f}, Accuracy: {accuracy:.4f}")
+            
+            # Send model update to server
+            success = self.send_model_update(client_socket)
+            
+        except Exception as e:
+            logger.error(f"Error during federated cycle: {e}")
+            success = False
+        finally:
+            client_socket.close()
+        
+        return success
+
     def start_continuous_learning(self, num_cycles: int = 1, wait_time: int = 10) -> None:
         """
         Start continuous federated learning process.
@@ -209,7 +280,11 @@ class Client:
             cycle_count += 1
             logger.info(f"Starting federated cycle {cycle_count} for {self.dataset_type}")
             
-            success = self.run_federated_cycle()
+            # Choose the appropriate cycle method based on skip_training flag
+            if self.skip_training:
+                success = self.run_federated_cycle_no_training()
+            else:
+                success = self.run_federated_cycle()
             
             if success:
                 logger.info(f"Federated cycle {cycle_count} completed successfully")
@@ -224,6 +299,73 @@ class Client:
                 time.sleep(wait_time)
 
 
+def normalize_config(config):
+        """
+        Normalize the configuration to ensure backward compatibility.
+        
+        This function transforms new format configs into a structure that
+        the existing code can work with.
+        """
+        normalized = {}
+        
+        # Check if this is a nested configuration from the new format
+        if "configData" in config:
+            # Extract data from the nested structure
+            config_data = config["configData"]
+            
+            # Copy the dataset type
+            normalized["dataset_type"] = config.get("datasetType", "breast_cancer")
+            
+            # Ensure minimum required structure exists
+            normalized["dataset"] = {}
+            normalized["training"] = {"epochs": 10, "batch_size": 32, "learning_rate": 0.001}
+            normalized["model"] = {}
+            normalized["server"] = {}
+            normalized["client"] = {}
+            
+            # Copy any existing sections
+            if "dataset" in config_data:
+                normalized["dataset"] = config_data["dataset"]
+            
+            if "model" in config_data:
+                normalized["model"] = config_data["model"]
+                
+                # If no parameters_file is specified, set a default based on the dataset type
+                if "parameters_file" not in normalized["model"]:
+                    if normalized["dataset_type"] == "breast_cancer":
+                        normalized["model"]["parameters_file"] = "global_models/breast_cancer_model.json"
+                    elif normalized["dataset_type"] == "parkinsons":
+                        normalized["model"]["parameters_file"] = "global_models/parkinsons_model.pkl"
+                    elif normalized["dataset_type"] == "reinopath":
+                        normalized["model"]["parameters_file"] = "global_models/reinopath_model.pkl"
+                    else:
+                        normalized["model"]["parameters_file"] = f"global_models/{normalized['dataset_type']}_model.json"
+            
+            if "server" in config_data:
+                normalized["server"] = config_data["server"]
+            
+            if "client" in config_data:
+                normalized["client"] = config_data["client"]
+            
+            # If dataset info is missing, create default paths
+            if not normalized["dataset"].get("path"):
+                normalized["dataset"]["path"] = f"datasets/{normalized['dataset_type']}_data.csv"
+            
+            if not normalized["dataset"].get("target_column"):
+                if normalized["dataset_type"] == "breast_cancer":
+                    normalized["dataset"]["target_column"] = "diagnosis"
+                elif normalized["dataset_type"] == "parkinsons":
+                    normalized["dataset"]["target_column"] = "UPDRS"
+                elif normalized["dataset_type"] == "reinopath":
+                    normalized["dataset"]["target_column"] = "class"
+                else:
+                    normalized["dataset"]["target_column"] = "target"
+        else:
+            # Old format - just return as is
+            normalized = config
+        
+        return normalized
+
 def run_client(
     config,
     train_dataset,
@@ -236,9 +378,14 @@ def run_client(
     server_port=8080,
     num_cycles=1,
     wait_time=10,
-    dataset_type="breast_cancer"
+    dataset_type="breast_cancer",
+    skip_training=False,
+    parameter_path=None
 ):
     """Run a federated learning client with specified dataset type."""
+    # Normalize config for backward compatibility
+    normalized_config = normalize_config(config)
+    
     # Create model if not provided
     if model is None:
         # Determine task type based on dataset
@@ -277,12 +424,13 @@ def run_client(
             else:
                 output_dim = 2  # Binary classification
         
-        # Get appropriate hidden layers from config based on dataset type
-        hidden_layers = config["model"].get("hidden_layers", [64, 32])
+        # Get appropriate hidden layers from normalized config
+        model_config = normalized_config.get("model", {})
+        hidden_layers = model_config.get("hidden_layers", [64, 32])
+        
+        # Get dataset-specific hidden layers if available
         if dataset_type.lower() == "parkinsons":
-            hidden_layers = config["model"].get("parkinsons_hidden_layers", [128, 64, 32])
-        elif dataset_type.lower() == "third_dataset":
-            hidden_layers = config["model"].get("third_dataset_hidden_layers", [256, 128, 64])
+            hidden_layers = model_config.get("parkinsons_hidden_layers", [128, 64, 32])
         
         # Create model with the right architecture for the dataset
         model = create_model(
@@ -294,17 +442,49 @@ def run_client(
         )
         logger.info(f"Created {dataset_type} model with input dim={input_dim}, output dim={output_dim}, task={task}")
     
+    # Load parameters if path is provided
+    if parameter_path:
+        from models.nn_models import import_model_parameters
+        try:
+            import_model_parameters(model, parameter_path)
+            logger.info(f"Successfully loaded parameters from {parameter_path}")
+            # Always skip training if parameters are loaded
+            skip_training = True
+        except Exception as e:
+            logger.error(f"Failed to load parameters from {parameter_path}: {e}")
+    
+    # Get training epochs from normalized config
+    train_config = normalized_config.get("training", {})
+    epochs = train_config.get("epochs", 1)
+    
+    # Get client config from normalized config
+    client_config = normalized_config.get("client", {})
+    retry_interval = client_config.get("retry_interval", 10)
+    if wait_time is None:
+        wait_time = client_config.get("wait_time", 10)
+    
     # Create client
     client = Client(
         model=model,
         train_loader=train_loader,
         test_loader=test_loader,
-        epochs=config["training"]["epochs"],
+        epochs=epochs,
         client_id=client_id,
         server_host=server_host,
         server_port=server_port,
-        dataset_type=dataset_type
+        retry_interval=retry_interval,
+        dataset_type=dataset_type,
+        skip_training=skip_training
     )
+    
+    # Start continuous learning
+    client.start_continuous_learning(num_cycles=num_cycles, wait_time=wait_time)
+    
+    # Get wait time from config for backward compatibility
+    if "client" in config and "wait_time" in config["client"]:
+        wait_time = config["client"]["wait_time"]
+    elif "configData" in config and "client" in config["configData"]:
+        wait_time = config["configData"]["client"].get("wait_time", wait_time)
     
     # Start continuous learning
     client.start_continuous_learning(num_cycles=num_cycles, wait_time=wait_time)

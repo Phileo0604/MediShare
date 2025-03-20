@@ -1,11 +1,18 @@
 // src/pages/ServerManagement.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import ServerStatus from '../components/server/ServerStatus';
 import ServerControls from '../components/server/ServerControls';
+import LogViewer from '../components/logs/LogViewer';
 import { useGlobalContext } from '../context/GlobalContext';
 
 const ServerManagement = () => {
   const { serverStatus, activeClients } = useGlobalContext();
+  const [refreshInterval, setRefreshInterval] = useState(5000); // 5 seconds default
+  
+  // Handle change in refresh interval
+  const handleRefreshIntervalChange = (e) => {
+    setRefreshInterval(parseInt(e.target.value, 10));
+  };
   
   return (
     <div className="server-management">
@@ -48,6 +55,27 @@ const ServerManagement = () => {
           </table>
         </div>
       )}
+      
+      <div className="logs-section">
+        <div className="logs-header">
+          <h2>Server & Client Logs</h2>
+          <div className="refresh-control">
+            <label htmlFor="refreshInterval">Refresh Interval:</label>
+            <select 
+              id="refreshInterval" 
+              value={refreshInterval}
+              onChange={handleRefreshIntervalChange}
+            >
+              <option value="1000">1 second</option>
+              <option value="5000">5 seconds</option>
+              <option value="10000">10 seconds</option>
+              <option value="30000">30 seconds</option>
+              <option value="60000">1 minute</option>
+            </select>
+          </div>
+        </div>
+        <LogViewer maxLines={200} refreshInterval={refreshInterval} />
+      </div>
     </div>
   );
 };

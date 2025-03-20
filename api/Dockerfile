@@ -1,27 +1,53 @@
-# Stage 1: Build the React application
-FROM node:18 as build
+# Build stage
+FROM eclipse-temurin:17-jdk-alpine as build
+WORKDIR /workspace/app
 
-WORKDIR /app
+COPY mvnw .
+COPY .mvn .mvn
+COPY pom.xml .
+RUN ./mvnw dependency:go-offline -B
+COPY src src
+RUN ./mvnw package -DskipTests
+RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Runtime stage - Using OpenJDK slim instead
+FROM openjdk:17-slim
+VOLUME /tmp
 
-# Install dependencies with --omit=optional flag
-RUN npm install --omit=optional
+# Install Python and pip
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    python3 \
+    python3-pip \
+    python3-venv \
+    procps \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy the rest of the code
-COPY . .
+# Create symbolic link for python command
+RUN ln -sf /usr/bin/python3 /usr/bin/python
 
-# Build the application
-RUN npm run build
+# Install required Python packages
+RUN pip3 install --no-cache-dir numpy pandas scikit-learn xgboost torch matplotlib seaborn plotly openpyxl python-dateutil scipy joblib pillow
 
-# Stage 2: Serve the application with Nginx
-FROM nginx:stable-alpine
+# Try installing torch with CPU-only support to reduce size
+RUN pip3 install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
 
-# Copy the build output from the previous stage
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy application files
+ARG DEPENDENCY=/workspace/app/target/dependency
+COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
+COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
+COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
 
-# Expose port 80
-EXPOSE 80
+# Create directories for configs and models
+RUN mkdir -p /app/configs /app/models
 
-CMD ["nginx", "-g", "daemon off;"]
+# Instead of copying, create a placeholder Python script
+RUN echo 'print("MediShare API Server")' > /app/main.py
+
+# Set environment variables
+ENV APP_CONFIG_STORAGE_LOCATION=/app/configs
+ENV APP_MODEL_STORAGE_LOCATION=/app/models
+ENV APP_PYTHON_SCRIPT_PATH=/app/main.py
+ENV APP_PYTHON_EXECUTABLE=/usr/bin/python3
+
+ENTRYPOINT ["java","-cp","app:app/lib/*","com.medishare.api.MediShareApiApplication"]

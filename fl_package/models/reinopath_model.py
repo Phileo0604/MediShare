@@ -194,20 +194,27 @@ class ReinopathModel:
         # Convert first parameter back to bytes
         model_data = parameters[0].tobytes()
         
-        # Create a new model
+        # Create a new model with the same parameters
         self.model = xgb.Booster(params=self.params)
         
+        # Always use the file-based approach (more reliable)
+        temp_file = "temp_model.bin"
         try:
-            # Try to load the model directly from buffer
-            self.model.load_model_from_buffer(model_data)
-        except:
-            # Fallback if load_model_from_buffer is not available (version compatibility)
-            # Save to a temporary file and load
-            temp_file = "temp_model.bin"
             with open(temp_file, "wb") as f:
                 f.write(model_data)
+            
+            # Load the model from file
             self.model.load_model(temp_file)
-            os.remove(temp_file)
+            
+            # Clean up the temporary file
+            if os.path.exists(temp_file):
+                os.remove(temp_file)
+        except Exception as e:
+            print(f"Error loading model: {e}")
+            import traceback
+            traceback.print_exc()
+            # If failed to load, reset the model
+            self.reset_model()
 
 
 def create_reinopath_model(input_dim, output_dim, params=None):

@@ -9,6 +9,7 @@ import ServerManagement from './pages/ServerManagement';
 import ClientManagement from './pages/ClientManagement';
 import ConfigurationManagement from './pages/ConfigurationManagement';
 import ModelManagement from './pages/ModelManagement';
+import ModelParametersManagement from './pages/ModelParametersManagement';
 
 // Import common components
 import Header from './components/common/Header';
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/clients" element={<ClientManagement />} />
                 <Route path="/configurations" element={<ConfigurationManagement />} />
                 <Route path="/models" element={<ModelManagement />} />
+                <Route path="/parameters" element={<ModelParametersManagement />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </div>
@@ -45,6 +47,3 @@ function App() {
 }
 
 export default App;
-
-
-

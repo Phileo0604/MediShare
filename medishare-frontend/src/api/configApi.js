@@ -5,7 +5,13 @@ export const configApi = {
   // Get all configurations
   getAllConfigurations: async () => {
     const response = await apiClient.get('/api/config/all');
-    return response.data;
+    // Make sure configData is parsed JSON, not a string
+    return response.data.map(config => ({
+      ...config,
+      configData: typeof config.configJson === 'string' 
+        ? JSON.parse(config.configJson)
+        : config.configJson
+    }));
   },
 
   // Get configuration by dataset type

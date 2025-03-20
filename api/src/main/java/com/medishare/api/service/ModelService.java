@@ -30,6 +30,10 @@ public class ModelService {
         return modelRepository.findAll();
     }
     
+    public Optional<Model> getModelById(Long id) {
+        return modelRepository.findById(id);
+    }
+    
     public List<Model> getModelsByDatasetType(String datasetType) {
         return modelRepository.findByDatasetType(datasetType);
     }
@@ -50,7 +54,13 @@ public class ModelService {
         throw new RuntimeException("Model not found for dataset type: " + datasetType);
     }
     
+    // Original method that can still be used by other parts of the app
     public Model registerModel(ModelDTO modelDTO, String filePath) {
+        return registerModel(modelDTO, filePath, "json"); // Default file format
+    }
+    
+    // Method that accepts file format
+    public Model registerModel(ModelDTO modelDTO, String filePath, String fileFormat) {
         // Deactivate previous active models for this dataset type
         List<Model> activeModels = modelRepository.findByDatasetTypeAndActive(modelDTO.getDatasetType(), true)
                 .stream().toList();
@@ -66,6 +76,7 @@ public class ModelService {
         model.setName(modelDTO.getName());
         model.setDescription(modelDTO.getDescription());
         model.setFilePath(filePath);
+        model.setFileFormat(fileFormat); // Set the file format
         model.setCreatedAt(LocalDateTime.now());
         model.setActive(true);
         

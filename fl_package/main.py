@@ -98,6 +98,142 @@ def run_standalone_training(config, model, train_loader):
     # Export model parameters
     export_model_parameters(model, config["model"]["parameters_file"])
 
+def normalize_config(config):
+    """
+    Normalize the configuration to ensure backward compatibility.
+    
+    This function transforms new format configs into a structure that
+    the existing code can work with.
+    """
+    normalized = {}
+    
+    # Check if this is a nested configuration from the new format
+    if "configData" in config:
+        # Extract data from the nested structure
+        config_data = config["configData"]
+        
+        # Copy the dataset type
+        normalized["dataset_type"] = config.get("datasetType", "breast_cancer")
+        
+        # Ensure minimum required structure exists
+        normalized["dataset"] = {}
+        normalized["training"] = {"epochs": 10, "batch_size": 32, "learning_rate": 0.001}
+        normalized["model"] = {}
+        normalized["server"] = {}
+        normalized["client"] = {}
+        
+        # Copy any existing sections
+        if "dataset" in config_data:
+            normalized["dataset"] = config_data["dataset"]
+        
+        if "model" in config_data:
+            normalized["model"] = config_data["model"]
+            
+            # If no parameters_file is specified, set a default based on the dataset type
+            if "parameters_file" not in normalized["model"]:
+                if normalized["dataset_type"] == "breast_cancer":
+                    normalized["model"]["parameters_file"] = "global_models/breast_cancer_model.json"
+                elif normalized["dataset_type"] == "parkinsons":
+                    normalized["model"]["parameters_file"] = "global_models/parkinsons_model.pkl"
+                elif normalized["dataset_type"] == "reinopath":
+                    normalized["model"]["parameters_file"] = "global_models/reinopath_model.pkl"
+                else:
+                    normalized["model"]["parameters_file"] = f"global_models/{normalized['dataset_type']}_model.json"
+        
+        if "server" in config_data:
+            normalized["server"] = config_data["server"]
+        
+        if "client" in config_data:
+            normalized["client"] = config_data["client"]
+        
+        # If dataset info is missing, create default paths
+        if not normalized["dataset"].get("path"):
+            normalized["dataset"]["path"] = f"datasets/{normalized['dataset_type']}_data.csv"
+        
+        if not normalized["dataset"].get("target_column"):
+            if normalized["dataset_type"] == "breast_cancer":
+                normalized["dataset"]["target_column"] = "diagnosis"
+            elif normalized["dataset_type"] == "parkinsons":
+                normalized["dataset"]["target_column"] = "UPDRS"
+            elif normalized["dataset_type"] == "reinopath":
+                normalized["dataset"]["target_column"] = "class"
+            else:
+                normalized["dataset"]["target_column"] = "target"
+    else:
+        # Old format - just return as is
+        normalized = config
+    
+    return normalized
+
+def run_parameter_only_client(
+    config,
+    model,
+    client_id=None,
+    server_host="127.0.0.1",
+    server_port=8080,
+    num_cycles=1,
+    wait_time=10,
+    dataset_type="breast_cancer"
+):
+    """Run a federated learning client in parameter-only mode (no dataset/training)."""
+    from federated.client import Client
+    
+    # Create client with None for train_loader and test_loader
+    client = Client(
+        model=model,
+        train_loader=None,
+        test_loader=None,
+        epochs=1,  # Not used but required by the API
+        client_id=client_id,
+        server_host=server_host,
+        server_port=server_port,
+        dataset_type=dataset_type,
+        skip_training=True  # Always skip training in this mode
+    )
+    
+    # Start continuous learning
+    print("Starting parameter-only client (no dataset, just parameter sharing)")
+    client.start_continuous_learning(num_cycles=num_cycles, wait_time=wait_time)
+
+def create_minimal_model(config, dataset_type):
+    """Create a minimal model for parameter-only mode."""
+    from models.nn_models import create_model
+    
+    # Get model info from config if available
+    model_config = config.get("model", {})
+    if "configData" in config and "model" in config["configData"]:
+        model_config = config["configData"]["model"]
+    
+    # Default dimensions based on dataset type
+    input_dim = 30  # Default
+    output_dim = 2  # Default binary classification
+    
+    if dataset_type == "breast_cancer":
+        input_dim = 30
+        output_dim = 2
+    elif dataset_type == "parkinsons":
+        input_dim = 16
+        output_dim = 1  # Regression
+    elif dataset_type == "reinopath":
+        input_dim = 19
+        output_dim = 2
+    
+    # Get hidden layers from config
+    hidden_layers = model_config.get("hidden_layers", [64, 32])
+    
+    # Determine task
+    task = "regression" if dataset_type.lower() == "parkinsons" else "classification"
+    
+    # Create model
+    model = create_model(
+        input_dim=input_dim,
+        output_dim=output_dim,
+        hidden_layers=hidden_layers,
+        dataset_type=dataset_type,
+        task=task
+    )
+    
+    return model
 
 def main():
     """Main entry point for the application."""
@@ -110,15 +246,23 @@ def main():
     parser.add_argument("--server-port", type=int, default=None, help="Server port")
     parser.add_argument("--cycles", type=int, default=None, help="Number of client cycles (0 for infinite)")
     parser.add_argument("--wait-time", type=int, default=None, help="Wait time between client cycles in seconds")
-    # Add dataset type argument with reinopath included
     parser.add_argument("--dataset-type", type=str, default="breast_cancer",
                         choices=["breast_cancer", "parkinsons", "reinopath", "third_dataset"],
-                        help="Type of dataset to use (default: breast_cancer)")
+                        help="Type of dataset to use")
+    # Add new arguments
+    parser.add_argument("--skip-training", action="store_true", help="Skip training and only evaluate model")
+    parser.add_argument("--parameter-path", type=str, help="Path to pre-trained model parameters")
+    # Add new argument for skip-dataset
+    parser.add_argument("--skip-dataset", action="store_true", 
+                       help="Skip loading dataset (use with --parameter-path for model-only mode)")
     
     args = parser.parse_args()
     
     # Load configuration
     config = load_config(args.config)
+    
+    # Normalize the configuration for backwards compatibility
+    config = normalize_config(config)
     
     # Generate client ID if not provided
     client_id = args.client_id or f"client_{uuid.uuid4().hex[:8]}"
@@ -180,61 +324,157 @@ def main():
                     print(f"Try to import using: from {rel_path.replace(os.sep, '.')}.client import run_client")
             raise
         
-        # Get dataset-specific configurations
-        dataset_path = config["dataset"].get("path")
-        target_column = config["dataset"].get("target_column")
+        # Check if we should run in dataset-free mode
+        dataset_free_mode = args.skip_training and args.parameter_path
         
-        # Use dataset-specific path and target column if available
-        if args.dataset_type == "parkinsons":
-            if "parkinsons_path" in config["dataset"]:
-                dataset_path = config["dataset"]["parkinsons_path"]
-            if "parkinsons_target_column" in config["dataset"]:
-                target_column = config["dataset"]["parkinsons_target_column"]
-        elif args.dataset_type == "reinopath":
-            if "reinopath_path" in config["dataset"]:
-                dataset_path = config["dataset"]["reinopath_path"]
-            if "reinopath_target_column" in config["dataset"]:
-                target_column = config["dataset"]["reinopath_target_column"]
-        elif args.dataset_type == "third_dataset":
-            if "third_dataset_path" in config["dataset"]:
-                dataset_path = config["dataset"]["third_dataset_path"]
-            if "third_dataset_target_column" in config["dataset"]:
-                target_column = config["dataset"]["third_dataset_target_column"]
-        
-        # Update config with dataset-specific settings
-        config["dataset"]["path"] = dataset_path
-        config["dataset"]["target_column"] = target_column
-        
-        # Initialize data and model
-        train_dataset, test_dataset, train_loader, test_loader, model, device = initialize_data_and_model(
-            config, dataset_type=args.dataset_type
-        )
-        
-        # Get server details from args or config
-        # For client connections, use client_host (usually 127.0.0.1 or the server's actual IP)
-        server_host = args.server_host or config["server"].get("client_host", "127.0.0.1")
-        server_port = args.server_port or config["server"].get("port", 8080)
-        cycles = args.cycles if args.cycles is not None else config["client"].get("cycles", 0)
-        wait_time = args.wait_time if args.wait_time is not None else config["client"].get("wait_time", 60)
-        
-        print(f"Client will connect to server at {server_host}:{server_port}")
-        print(f"Using dataset type: {args.dataset_type}")
-        
-        # Run client
-        run_client(
-            config=config,
-            train_dataset=train_dataset,
-            test_dataset=test_dataset,
-            train_loader=train_loader,
-            test_loader=test_loader,
-            model=model,
-            client_id=client_id,
-            server_host=server_host,
-            server_port=server_port,
-            num_cycles=cycles,
-            wait_time=wait_time,
-            dataset_type=args.dataset_type  # Pass dataset type to run_client
-        )
+        if dataset_free_mode:
+            print(f"Running in dataset-free mode with pre-trained parameters from {args.parameter_path}")
+            
+            # Create a minimal model with default dimensions based on dataset type
+            input_dim = 30  # Default
+            output_dim = 2  # Default binary classification
+            
+            if args.dataset_type == "breast_cancer":
+                input_dim = 30
+                output_dim = 2
+            elif args.dataset_type == "parkinsons":
+                input_dim = 16
+                output_dim = 1  # Regression
+            elif args.dataset_type == "reinopath":
+                input_dim = 19
+                output_dim = 2
+            
+            # Get model config section
+            model_config = config.get("model", {})
+            if "configData" in config and "model" in config["configData"]:
+                model_config = config["configData"]["model"]
+            
+            # Get hidden layers from config
+            hidden_layers = model_config.get("hidden_layers", [64, 32])
+            
+            # Determine task type
+            task = "regression" if args.dataset_type == "parkinsons" else "classification"
+            
+            # Import the create_model function
+            from models.nn_models import create_model, import_model_parameters
+            
+            # Create model with appropriate dimensions
+            model = create_model(
+                input_dim=input_dim,
+                output_dim=output_dim,
+                hidden_layers=hidden_layers,
+                dataset_type=args.dataset_type,
+                task=task
+            )
+            
+            # Load pre-trained parameters
+            try:
+                import_model_parameters(model, args.parameter_path)
+                print(f"Loaded pre-trained parameters from {args.parameter_path}")
+            except Exception as e:
+                print(f"Failed to load parameters from {args.parameter_path}: {e}")
+                sys.exit(1)  # Exit if parameters can't be loaded in parameter-only mode
+            
+            # Get server details from args or config
+            server_host = args.server_host or config["server"].get("client_host", "127.0.0.1")
+            server_port = args.server_port or config["server"].get("port", 8080)
+            cycles = args.cycles if args.cycles is not None else config["client"].get("cycles", 0)
+            wait_time = args.wait_time if args.wait_time is not None else config["client"].get("wait_time", 60)
+            
+            print(f"Client will connect to server at {server_host}:{server_port}")
+            print(f"Using dataset type: {args.dataset_type}")
+            print(f"Operating in parameter-sharing mode (no dataset, no training)")
+            
+            # Run client with None for datasets and loaders
+            run_client(
+                config=config,
+                train_dataset=None,
+                test_dataset=None,
+                train_loader=None,
+                test_loader=None,
+                model=model,
+                client_id=client_id,
+                server_host=server_host,
+                server_port=server_port,
+                num_cycles=cycles,
+                wait_time=wait_time,
+                dataset_type=args.dataset_type,
+                skip_training=True
+            )
+        else:
+            # Regular mode with dataset
+            # Get dataset-specific configurations
+            dataset_path = config["dataset"].get("path")
+            target_column = config["dataset"].get("target_column")
+            
+            # Use dataset-specific path and target column if available
+            if args.dataset_type == "parkinsons":
+                if "parkinsons_path" in config.get("dataset", {}):
+                    dataset_path = config["dataset"]["parkinsons_path"]
+                if "parkinsons_target_column" in config.get("dataset", {}):
+                    target_column = config["dataset"]["parkinsons_target_column"]
+            elif args.dataset_type == "reinopath":
+                if "reinopath_path" in config.get("dataset", {}):
+                    dataset_path = config["dataset"]["reinopath_path"]
+                if "reinopath_target_column" in config.get("dataset", {}):
+                    target_column = config["dataset"]["reinopath_target_column"]
+            elif args.dataset_type == "third_dataset":
+                if "third_dataset_path" in config.get("dataset", {}):
+                    dataset_path = config["dataset"]["third_dataset_path"]
+                if "third_dataset_target_column" in config.get("dataset", {}):
+                    target_column = config["dataset"]["third_dataset_target_column"]
+            
+            # Create default dataset settings if they don't exist
+            if "dataset" not in config:
+                config["dataset"] = {
+                    "path": dataset_path,
+                    "target_column": target_column
+                }
+            
+            # Update config with dataset-specific settings
+            config["dataset"]["path"] = dataset_path
+            config["dataset"]["target_column"] = target_column
+            
+            # Initialize data and model
+            train_dataset, test_dataset, train_loader, test_loader, model, device = initialize_data_and_model(
+                config, dataset_type=args.dataset_type
+            )
+            
+            # Load parameters if path is provided
+            if args.parameter_path:
+                try:
+                    from models.nn_models import import_model_parameters
+                    import_model_parameters(model, args.parameter_path)
+                    print(f"Loaded pre-trained parameters from {args.parameter_path}")
+                except Exception as e:
+                    print(f"Failed to load parameters from {args.parameter_path}: {e}")
+            
+            # Get server details from args or config
+            server_host = args.server_host or config["server"].get("client_host", "127.0.0.1")
+            server_port = args.server_port or config["server"].get("port", 8080)
+            cycles = args.cycles if args.cycles is not None else config["client"].get("cycles", 0)
+            wait_time = args.wait_time if args.wait_time is not None else config["client"].get("wait_time", 60)
+            
+            print(f"Client will connect to server at {server_host}:{server_port}")
+            print(f"Using dataset type: {args.dataset_type}")
+            print(f"Training will be {'skipped' if args.skip_training else 'performed'}")
+            
+            # Run client
+            run_client(
+                config=config,
+                train_dataset=train_dataset,
+                test_dataset=test_dataset,
+                train_loader=train_loader,
+                test_loader=test_loader,
+                model=model,
+                client_id=client_id,
+                server_host=server_host,
+                server_port=server_port,
+                num_cycles=cycles,
+                wait_time=wait_time,
+                dataset_type=args.dataset_type,
+                skip_training=args.skip_training
+            )
 
 
 if __name__ == "__main__":

@@ -2762,3 +2762,238 @@
 2025-03-10 00:58:27,347 - Client - INFO - Expecting 32056 bytes from server
 2025-03-10 00:58:27,357 - Client - ERROR - Error receiving global model: bad allocation
 2025-03-10 00:58:27,357 - Client - WARNING - Federated cycle 3 failed
+2025-03-18 00:04:43,897 - Client - INFO - Using model path: global_models\breast_cancer_model.json
+2025-03-18 00:04:43,897 - Client - INFO - Starting federated cycle 1 for breast_cancer
+2025-03-18 00:04:43,898 - Client - INFO - Sent dataset type: breast_cancer
+2025-03-18 00:04:43,901 - Client - INFO - Expecting 89169 bytes from server
+2025-03-18 00:04:43,908 - Client - INFO - Received and set global model parameters for breast_cancer
+2025-03-18 00:04:43,908 - Client - INFO - Starting local training for 10 epochs on breast_cancer dataset
+2025-03-18 00:04:45,831 - Client - INFO - Local evaluation - Loss: 0.0654, Accuracy: 0.9737
+2025-03-18 00:04:45,834 - Client - INFO - Sent updated model parameters (89036 bytes) for breast_cancer
+2025-03-18 00:04:45,852 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-18 00:04:45,853 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-18 00:06:18,615 - Client - INFO - Using model path: global_models\parkinsons_model.pkl
+2025-03-18 00:06:18,615 - Client - INFO - Starting federated cycle 1 for parkinsons
+2025-03-18 00:06:18,616 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:06:18,617 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:06:18,629 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:06:18,629 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:06:18,631 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:06:18,632 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:06:28,633 - Client - INFO - Starting federated cycle 2 for parkinsons
+2025-03-18 00:06:28,633 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:06:28,634 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:06:28,642 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:06:28,642 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:06:28,643 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:06:28,643 - Client - WARNING - Federated cycle 2 failed
+2025-03-18 00:07:06,306 - Client - INFO - Using model path: global_models\parkinsons_model.pkl
+2025-03-18 00:07:06,306 - Client - INFO - Starting federated cycle 1 for parkinsons
+2025-03-18 00:07:06,307 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:07:06,308 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:07:06,315 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:07:06,315 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:07:06,317 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:07:06,317 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:07:16,319 - Client - INFO - Starting federated cycle 2 for parkinsons
+2025-03-18 00:07:16,319 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:07:16,320 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:07:16,328 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:07:16,328 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:07:16,329 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:07:16,329 - Client - WARNING - Federated cycle 2 failed
+2025-03-18 00:11:41,395 - Client - INFO - Using model path: global_models\parkinsons_model.pkl
+2025-03-18 00:11:41,395 - Client - INFO - Starting federated cycle 1 for parkinsons
+2025-03-18 00:11:41,396 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:11:41,397 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:11:41,405 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:11:41,405 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:11:41,407 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:11:41,408 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:11:51,409 - Client - INFO - Starting federated cycle 2 for parkinsons
+2025-03-18 00:11:51,409 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:11:51,410 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:11:51,418 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:11:51,418 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:11:51,419 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:11:51,419 - Client - WARNING - Federated cycle 2 failed
+2025-03-18 00:12:01,420 - Client - INFO - Starting federated cycle 3 for parkinsons
+2025-03-18 00:12:01,420 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:12:01,422 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:12:01,429 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:12:01,429 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:12:01,430 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:12:01,430 - Client - WARNING - Federated cycle 3 failed
+2025-03-18 00:12:11,432 - Client - INFO - Starting federated cycle 4 for parkinsons
+2025-03-18 00:12:11,432 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:12:11,434 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:12:11,442 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:12:11,442 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:12:11,443 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:12:11,443 - Client - WARNING - Federated cycle 4 failed
+2025-03-18 00:12:21,444 - Client - INFO - Starting federated cycle 5 for parkinsons
+2025-03-18 00:12:21,444 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:12:21,445 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:12:21,454 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:12:21,454 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:12:21,455 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:12:21,455 - Client - WARNING - Federated cycle 5 failed
+2025-03-18 00:24:04,967 - Client - INFO - Using model path: global_models\parkinsons_model.pkl
+2025-03-18 00:24:04,967 - Client - INFO - Starting federated cycle 1 for parkinsons
+2025-03-18 00:24:04,968 - Client - INFO - Sent dataset type: parkinsons
+2025-03-18 00:24:04,969 - Client - INFO - Expecting 16628 bytes from server
+2025-03-18 00:24:04,977 - Client - INFO - Received and set global model parameters for parkinsons
+2025-03-18 00:24:04,977 - Client - INFO - Starting local training for 10 epochs on parkinsons dataset
+2025-03-18 00:24:05,022 - Client - ERROR - Error during federated cycle: cannot unpack non-iterable NoneType object
+2025-03-18 00:24:05,023 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:25:37,167 - Client - INFO - Using model path: global_models\reinopath_model.pkl
+2025-03-18 00:25:37,167 - Client - INFO - Starting federated cycle 1 for reinopath
+2025-03-18 00:25:37,168 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:25:37,169 - Client - INFO - Server has no global model for reinopath yet
+2025-03-18 00:25:37,169 - Client - INFO - Starting local training for 15 epochs on reinopath dataset
+2025-03-18 00:25:37,237 - Client - INFO - Local evaluation - Loss: 0.6587, Accuracy: 0.5584
+2025-03-18 00:25:37,238 - Client - INFO - Sent updated model parameters (33280 bytes) for reinopath
+2025-03-18 00:25:37,244 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-18 00:25:37,244 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-18 00:25:37,245 - Client - INFO - Waiting 30 seconds before next cycle
+2025-03-18 00:26:07,246 - Client - INFO - Starting federated cycle 2 for reinopath
+2025-03-18 00:26:07,246 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:26:07,248 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:26:07,255 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:26:07,255 - Client - WARNING - Federated cycle 2 failed
+2025-03-18 00:26:17,256 - Client - INFO - Starting federated cycle 3 for reinopath
+2025-03-18 00:26:17,256 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:26:17,257 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:26:17,266 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:26:17,266 - Client - WARNING - Federated cycle 3 failed
+2025-03-18 00:26:27,267 - Client - INFO - Starting federated cycle 4 for reinopath
+2025-03-18 00:26:27,267 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:26:27,268 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:26:27,275 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:26:27,275 - Client - WARNING - Federated cycle 4 failed
+2025-03-18 00:26:37,277 - Client - INFO - Starting federated cycle 5 for reinopath
+2025-03-18 00:26:37,277 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:26:37,278 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:26:37,285 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:26:37,286 - Client - WARNING - Federated cycle 5 failed
+2025-03-18 00:34:20,117 - Client - INFO - Using model path: global_models\reinopath_model.pkl
+2025-03-18 00:34:20,118 - Client - INFO - Starting federated cycle 1 for reinopath
+2025-03-18 00:34:20,118 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:34:20,120 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:34:20,126 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:34:20,127 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:34:41,187 - Client - INFO - Using model path: global_models\reinopath_model.pkl
+2025-03-18 00:34:41,187 - Client - INFO - Starting federated cycle 1 for reinopath
+2025-03-18 00:34:41,188 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:34:41,189 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:34:41,195 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:34:41,196 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:34:51,197 - Client - INFO - Starting federated cycle 2 for reinopath
+2025-03-18 00:34:51,197 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:34:51,199 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:34:51,207 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:34:51,207 - Client - WARNING - Federated cycle 2 failed
+2025-03-18 00:35:01,208 - Client - INFO - Starting federated cycle 3 for reinopath
+2025-03-18 00:35:01,208 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:35:01,209 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:35:01,216 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:35:01,216 - Client - WARNING - Federated cycle 3 failed
+2025-03-18 00:35:11,217 - Client - INFO - Starting federated cycle 4 for reinopath
+2025-03-18 00:35:11,217 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:35:11,219 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:35:11,227 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:35:11,228 - Client - WARNING - Federated cycle 4 failed
+2025-03-18 00:35:21,229 - Client - INFO - Starting federated cycle 5 for reinopath
+2025-03-18 00:35:21,229 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:35:21,231 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:35:21,238 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:35:21,239 - Client - WARNING - Federated cycle 5 failed
+2025-03-18 00:38:56,048 - Client - INFO - Using model path: global_models\reinopath_model.pkl
+2025-03-18 00:38:56,048 - Client - INFO - Starting federated cycle 1 for reinopath
+2025-03-18 00:38:56,048 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:38:56,050 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:38:56,057 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:38:56,057 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:39:06,058 - Client - INFO - Starting federated cycle 2 for reinopath
+2025-03-18 00:39:06,058 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:39:06,060 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:39:06,067 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:39:06,067 - Client - WARNING - Federated cycle 2 failed
+2025-03-18 00:39:22,076 - Client - INFO - Using model path: global_models\reinopath_model.pkl
+2025-03-18 00:39:22,077 - Client - INFO - Starting federated cycle 1 for reinopath
+2025-03-18 00:39:22,077 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:39:22,078 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:39:22,085 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:39:22,086 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:39:32,087 - Client - INFO - Starting federated cycle 2 for reinopath
+2025-03-18 00:39:32,087 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:39:32,089 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:39:32,095 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:39:32,095 - Client - WARNING - Federated cycle 2 failed
+2025-03-18 00:39:42,097 - Client - INFO - Starting federated cycle 3 for reinopath
+2025-03-18 00:39:42,097 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:39:42,099 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:39:42,105 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:39:42,105 - Client - WARNING - Federated cycle 3 failed
+2025-03-18 00:42:49,805 - Client - INFO - Using model path: global_models\breast_cancer_model.json
+2025-03-18 00:42:49,805 - Client - INFO - Starting federated cycle 1 for breast_cancer
+2025-03-18 00:42:49,806 - Client - INFO - Sent dataset type: breast_cancer
+2025-03-18 00:42:49,812 - Client - INFO - Expecting 89180 bytes from server
+2025-03-18 00:42:49,825 - Client - ERROR - Error receiving global model: The size of tensor a (18) must match the size of tensor b (30) at non-singleton dimension 1
+2025-03-18 00:42:49,826 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:43:24,087 - Client - INFO - Using model path: global_models\reinopath_model.pkl
+2025-03-18 00:43:24,087 - Client - INFO - Starting federated cycle 1 for reinopath
+2025-03-18 00:43:24,088 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:43:24,089 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:43:24,097 - Client - ERROR - Error receiving global model: bad allocation
+2025-03-18 00:43:24,097 - Client - WARNING - Federated cycle 1 failed
+2025-03-18 00:46:29,484 - Client - INFO - Using model path: global_models\reinopath_model.pkl
+2025-03-18 00:46:29,484 - Client - INFO - Starting federated cycle 1 for reinopath
+2025-03-18 00:46:29,484 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:46:29,486 - Client - INFO - Expecting 33280 bytes from server
+2025-03-18 00:46:29,494 - Client - INFO - Received and set global model parameters for reinopath
+2025-03-18 00:46:29,494 - Client - INFO - Starting local training for 15 epochs on reinopath dataset
+2025-03-18 00:46:29,591 - Client - INFO - Local evaluation - Loss: 0.6806, Accuracy: 0.5325
+2025-03-18 00:46:29,592 - Client - INFO - Sent updated model parameters (32804 bytes) for reinopath
+2025-03-18 00:46:29,597 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-18 00:46:29,597 - Client - INFO - Federated cycle 1 completed successfully
+2025-03-18 00:46:29,597 - Client - INFO - Waiting 30 seconds before next cycle
+2025-03-18 00:46:59,598 - Client - INFO - Starting federated cycle 2 for reinopath
+2025-03-18 00:46:59,598 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:46:59,599 - Client - INFO - Expecting 32804 bytes from server
+2025-03-18 00:46:59,608 - Client - INFO - Received and set global model parameters for reinopath
+2025-03-18 00:46:59,608 - Client - INFO - Starting local training for 15 epochs on reinopath dataset
+2025-03-18 00:46:59,669 - Client - INFO - Local evaluation - Loss: 0.6540, Accuracy: 0.5455
+2025-03-18 00:46:59,670 - Client - INFO - Sent updated model parameters (32668 bytes) for reinopath
+2025-03-18 00:46:59,675 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-18 00:46:59,675 - Client - INFO - Federated cycle 2 completed successfully
+2025-03-18 00:46:59,675 - Client - INFO - Waiting 30 seconds before next cycle
+2025-03-18 00:47:29,677 - Client - INFO - Starting federated cycle 3 for reinopath
+2025-03-18 00:47:29,678 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:47:29,679 - Client - INFO - Expecting 32668 bytes from server
+2025-03-18 00:47:29,697 - Client - INFO - Received and set global model parameters for reinopath
+2025-03-18 00:47:29,697 - Client - INFO - Starting local training for 15 epochs on reinopath dataset
+2025-03-18 00:47:29,758 - Client - INFO - Local evaluation - Loss: 0.6602, Accuracy: 0.5325
+2025-03-18 00:47:29,759 - Client - INFO - Sent updated model parameters (32600 bytes) for reinopath
+2025-03-18 00:47:29,764 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-18 00:47:29,764 - Client - INFO - Federated cycle 3 completed successfully
+2025-03-18 00:47:29,764 - Client - INFO - Waiting 30 seconds before next cycle
+2025-03-18 00:47:59,765 - Client - INFO - Starting federated cycle 4 for reinopath
+2025-03-18 00:47:59,765 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:47:59,767 - Client - INFO - Expecting 32600 bytes from server
+2025-03-18 00:47:59,775 - Client - INFO - Received and set global model parameters for reinopath
+2025-03-18 00:47:59,775 - Client - INFO - Starting local training for 15 epochs on reinopath dataset
+2025-03-18 00:47:59,842 - Client - INFO - Local evaluation - Loss: 0.6630, Accuracy: 0.5455
+2025-03-18 00:47:59,843 - Client - INFO - Sent updated model parameters (33552 bytes) for reinopath
+2025-03-18 00:47:59,846 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-18 00:47:59,847 - Client - INFO - Federated cycle 4 completed successfully
+2025-03-18 00:47:59,847 - Client - INFO - Waiting 30 seconds before next cycle
+2025-03-18 00:48:29,848 - Client - INFO - Starting federated cycle 5 for reinopath
+2025-03-18 00:48:29,848 - Client - INFO - Sent dataset type: reinopath
+2025-03-18 00:48:29,849 - Client - INFO - Expecting 33552 bytes from server
+2025-03-18 00:48:29,860 - Client - INFO - Received and set global model parameters for reinopath
+2025-03-18 00:48:29,860 - Client - INFO - Starting local training for 15 epochs on reinopath dataset
+2025-03-18 00:48:29,919 - Client - INFO - Local evaluation - Loss: 0.6845, Accuracy: 0.5455
+2025-03-18 00:48:29,920 - Client - INFO - Sent updated model parameters (30900 bytes) for reinopath
+2025-03-18 00:48:29,924 - Client - INFO - Server acknowledged receipt of parameters
+2025-03-18 00:48:29,924 - Client - INFO - Federated cycle 5 completed successfully

@@ -17,7 +17,6 @@ const ServerStatus = () => {
   
   return (
     <div className="server-status">
-      <h2>Server Status</h2>
       <div className="status-card">
         <div className="status-indicator">
           <span className={`status-dot ${serverStatus.isRunning ? 'active' : 'inactive'}`}></span>
@@ -29,10 +28,20 @@ const ServerStatus = () => {
         {serverStatus.isRunning && (
           <div className="status-details">
             <p><strong>Dataset Type:</strong> {serverStatus.datasetType}</p>
-            <p><strong>Started:</strong> {new Date(serverStatus.startTime).toLocaleString()}</p>
+            <p><strong>Started:</strong> {serverStatus.startTime ? new Date(serverStatus.startTime).toLocaleString() : 'Unknown'}</p>
             <p><strong>Active Clients:</strong> {serverStatus.activeClients}</p>
           </div>
         )}
+        
+        {/* Add debug information section */}
+        <div className="debug-info">
+          <details>
+            <summary>Debug Information</summary>
+            <pre className="debug-data">
+              {JSON.stringify(serverStatus, null, 2)}
+            </pre>
+          </details>
+        </div>
       </div>
     </div>
   );

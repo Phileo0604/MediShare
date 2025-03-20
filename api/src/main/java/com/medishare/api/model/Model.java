@@ -21,10 +21,22 @@ public class Model {
     @Column(nullable = false)
     private String filePath;
     
+    @Column(nullable = false)
+    private String fileFormat;
+    
     @Column(columnDefinition = "TEXT")
     private String description;
     
     private LocalDateTime createdAt;
     
     private boolean active;
+    
+    // Getter and setter for fileFormat
+    public String getFileFormat() {
+        return fileFormat;
+    }
+    
+    public void setFileFormat(String fileFormat) {
+        this.fileFormat = fileFormat;
+    }
 }
