@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -18,7 +17,8 @@ import java.util.Map;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/model")
+@RequestMapping("/api/model") // This might need to be "/api/models" to match your frontend
+@CrossOrigin(origins = "http://localhost:3000") // Add this line for direct CORS support
 public class ModelUploadController {
     
     @Value("${app.model-storage.location}")
@@ -31,7 +31,7 @@ public class ModelUploadController {
         this.modelService = modelService;
     }
     
-    @PostMapping("/upload")
+    @PostMapping(value = "/upload", consumes = "multipart/form-data")
     public ResponseEntity<?> uploadModelParameters(
             @RequestParam("file") MultipartFile file,
             @RequestParam("name") String name,

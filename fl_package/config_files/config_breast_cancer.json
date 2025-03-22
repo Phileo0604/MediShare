@@ -1,7 +1,7 @@
 {
     "dataset_type": "breast_cancer",
     "dataset": {
-        "path": "datasets/data.csv",
+        "path": "datasets/breast_cancer3.csv",
         "target_column": "diagnosis"
     },
     "training": {
