@@ -48,7 +48,7 @@ export const modelApi = {
     formData.append('description', description);
     formData.append('datasetType', datasetType);
     
-    const response = await apiClient.post('/api/models/upload', formData, {
+    const response = await apiClient.post('/api/model/upload', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       },
@@ -59,6 +59,49 @@ export const modelApi = {
       }
     });
     
+    return response.data;
+  },
+
+  /**
+   * Set a model as the active global model
+   * @param {number} modelId - ID of the model to activate
+   * @param {string} datasetType - Dataset type
+   * @returns {Promise} API response
+   */
+  activateModel: async (modelId, datasetType) => {
+    const response = await apiClient.post(`/api/models/activate`, {
+      modelId,
+      datasetType
+    });
+    return response.data;
+  },
+
+  /**
+   * Get performance metrics for a model
+   * @param {number} modelId - ID of the model
+   * @returns {Promise} API response with model metrics
+   */
+  getModelMetrics: async (modelId) => {
+    const response = await apiClient.get(`/api/models/${modelId}/metrics`);
+    return response.data;
+  },
+
+  /**
+   * Start a new federated learning round
+   * @param {string} datasetType - Dataset type
+   * @param {Object} options - Options for the training round
+   * @returns {Promise} API response
+   */
+  startTrainingRound: async (datasetType, options = {}) => {
+    const response = await apiClient.post(`/api/models/training-round`, {
+      datasetType,
+      ...options
+    });
+    return response.data;
+  },
+  deleteAllModels: async (datasetType = null) => {
+    const url = datasetType ? `/api/models/all/${datasetType}` : '/api/models/all';
+    const response = await apiClient.delete(url);
     return response.data;
   }
 };

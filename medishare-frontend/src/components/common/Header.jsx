@@ -39,9 +39,6 @@ const Header = () => {
             <Link to="/configurations">Configurations</Link>
           </li>
           <li>
-            <Link to="/models">Models</Link>
-          </li>
-          <li>
             <Link to="/parameters">Parameters</Link>
           </li>
         </ul>

@@ -82,10 +82,13 @@ export const GlobalProvider = ({ children }) => {
   };
 
   // Start the server
-  const startServer = async (datasetType, configId = null) => {
+  const startServer = async (datasetType = null, configId = null) => {
     try {
       setServerStatus(prev => ({ ...prev, loading: true, error: null }));
-      await serverApi.startServer(datasetType, configId);
+      
+      // Update the call to serverApi
+      await serverApi.startServer(datasetType); // This should already handle null
+      
       await fetchServerStatus();
       return true;
     } catch (error) {
@@ -98,6 +101,7 @@ export const GlobalProvider = ({ children }) => {
     }
   };
 
+  
   // Stop the server
   const stopServer = async () => {
     try {

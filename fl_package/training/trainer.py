@@ -57,7 +57,7 @@ def test(model, test_loader):
     # Check if this is an XGBoost model
     elif hasattr(model, 'evaluate') and hasattr(model, 'model') and hasattr(model.model, 'predict'):
         try:
-            from training.xgboost_trainer import test_xgboost
+            from training.xgb_trainer import test_xgboost
             return test_xgboost(model, test_loader)
         except ImportError:
             print("Warning: XGBoost trainer not found, falling back to default evaluation.")

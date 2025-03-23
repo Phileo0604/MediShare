@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -60,26 +61,16 @@ public class ConfigurationController {
     }
 
     @DeleteMapping("/all")
-    public ResponseEntity<?> deleteAllConfigurations() {
-        try {
-            int deletedCount = configService.deleteAllConfigurations();
-            return ResponseEntity.ok("Deleted " + deletedCount + " configurations");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error deleting configurations: " + e.getMessage());
-        }
-    }
-
-    @DeleteMapping("/{datasetType}")
-    public ResponseEntity<?> deleteConfigurationByDatasetType(@PathVariable String datasetType) {
-        try {
-            boolean deleted = configService.deleteConfigurationByDatasetType(datasetType);
-            if (deleted) {
-                return ResponseEntity.ok("Configuration for " + datasetType + " deleted successfully");
-            } else {
-                return ResponseEntity.notFound().build();
+        public ResponseEntity<?> deleteAllConfigurations() {
+            try {
+                int deletedCount = configService.deleteAllConfigurations();
+                return ResponseEntity.ok(Map.of(
+                    "success", true,
+                    "count", deletedCount,
+                    "message", "Deleted " + deletedCount + " configurations"
+                ));
+            } catch (Exception e) {
+                return ResponseEntity.badRequest().body("Error deleting configurations: " + e.getMessage());
             }
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error deleting configuration: " + e.getMessage());
         }
-    }
 }

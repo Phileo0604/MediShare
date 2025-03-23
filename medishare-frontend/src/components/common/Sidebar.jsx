@@ -13,7 +13,7 @@ const Sidebar = () => {
           <li>
             <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>
               <i className="icon dashboard-icon"></i>
-              <span>Dashboard</span>
+              <span>Dashboard & Models</span>
             </NavLink>
           </li>
           <li>
@@ -33,12 +33,6 @@ const Sidebar = () => {
             <NavLink to="/configurations" className={({ isActive }) => isActive ? 'active' : ''}>
               <i className="icon config-icon"></i>
               <span>Configurations</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/models" className={({ isActive }) => isActive ? 'active' : ''}>
-              <i className="icon model-icon"></i>
-              <span>Models</span>
             </NavLink>
           </li>
           <li>

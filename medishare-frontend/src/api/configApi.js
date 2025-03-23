@@ -22,13 +22,27 @@ export const configApi = {
 
   // Create a new configuration
   createConfiguration: async (configData) => {
-    const response = await apiClient.post('/api/config/create', configData);
+    // Create a DTO matching what the backend expects
+    const configDTO = {
+      datasetType: configData.datasetType,
+      configName: configData.configName,
+      configData: configData.configData
+    };
+    
+    const response = await apiClient.post('/api/config/create', configDTO);
     return response.data;
   },
 
   // Update an existing configuration
   updateConfiguration: async (datasetType, configData) => {
-    const response = await apiClient.put(`/api/config/${datasetType}`, configData);
+    // Create a DTO matching what the backend expects
+    const configDTO = {
+      datasetType: configData.datasetType,
+      configName: configData.configName,
+      configData: configData.configData
+    };
+    
+    const response = await apiClient.put(`/api/config/${datasetType}`, configDTO);
     return response.data;
   },
 
@@ -42,10 +56,5 @@ export const configApi = {
   deleteAllConfigurations: async () => {
     const response = await apiClient.delete('/api/config/all');
     return response.data;
-  }
+  },
 };
-
-
-
-
-

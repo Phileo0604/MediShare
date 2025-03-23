@@ -15,6 +15,7 @@ const ClientForm = ({ onClientStarted }) => {
     modelId: '',
     cycles: 3,
     serverHost: '127.0.0.1',
+    clientName: '', // Added client name field
     mode: 'config' // 'config' or 'model'
   });
   
@@ -124,12 +125,17 @@ const ClientForm = ({ onClientStarted }) => {
     try {
       let result;
       
+      // Generate a custom client ID if name is provided
+      const clientName = formData.clientName.trim();
+      const clientId = clientName ? clientName.replace(/\s+/g, '_').toLowerCase() : null;
+      
       if (formData.mode === 'model' && formData.modelId) {
         // Start client with model parameters
         result = await clientApi.startClientWithParameters(
           formData.datasetType,
           formData.modelId,
-          formData.serverHost
+          formData.serverHost,
+          clientId // Pass the custom client ID
         );
       } else {
         // Start client with configuration
@@ -137,11 +143,17 @@ const ClientForm = ({ onClientStarted }) => {
           formData.datasetType, 
           formData.cycles, 
           formData.serverHost,
-          formData.configId // Pass the selected configuration ID
+          formData.configId, // Pass the selected configuration ID
+          clientId // Pass the custom client ID
         );
       }
       
       if (result && result.clientId) {
+        // Add the client name to the result for display purposes
+        if (clientName) {
+          result.clientName = clientName;
+        }
+        
         if (onClientStarted) {
           onClientStarted(result);
         }
@@ -149,7 +161,8 @@ const ClientForm = ({ onClientStarted }) => {
         setFormData(prev => ({
           ...prev,
           cycles: 3,
-          serverHost: '127.0.0.1'
+          serverHost: '127.0.0.1',
+          clientName: '' // Clear client name
         }));
       } else {
         setError('Failed to start client. Please try again.');
@@ -192,6 +205,22 @@ const ClientForm = ({ onClientStarted }) => {
       </div>
       
       <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="clientName">Client Name (optional):</label>
+          <input
+            type="text"
+            id="clientName"
+            name="clientName"
+            value={formData.clientName}
+            onChange={handleChange}
+            placeholder="Enter a friendly name for this client"
+            disabled={loading}
+          />
+          <small className="help-text">
+            If not provided, a system-generated ID will be used
+          </small>
+        </div>
+        
         <div className="form-group">
           <label htmlFor="datasetType">Dataset Type:</label>
           <select 

@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface ModelRepository extends JpaRepository<Model, Long> {
     List<Model> findByDatasetType(String datasetType);
     Optional<Model> findByDatasetTypeAndActive(String datasetType, boolean active);
+    void deleteByDatasetType(String datasetType);
 }

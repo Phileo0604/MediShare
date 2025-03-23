@@ -48,7 +48,8 @@ public class ClientController {
             @RequestParam String datasetType,
             @RequestParam(required = false) Long configId,
             @RequestParam(defaultValue = "1") int cycles,
-            @RequestParam(defaultValue = "127.0.0.1") String serverHost) {
+            @RequestParam(defaultValue = "127.0.0.1") String serverHost,
+            @RequestParam(required = false) String clientId) { // Added optional clientId parameter
         try {
             String configPath;
             String modelFilePath = null;
@@ -113,15 +114,18 @@ public class ClientController {
                 }
             }
             
-            // Generate a client ID
-            String clientId = "client_" + System.currentTimeMillis();
+            // Generate a client ID if not provided
+            String finalClientId = clientId;
+            if (finalClientId == null || finalClientId.isEmpty()) {
+                finalClientId = "client_" + System.currentTimeMillis();
+            }
             
             // Start the client
             boolean started = clientService.startClient(
                 modelFilePath, // This can be null if we're using training mode
                 configPath, 
                 datasetType, 
-                clientId, 
+                finalClientId, 
                 serverHost, 
                 cycles
             );
@@ -129,7 +133,7 @@ public class ClientController {
             if (started) {
                 Map<String, Object> response = new HashMap<>();
                 response.put("status", "started");
-                response.put("clientId", clientId);
+                response.put("clientId", finalClientId);
                 response.put("datasetType", datasetType);
                 response.put("cycles", cycles);
                 response.put("serverHost", serverHost);
@@ -151,7 +155,8 @@ public class ClientController {
     public ResponseEntity<?> startClientWithParameters(
             @RequestParam String datasetType,
             @RequestParam Long modelId,
-            @RequestParam(defaultValue = "127.0.0.1") String serverHost) {
+            @RequestParam(defaultValue = "127.0.0.1") String serverHost,
+            @RequestParam(required = false) String clientId) { // Added optional clientId parameter
         try {
             // Get the model from the database
             Optional<Model> modelOpt = modelRepository.findById(modelId);
@@ -171,8 +176,11 @@ public class ClientController {
             // Get the model file path
             String modelFilePath = model.getFilePath();
             
-            // Generate a client ID
-            String clientId = "client_" + System.currentTimeMillis();
+            // Generate a client ID if not provided
+            String finalClientId = clientId;
+            if (finalClientId == null || finalClientId.isEmpty()) {
+                finalClientId = "client_" + System.currentTimeMillis();
+            }
             
             // We need a config path as well, using the default one for the dataset type
             String configPath = fileSystemUtil.getConfigFilePath(datasetType);
@@ -188,7 +196,7 @@ public class ClientController {
                 modelFilePath, 
                 configPath,
                 datasetType, 
-                clientId, 
+                finalClientId, 
                 serverHost, 
                 1 // Default to 1 cycle when using parameters
             );
@@ -196,7 +204,7 @@ public class ClientController {
             if (started) {
                 Map<String, Object> response = new HashMap<>();
                 response.put("status", "started");
-                response.put("clientId", clientId);
+                response.put("clientId", finalClientId);
                 response.put("datasetType", datasetType);
                 response.put("modelId", modelId);
                 response.put("serverHost", serverHost);
@@ -250,6 +258,72 @@ public class ClientController {
             return ResponseEntity.badRequest().body(
                 "Error retrieving client history: " + e.getMessage()
             );
+        }
+    }
+    
+    /**
+     * Delete a client history entry
+     */
+    @DeleteMapping("/history/{clientId}")
+    public ResponseEntity<?> deleteClientHistory(@PathVariable String clientId) {
+        try {
+            // Try to stop the client first if it's running
+            try {
+                String status = clientService.getClientStatus(clientId);
+                if (status.equals("running")) {
+                    clientService.stopClient(clientId);
+                }
+            } catch (Exception e) {
+                // Ignore errors if the client is not running or can't be stopped
+                System.err.println("Error stopping client before deletion: " + e.getMessage());
+            }
+            
+            // Now try to remove from history
+            boolean removed = false;
+            synchronized (clientService) {
+                List<Map<String, Object>> allHistory = clientService.getAllClientHistory();
+                int sizeBefore = allHistory.size();
+                
+                // Filter the specific entry out
+                allHistory.removeIf(entry -> entry.get("clientId").equals(clientId));
+                
+                removed = allHistory.size() < sizeBefore;
+            }
+            
+            if (removed) {
+                return ResponseEntity.ok("Client history deleted successfully");
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Error deleting client history: " + e.getMessage());
+        }
+    }
+    
+    /**
+     * Refresh client statuses
+     */
+    @PostMapping("/refresh-status")
+    public ResponseEntity<?> refreshClientStatuses(@RequestParam String datasetType) {
+        try {
+            List<String> activeClientIds = clientService.getActiveClientIds();
+            
+            // Update status for each potentially active client
+            for (String clientId : activeClientIds) {
+                try {
+                    String status = clientService.getClientStatus(clientId);
+                    // Status update is handled inside getClientStatus
+                } catch (Exception e) {
+                    // Log but continue with other clients
+                    System.err.println("Error updating status for client " + clientId + ": " + e.getMessage());
+                }
+            }
+            
+            // Return updated client history
+            List<Map<String, Object>> updatedHistory = clientService.getClientHistory(datasetType);
+            return ResponseEntity.ok(updatedHistory);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Error refreshing client statuses: " + e.getMessage());
         }
     }
     

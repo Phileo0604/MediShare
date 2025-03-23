@@ -788,3 +788,138 @@ tr:hover {
   font-size: 0.9rem;
   color: #666;
 }
+
+/* Add to your index.css or create a new ConfigList.css file */
+
+.config-list {
+  margin-top: 20px;
+  overflow-x: auto; /* Make table responsive */
+}
+
+.config-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.config-table th {
+  background-color: #f8f9fa;
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.config-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.config-table tr:last-child td {
+  border-bottom: none;
+}
+
+.config-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Special column styling */
+.config-table th:first-child,
+.config-table td:first-child {
+  padding-left: 20px;
+}
+
+.config-table th:last-child,
+.config-table td:last-child {
+  padding-right: 20px;
+}
+
+/* Dataset badge */
+.dataset-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Info text styling */
+.info-text {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+.info-text strong {
+  color: #495057;
+}
+
+.server-info, .client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.875rem;
+}
+
+/* Config name highlight */
+.config-table td:first-child {
+  font-weight: 500;
+  color: #212529;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .config-table {
+    font-size: 0.9rem;
+  }
+  
+  .config-table th, 
+  .config-table td {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .config-table {
+    font-size: 0.85rem;
+  }
+  
+  .info-text {
+    font-size: 0.8rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .btn-sm {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+.global-model-icon {
+  background-image: url('/icons/global-model-icon.svg'); /* Replace with your actual icon path */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

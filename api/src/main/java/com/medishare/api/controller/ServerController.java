@@ -22,21 +22,32 @@ public class ServerController {
     }
     
     @PostMapping("/start")
-    public ResponseEntity<?> startServer(@RequestParam String datasetType) {
+    public ResponseEntity<?> startServer(@RequestParam(required = false) String datasetType) {
         try {
-            // Get the path to the configuration file
-            String configPath = fileSystemUtil.getConfigFilePath(datasetType);
+            boolean started;
             
-            // Check if the configuration file exists
-            if (!fileSystemUtil.checkFileExists(configPath)) {
-                return ResponseEntity.badRequest().body("Configuration file not found for dataset type: " + datasetType);
+            if (datasetType != null && !datasetType.isEmpty()) {
+                // Start with specific dataset type
+                String configPath = fileSystemUtil.getConfigFilePath(datasetType);
+                
+                // Check if the configuration file exists
+                if (!fileSystemUtil.checkFileExists(configPath)) {
+                    return ResponseEntity.badRequest().body("Configuration file not found for dataset type: " + datasetType);
+                }
+                
+                // Start the server with the dataset-specific config
+                started = serverService.startServer(configPath);
+            } else {
+                // Start with default configuration that handles multiple dataset types
+                started = serverService.startServerWithDefaultConfig();
             }
             
-            // Start the server
-            boolean started = serverService.startServer(configPath);
-            
             if (started) {
-                return ResponseEntity.ok("Server started successfully for " + datasetType);
+                String successMessage = "Server started successfully";
+                if (datasetType != null && !datasetType.isEmpty()) {
+                    successMessage += " for " + datasetType;
+                }
+                return ResponseEntity.ok(successMessage);
             } else {
                 return ResponseEntity.internalServerError().body("Failed to start server");
             }

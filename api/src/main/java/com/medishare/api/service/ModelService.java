@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
@@ -81,5 +83,96 @@ public class ModelService {
         model.setActive(true);
         
         return modelRepository.save(model);
+    }
+    
+    /**
+     * Set a model as the active model for its dataset type
+     * 
+     * @param model The model to set as active
+     * @return The updated model
+     */
+    public Model setModelActive(Model model) {
+        // First, deactivate all models for this dataset type
+        List<Model> activeModels = modelRepository.findByDatasetTypeAndActive(model.getDatasetType(), true)
+                .stream().toList();
+        
+        for (Model activeModel : activeModels) {
+            // Skip if this is the model we're trying to activate
+            if (activeModel.getId().equals(model.getId())) {
+                continue;
+            }
+            activeModel.setActive(false);
+            modelRepository.save(activeModel);
+        }
+        
+        // Now activate the requested model
+        model.setActive(true);
+        return modelRepository.save(model);
+    }
+
+    // Add these methods to the ModelService class
+
+// Add these methods to your ModelService class
+
+/**
+ * Delete all models
+ * 
+ * @return The number of models deleted
+ */
+@Transactional
+public int deleteAllModels() {
+    // Get the count of models before deleting
+    long count = modelRepository.count();
+    
+    // Delete all models from repository
+    modelRepository.deleteAll();
+    
+    // Return the count of deleted models
+    return (int) count;
+}
+
+/**
+ * Delete all models for a specific dataset type
+ * 
+ * @param datasetType The dataset type to delete models for
+ * @return The number of models deleted
+ */
+@Transactional
+public int deleteAllModelsByDatasetType(String datasetType) {
+    // Get the list of models for this dataset type
+    List<Model> models = modelRepository.findByDatasetType(datasetType);
+    int count = models.size();
+    
+    // Delete all models for this dataset type
+    modelRepository.deleteByDatasetType(datasetType);
+    
+    // Return the count of deleted models
+    return count;
+}
+
+    /**
+     * Activate a model by ID
+     * 
+     * @param modelId The ID of the model to activate
+     * @param datasetType The dataset type for validation
+     * @return The activated model
+     * @throws RuntimeException if the model is not found or dataset type doesn't match
+     */
+    public Model activateModelById(Long modelId, String datasetType) {
+        Optional<Model> modelOpt = modelRepository.findById(modelId);
+        
+        if (modelOpt.isPresent()) {
+            Model model = modelOpt.get();
+            
+            // Verify the dataset type matches
+            if (!model.getDatasetType().equals(datasetType)) {
+                throw new RuntimeException("Model dataset type does not match the requested dataset type");
+            }
+            
+            // Set the model as active
+            return setModelActive(model);
+        } else {
+            throw new RuntimeException("Model not found with ID: " + modelId);
+        }
     }
 }

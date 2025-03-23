@@ -98,3 +98,54 @@
   .button-group .btn {
     white-space: nowrap;
   }
+
+/* Training form styles */
+.training-form {
+  width: 100%;
+}
+
+.file-selected-indicator {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.privacy-notice {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-left: 4px solid var(--primary-color);
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.training-progress {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: rgba(52, 152, 219, 0.1);
+  border-radius: 6px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-message {
+  font-weight: 500;
+  color: #444;
+}
+
+.training-success {
+  text-align: center;
+  padding: 15px;
+}
+
+.success-message {
+  color: var(--secondary-color);
+  background-color: rgba(46, 204, 113, 0.1);
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}

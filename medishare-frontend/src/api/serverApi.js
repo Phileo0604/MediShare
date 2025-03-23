@@ -2,9 +2,12 @@
 import apiClient from './apiClient';
 
 export const serverApi = {
-  // Start the server
-  startServer: async (datasetType) => {
-    const response = await apiClient.post(`/api/server/start?datasetType=${datasetType}`);
+  // Start the server - modified to make datasetType optional
+  startServer: async (datasetType = null) => {
+    const url = datasetType 
+      ? `/api/server/start?datasetType=${datasetType}`
+      : '/api/server/start';
+    const response = await apiClient.post(url);
     return response.data;
   },
 

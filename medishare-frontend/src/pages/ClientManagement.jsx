@@ -1,26 +1,26 @@
 // src/pages/ClientManagement.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ClientForm from '../components/client/ClientForm';
-import ClientList from '../components/client/ClientList';
 import ClientHistory from '../components/client/ClientHistory';
 import LogViewer from '../components/logs/LogViewer';
-import { useClients } from '../hooks/useClients';
 import { useClientHistory } from '../hooks/useClientHistory';
 import { useGlobalContext } from '../context/GlobalContext';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import ErrorMessage from '../components/common/ErrorMessage';
+import { clientApi } from '../api/clientApi';
+import '../styles/ClientManagement.css';
 
 const ClientManagement = () => {
   const { selectedDatasetType } = useGlobalContext();
-  const { clients, loading, error, startClient, stopClient } = useClients();
   const { 
     clientHistory, 
     loading: historyLoading, 
     error: historyError,
-    fetchClientHistory 
+    fetchClientHistory,
+    deleteClientHistory,
+    refreshClientStatuses
   } = useClientHistory(selectedDatasetType);
   
-  const [activeTab, setActiveTab] = useState('activeClients');
   const [refreshInterval, setRefreshInterval] = useState(5000); // 5 seconds default
   
   // Handle change in refresh interval
@@ -33,12 +33,8 @@ const ClientManagement = () => {
     await fetchClientHistory();
   };
   
-  const handleStopClient = async (clientId) => {
-    const result = await stopClient(clientId);
-    if (result.success) {
-      // After stopping a client, refresh the history
-      await fetchClientHistory();
-    }
+  const handleDeleteClient = async (clientId, stopFirst = false) => {
+    await deleteClientHistory(clientId, stopFirst);
   };
   
   return (
@@ -51,46 +47,14 @@ const ClientManagement = () => {
         />
       </div>
       
-      <div className="client-tabs">
-        <div className="tab-headers">
-          <button 
-            className={`tab-button ${activeTab === 'activeClients' ? 'active' : ''}`}
-            onClick={() => setActiveTab('activeClients')}
-          >
-            Active Clients
-          </button>
-          <button 
-            className={`tab-button ${activeTab === 'clientHistory' ? 'active' : ''}`}
-            onClick={() => setActiveTab('clientHistory')}
-          >
-            Client History
-          </button>
-        </div>
-        
-        <div className="tab-content">
-          {activeTab === 'activeClients' && (
-            <>
-              {loading ? (
-                <LoadingSpinner />
-              ) : error ? (
-                <ErrorMessage message={error} />
-              ) : (
-                <ClientList 
-                  clients={clients}
-                  onStopClient={handleStopClient}
-                />
-              )}
-            </>
-          )}
-          
-          {activeTab === 'clientHistory' && (
-            <ClientHistory 
-              clientHistory={clientHistory}
-              loading={historyLoading}
-              error={historyError}
-            />
-          )}
-        </div>
+      <div className="client-history-section">
+        <ClientHistory 
+          clientHistory={clientHistory}
+          loading={historyLoading}
+          error={historyError}
+          onRefresh={refreshClientStatuses}
+          onDelete={handleDeleteClient}
+        />
       </div>
       
       {/* Logs Section */}

@@ -8,7 +8,7 @@ import Dashboard from './pages/Dashboard';
 import ServerManagement from './pages/ServerManagement';
 import ClientManagement from './pages/ClientManagement';
 import ConfigurationManagement from './pages/ConfigurationManagement';
-import ModelManagement from './pages/ModelManagement';
+// No longer need to import the ModelManagement page
 import ModelParametersManagement from './pages/ModelParametersManagement';
 
 // Import common components
@@ -33,7 +33,7 @@ function App() {
                 <Route path="/server" element={<ServerManagement />} />
                 <Route path="/clients" element={<ClientManagement />} />
                 <Route path="/configurations" element={<ConfigurationManagement />} />
-                <Route path="/models" element={<ModelManagement />} />
+                {/* Removed the /models route */}
                 <Route path="/parameters" element={<ModelParametersManagement />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>

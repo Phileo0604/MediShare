@@ -1,7 +1,7 @@
 {
     "dataset_type": "reinopath",
     "dataset": {
-        "path": "datasets/Reinopathy_Debrecen1.csv",
+        "path": "datasets/Reinopathy_Debrecen3.csv",
         "target_column": "class"
     },
     "model": {
@@ -22,7 +22,7 @@
         "backup_dir": "model_backups/reinopath"
     },
     "client": {
-        "cycles": 3,
+        "cycles": 1,
         "wait_time": 30,
         "retry_interval": 10
     }
